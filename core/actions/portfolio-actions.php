@@ -45,6 +45,8 @@ function response_portfolio_element_content() {
 		$caption4 = $options->get($themeslug.'_front_portfolio_image_four_caption');
 	}
 	elseif (is_page() && !is_front_page()) {
+		$title_enable = get_post_meta($post->ID, $themeslug.'_portfolio_title_toggle' , true);
+		$title = get_post_meta($post->ID, $themeslug.'_portfolio_title' , true);
 	
 		$img1 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_one' , true);
 		$img2 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_two' , true);

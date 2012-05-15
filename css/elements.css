@@ -57,68 +57,7 @@ div.orbit-wrapper {
 	margin-bottom: 10px;
 }
 
-#sliderbg, #productbg {
-}
 
-/*============================*/
-/*===== Carousel Styles ======*/
-/*============================*/
-/* Elastislide Style */
-.es-carousel-wrapper{
-	padding:20px 0px 20px 0px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	position:relative;
-	margin-bottom: 10px;
-}
-.es-carousel{
-	overflow:hidden;
-	background: transparent;
-}
-.es-carousel ul{
-	display:none;
-}
-.es-carousel ul li{
-	height:100%;
-	float:left;
-	display:block;
-}
-.es-carousel ul li a{
-	display:block;
-	border-style:solid;
-	border-color:#3D3D3D;
-}
-.es-carousel ul li a img{
-	display:block;
-	border:none;
-	max-height:100%;
-	max-width:100%;
-}
-.es-nav span{
-	position:absolute;
-	top:50%;
-	left:12px;
-	background:transparent url(../images/nav.png) no-repeat top left;
-	width:14px;
-	height:26px;
-	margin-top:-13px;
-	text-indent:-9000px;
-	cursor:pointer;
-	opacity:0.8;
-}
-.es-nav span.es-nav-next{
-	right:17px;
-	left:auto;
-	background-position:top right;
-}
-.es-nav span:hover{
-	opacity:1.0;
-}
-
-#carousel_wrap.two.columns {margin-left: 0%;}
-
-.carousel_caption {text-align: center; margin-top: -21px; background: rgba(0, 0, 0, .6); color: white; width: 100%; position: relative; }
 /*============================*/
 /*======= Twitter Bar ========*/
 /*============================*/
@@ -147,55 +86,6 @@ div.orbit-wrapper {
 	font-family: 'Open Sans', sans-serif;
 	padding: 13.5px 0px 13.5px 15px;
 }
-
-/*============================*/
-/*===== Callout Section ======*/
-/*============================*/
-
-#callout_text {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 25px;
-	font-weight: 300;
-	color: #fff;
-	padding: 25px 0px 45px 0px;
-	text-align: center;
-	border-bottom: 2px solid #3d3d3d;
-	line-height: 36px;
-}
-
-
-#callout_text a {color: #5dc8ff;}
-
-#calloutbutton {
-	padding: 10px 5px 10px 5px;
-	margin-top: 28px;
-	background: #333;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	color: #fff;
-	text-align: center;
-	position: relative;
-	
-}
-
-#calloutimg{
-	padding-top: 10px;
-	
-	float:right;
-}
-
-.callout_link {text-align: center; margin-bottom: 0px;}
-
-#calloutbutton:hover{
-	background: #222;
-}
-
-#calloutbutton a{
-	color: #fff;
-	font-size: 18px;
-	font-weight: 800;
-}
-
 /*============================*/
 /*====== Bread Crumbs ========*/
 /*============================*/
@@ -264,65 +154,6 @@ div.orbit-wrapper {
 /*============================*/
 /*====== Tabbed Widgit =====*/
 /*============================*/
-
-/* Tabs */
-
-.ifeature-tabbed-header li {
-	float: left;
-}
-
-.ifeature-tabbed-popular-posts li, .ifeature-tabbed-recent-posts li {
-	padding: 10px;
-}
-
-.ifeature-tabbed-comments li {
-	padding: 10px 10px 25px 10px;
-}
-
-.ifeature-tabbed-tab {
-	clear: both;
-}
-
-.ui-tabs-hide {
-	display: none;
-}
-
-.ifeature-tabbed-widget {
-	margin: 10px 0 0 0;
-}
-
-.ifeature-tabbed-header {
-
-}
-
-.tab-image {float: left; margin-right: 10px; border: 2px solid #444; }
-
-.ui-state-default {
-	background: #f4f4f4;
-	border-bottom: 1px solid #d9d9d9;
-	border-left: 1px solid #d9d9d9;
-	border-right: 1px solid #d9d9d9;
-
-}
-
-li.ui-state-default  {
-	margin-left: 0px; padding-left: 5px; padding-right: 5px;
-}
-
-.ui-state-active {
-	background: #fff;
-	border-bottom: none;
-}
-
-#tab-4 {padding: 10px;}
-
-#tab-4 a {
-	padding: 3px 8px; background: #f4f4f4; font-size: 12px; margin: 0 4px 4px 0; border-radius: 3px;
-}
-.tabbed-title {font-size: 15px;}
-
-.tabbed-date {font-size: 12px; font-style: italic;}
-
 /**
  * jQuery lightBox plugin
  * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
@@ -347,7 +178,7 @@ li.ui-state-default  {
 
 #portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
 
-.portfolio_title {color: white; padding-left: 20px;}
+.portfolio_title {color: white;}
 
 .portfolio_caption {text-align: center; bottom: 50%; left: 5px; color: white; width: 100%; position: absolute; z-index: 2; font-size: 18px;}
 
