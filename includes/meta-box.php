@@ -71,7 +71,7 @@ function initialize_the_meta_boxes() {
 			->checkbox($themeslug.'_portfolio_title_toggle', 'Portfolio Title', '')
 			->text($themeslug.'_portfolio_title', 'Title', '', array('std' => 'Portfolio'))
 		->tab("Twitter Options")
-			->text($themeslug.'_twitter_handle', 'Twitter Handle', 'Enter your Twitter handle if using the Twitter bar')
+			->text($themeslug.'_twitter_handle', 'Twitter Handle', '')
 			->checkbox('twitter_reply', 'Show @ Replies', '')
 		->tab("SEO Options")
 			->text($themeslug.'_seo_title', 'SEO Title', '')
