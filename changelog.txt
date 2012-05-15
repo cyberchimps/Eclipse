@@ -1,0 +1,6 @@
+Eclipse Pro Changelog
+
+****************************
+
+1.0 (05-15-12)
+-Initial release.

@@ -1,0 +1,37 @@
+/* Dark */
+
+a {color: #555;text-decoration:underline}
+
+a:hover {color: #5ca9d6;}
+
+#header {
+	border-top: 4px solid #2E2F30;	
+	border-bottom: 4px solid #2E2F30;
+	min-height: 80px;
+	background: #3b3b3b url(../../images/headerbgdark.png);
+}
+
+.slider_content {
+	background: #3c3c3c url(../../images/sliderbglight.png);
+}
+
+#sliderbg {
+		border-bottom: 1px solid #2E2F30;
+		background: #bbb url(../../images/sliderbglight.png);
+}
+
+.calloutbg {background: #3b3b3b url(../../images/headerbgdark.png);border-bottom:1px solid #2E2F30;}
+
+#callout_text {color: #f8f8f8;}
+
+.content_title, .content_text {
+	color: #252525;
+}
+
+.sitename a{
+	color: #f8f8f8;
+}
+
+.sitename a:hover{
+	color: #ccc;
+}

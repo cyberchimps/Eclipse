@@ -1,0 +1,465 @@
+/*============================*/
+/*===== Recent Posts Styles ======*/
+/*============================*/
+.recent-posts-image {margin-top:8px; margin-bottom: 8px;}
+#recent-posts-container.three.columns {width: 22.4%; margin-left: 3.4%; margin-right:0%;}
+#recent-posts-container.columns:first-child {margin-left: 0%;}
+#recent-posts-container p {font-size: 11px;}
+
+#recent-posts-container a {color: white;}
+#recent-posts-container a:hover {color: #DDD;}
+
+.recent_posts_element_title {color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;}
+.recent_posts_post_title {font-size: 15px;color: #fff;}
+.recent_posts_byline {color:#646464;font-size: 11px;padding-bottom: 10px;}
+
+/*============================*/
+/*===== Product Styles ======*/
+/*============================*/
+#product_text {color: white; padding: 20px 0 20px 0;}
+.product_text_wrap {}
+#product_text.six.columns {width:48%;}
+#product_media.six.columns {width: 48%; margin-left: 0%;}
+.product_text_title {font-size: 24px;}
+.product_text_text {font-size: 14px;color:#fff; line-height: 1.5;}
+
+#product_media {padding: 20px 0 20px 0;}
+
+#image_container.six.columns {margin-left: 2%;}
+
+
+.elementsbg {
+	background: #fff; 
+}
+
+
+/* Page Elements */
+
+div.orbit-wrapper {
+	margin-top: 25px;	
+}
+
+.slider_content {
+	background: #3c3c3c url(../images/sliderbg.png);
+}
+
+#orbitDemo.orbit img {
+	}
+
+.content_title {font-size: 20px; color: #FFF;}
+
+.content_text {font-size: 16px; color: #FFF;}
+
+.slider_nav {
+	width: 99.8%;
+	
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+#sliderbg, #productbg {
+}
+
+/*============================*/
+/*===== Carousel Styles ======*/
+/*============================*/
+/* Elastislide Style */
+.es-carousel-wrapper{
+	padding:20px 0px 20px 0px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	position:relative;
+	margin-bottom: 10px;
+}
+.es-carousel{
+	overflow:hidden;
+	background: transparent;
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+}
+.es-carousel ul li a{
+	display:block;
+	border-style:solid;
+	border-color:#3D3D3D;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top:50%;
+	left:12px;
+	background:transparent url(../images/nav.png) no-repeat top left;
+	width:14px;
+	height:26px;
+	margin-top:-13px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.es-nav span.es-nav-next{
+	right:17px;
+	left:auto;
+	background-position:top right;
+}
+.es-nav span:hover{
+	opacity:1.0;
+}
+
+#carousel_wrap.two.columns {margin-left: 0%;}
+
+.carousel_caption {text-align: center; margin-top: -21px; background: rgba(0, 0, 0, .6); color: white; width: 100%; position: relative; }
+/*============================*/
+/*======= Twitter Bar ========*/
+/*============================*/
+
+#twitterbar {
+	overflow: hidden;
+	margin: auto;
+	background: url(../images/twitterbarbg.png);	
+	min-height: 42px;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+
+#bird {
+	float: left;
+	height: 45px;
+	width: 64px;
+	margin-right: 35px;
+}
+
+.twitter_bird {margin-left:20px; margin-right: 15px;}
+
+#twittertext {
+	color: #7c7c7c;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 13.5px 0px 13.5px 15px;
+}
+
+/*============================*/
+/*===== Callout Section ======*/
+/*============================*/
+
+#callout_text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	color: #fff;
+	padding: 25px 0px 45px 0px;
+	text-align: center;
+	border-bottom: 2px solid #3d3d3d;
+	line-height: 36px;
+}
+
+
+#callout_text a {color: #5dc8ff;}
+
+#calloutbutton {
+	padding: 10px 5px 10px 5px;
+	margin-top: 28px;
+	background: #333;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	
+}
+
+#calloutimg{
+	padding-top: 10px;
+	
+	float:right;
+}
+
+.callout_link {text-align: center; margin-bottom: 0px;}
+
+#calloutbutton:hover{
+	background: #222;
+}
+
+#calloutbutton a{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+/*============================*/
+/*====== Bread Crumbs ========*/
+/*============================*/
+
+#crumbs {border: 1px solid #3D3D3D;margin-bottom:15px;margin-top:15px;background:#222;}
+
+.crumbs_text {padding: 1px 5px 5px 15px;}
+
+/*============================*/
+/*===== Widgitized Boxes =====*/
+/*============================*/
+
+.boxes {margin-top:45px;margin-bottom:20px;padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;
+}
+
+.box_element_title{color:white; margin-top: 25px; font-weight: bold; margin-bottom: -35px;}
+
+#box_container {
+	min-height: 240px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#box_container ul {
+	list-style: none;
+}
+
+.boximg {
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+.boxtext {
+	text-align: left;
+	color: #9a9a9a;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+
+.box-widget-title {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: left;
+	margin-bottom: 5px;
+	clear: both;
+}
+
+#box1 {
+	min-height: 180px;
+	color: #222;
+}
+
+#box2 {
+	min-height: 180px;
+	color: #222;
+}
+
+#box3 {
+	min-height: 180px;
+	color: #222;
+}
+
+.boxes ul { padding-left: 15px; }
+
+/*============================*/
+/*====== Tabbed Widgit =====*/
+/*============================*/
+
+/* Tabs */
+
+.ifeature-tabbed-header li {
+	float: left;
+}
+
+.ifeature-tabbed-popular-posts li, .ifeature-tabbed-recent-posts li {
+	padding: 10px;
+}
+
+.ifeature-tabbed-comments li {
+	padding: 10px 10px 25px 10px;
+}
+
+.ifeature-tabbed-tab {
+	clear: both;
+}
+
+.ui-tabs-hide {
+	display: none;
+}
+
+.ifeature-tabbed-widget {
+	margin: 10px 0 0 0;
+}
+
+.ifeature-tabbed-header {
+
+}
+
+.tab-image {float: left; margin-right: 10px; border: 2px solid #444; }
+
+.ui-state-default {
+	background: #f4f4f4;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+
+}
+
+li.ui-state-default  {
+	margin-left: 0px; padding-left: 5px; padding-right: 5px;
+}
+
+.ui-state-active {
+	background: #fff;
+	border-bottom: none;
+}
+
+#tab-4 {padding: 10px;}
+
+#tab-4 a {
+	padding: 3px 8px; background: #f4f4f4; font-size: 12px; margin: 0 4px 4px 0; border-radius: 3px;
+}
+.tabbed-title {font-size: 15px;}
+
+.tabbed-date {font-size: 12px; font-style: italic;}
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright © 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+ 
+#gallery {
+	margin-top: 20px;
+	margin-bottom:20px;
+	padding-top: 10px; padding-bottom: 10px;
+}
+
+#portfolio_wrap {}
+
+#portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
+
+.portfolio_title {color: white; padding-left: 20px;}
+
+.portfolio_caption {text-align: center; bottom: 50%; left: 5px; color: white; width: 100%; position: absolute; z-index: 2; font-size: 18px;}
+
+#gallery li.three.columns {margin-right:0px; margin-left: 4.4%;}
+#gallery li.four.columns {margin-right:0px; margin-left: 4.4%;}
+#gallery li.six.columns {margin-right:0px; margin-left: 4.4%;}
+
+#portfolio_wrap.three.columns:first-child, #portfolio_wrap.four.columns:first-child, #portfolio_wrap.six.columns:first-child {margin-left: 0%;}
+
+#portfolio_wrap.three.columns.first-row, #portfolio_wrap.four.columns.first-row, #portfolio_wrap.six.columns.first-row {margin-left: 0%;}
+
+#gallery ul { list-style: none; margin: 0px; }
+
+#gallery ul li { display: inline; }
+
+#gallery ul img {
+border: 2px solid #3D3D3D;
+}
+	
+#gallery ul a:hover img {
+
+	color: #fff;
+	opacity: .5;
+}
+
+#gallery ul a:hover { color: #fff; }
+	
+#jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+}
+#jquery-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	width: 49%;
+	height: 100%;
+	zoom: 1;
+	display: block;
+}
+#lightbox-nav-btnPrev { 
+	left: 0; 
+	float: left;
+}
+#lightbox-nav-btnNext { 
+	right: 0; 
+	float: right;
+}
+#lightbox-container-image-data-box {
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%;
+	padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+	padding: 0 10px; 
+	color: #666; 
+}
+#lightbox-container-image-data #lightbox-image-details { 
+	width: 70%; 
+	float: left; 
+	text-align: left; 
+}	
+#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-currentNumber {
+	display: block; 
+	clear: left; 
+	padding-bottom: 1.0em;	
+}			
+#lightbox-secNav-btnClose {
+	width: 66px; 
+	float: right;
+	padding-bottom: 0.7em;	
+}
