@@ -503,6 +503,13 @@ function response_box_section() {
 	do_action ('response_box_section');
 }
 
+/** 
+* Portfolio
+*/
+function response_portfolio_element() {
+	do_action ('response_portfolio_element');
+}
+
 /**
 * End
 */
