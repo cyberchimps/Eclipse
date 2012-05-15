@@ -26,7 +26,18 @@ add_action( 'response_twitterbar_section', 'response_twitterbar_section_content'
 function response_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
 
-	if ( is_page() ) {
+	if (is_front_page()) {
+		$handle = $options->get($themeslug.'_front_twitter');
+		$show_replies = $options->get($themeslug.'_front_twitter_reply');
+	}
+	
+	elseif (is_page() && !is_front_page()) {
+		$handle = $options->get($themeslug.'_blog_twitter');
+		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
+
+	}
+	
+	else {
 		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
 		$replies = get_post_meta($post->ID, 'twitter_reply' , true); 
 		
@@ -36,10 +47,6 @@ function response_twitterbar_section_content() {
 		else {
 			$show_replies = '1'; 
 		}	
-	}
-	else {
-		$handle = $options->get($themeslug.'_blog_twitter');
-		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
 	}
 
 	if ( $handle ) {
