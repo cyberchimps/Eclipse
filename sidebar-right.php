@@ -8,11 +8,11 @@
 		<div class="widget-container">    
 		<h2 class="widget-title">Sidebar Right</h2>
     	<ul>
-						<li>Thank you for purchasing Business Pro.</li>
+						<li>Thank you for purchasing Eclipse.</li>
 						<li>&nbsp;</li>
 						<li>To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Right.</li>
 						<li>&nbsp;</li>
-						<li>We designed Business Pro to be as user friendly as possible, if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">free support forum</a>, and <a href="http://www.cyberchimps.com/Business-pro/docs/">precise documentation</a>.</li>
+						<li>We designed Eclipse to be as user friendly as possible, if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">free support forum</a>, and <a href="http://www.cyberchimps.com/eclipse/docs/">precise documentation</a>.</li>
 						<li>&nbsp;</li>
 						<li>If we were all designers then every WordPress theme would look this good.</li>
 					</ul>
