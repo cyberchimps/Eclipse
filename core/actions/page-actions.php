@@ -37,9 +37,7 @@ function response_page_section_content() {
 	<!--End @response before content sidebar hook-->
 			
 		<div id="content" class="<?php echo $content_grid; ?>">
-		
-		<?php response_page_content_slider(); ?>
-		
+				
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 			<div class="post_container">
