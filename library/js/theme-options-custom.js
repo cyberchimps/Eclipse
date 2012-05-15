@@ -233,13 +233,10 @@ jQuery(function($) {
 		$("input[name='eclipse[ec_front_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_page_slider: "subsection-slider",
-			response_callout_section: "subsection-callout",
 			response_portfolio_element: "subsection-portfolio",
 			response_twitterbar_section: "subsection-twtterbar",
-			response_index_carousel_section: "subsection-carousel",
-			response_front_page_custom: "subsection-custom",
-			response_product_element: "subsection-product"
+			response_box_section: "subsection-box",
+			response_recent_posts_element: "subsection-recentposts",
 			// , response_box_section: ""
 		};
 
