@@ -35,21 +35,17 @@ $options
 	->section("Welcome")
 		->info("<h1>response Pro 3</h1>
 		
-<p><strong>response Pro Professional Responsive WordPress Theme</strong></p>
+<p><strong>Eclipse Professional Responsive WordPress Theme</strong></p>
 
-<p>response Pro 3 from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
+<p>Eclipse from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
 
 <p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Content Feature Slider options are under the response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
+<p>We tried to make Eclipse as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/eclipse/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
-<p>If you are using the Content Feature Slider, Image Carousel, or Portfolio on a Page you can edit your slides from the Content Slides menu available in the WP-Admin menu to the far left. Look for the CyberChimps logo.</p>
+<p>Thank you for using Eclipse.</p>
 
-<p>We tried to make response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
-
-<p>Thank you for using response Pro.</p>
-
-<p><strong>A Professional response WordPress Theme</strong></p>
+<p><strong>A Professional WordPress Theme</strong></p>
 ")
 	->section("Design")
 		->subsection("Typography")
