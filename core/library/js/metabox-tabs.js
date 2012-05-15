@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
 		carousel_section: "subsection-Carousel-Options",
 		product_element: "subsection-Carousel-Options",
 		box_section: "subsection-Box-Options",
-		recent_posts_element: "subsection-Recent_Posts-Options",
+		recent_posts_element: "subsection-Recent-Posts-Options",
 		portfolio_element: "subsection-Portfolio-Options",
 		product_element: "subsection-Product-Options",
 		twitterbar_section: "subsection-Twitter-Options"
@@ -118,19 +118,25 @@ jQuery(document).ready(function($) {
      $('.checkbox').toggle()
      e.preventDefault();
     });
-
-    $('#checkbox-extra_callout_options').change(function(){
-	    var items = $(" tr.custom_callout_text_color, tr.custom_callout_link_color");
+    
+    $('#checkbox-ec_portfolio_title_toggle').change(function(){
+	    var items = $("tr.ec_portfolio_title,");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
 			items.hide();
 		}
-		$("#checkbox-disable_callout_button").trigger("change");
+	 }).trigger('change');
+	$('#checkbox-ec_box_title_toggle').change(function(){
+	    var items = $("tr.ec_box_title,");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
     }).trigger('change');
-
-    $('#checkbox-disable_callout_button').change(function(){
-	    var items = $("tr.callout_button_text, tr.callout_url");
+    $('#checkbox-ec_recent_posts_title_toggle').change(function(){
+	    var items = $("tr.ec_recent_posts_title,");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
@@ -138,37 +144,4 @@ jQuery(document).ready(function($) {
 		}
     }).trigger('change');
     
-    $('#checkbox-portfolio_title_toggle').change(function(){
-	    var items = $("tr.portfolio_title,");
-		if($(this).is(':checked')) {
-			items.show();
-		} else {
-			items.hide();
-		}
-	 }).trigger('change');
-	$('#checkbox-box_title_toggle').change(function(){
-	    var items = $("tr.box_title,");
-		if($(this).is(':checked')) {
-			items.show();
-		} else {
-			items.hide();
-		}
-    }).trigger('change');
-    $('#checkbox-recent_posts_title_toggle').change(function(){
-	    var items = $("tr.recent_posts_title,");
-		if($(this).is(':checked')) {
-			items.show();
-		} else {
-			items.hide();
-		}
-    }).trigger('change');
-        $('#checkbox-product_link_toggle').change(function(){
-	    var items = $("tr.product_link_url, tr.product_link_text");
-		if($(this).is(':checked')) {
-			items.show();
-		} else {
-			items.hide();
-		}
-    }).trigger('change');
-
 });
