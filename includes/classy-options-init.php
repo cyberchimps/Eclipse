@@ -33,7 +33,7 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>response Pro 3</h1>
+		->info("<h1>Eclipse</h1>
 		
 <p><strong>Eclipse Professional Responsive WordPress Theme</strong></p>
 
@@ -100,7 +100,7 @@ $options
 		->subsection_end()
 		->section("Front Page")
 		->open_outersection()
-			->section_order($themeslug."_front_section_order", "Drag & Drop Elements", array('options' => array( "response_twitterbar_section" => "Twitter Bar", "response_portfolio_element" => "Portfolio","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_box_section'))		
+			->section_order($themeslug."_front_section_order", "Drag & Drop Elements", array('options' => array( "response_twitterbar_section" => "Twitter Bar", "response_portfolio_element" => "Portfolio","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_portfolio_element,response_box_section,response_twitterbar_section,response_recent_posts_element'))		
 		->close_outersection()
 			->subsection("Portfolio")
 			->upload($themeslug."_front_portfolio_image_one", "First Portfolio Image", array('default' => array('url' => TEMPLATE_URL . '/images/portfolio.jpg')))
@@ -111,7 +111,6 @@ $options
 			->text($themeslug."_front_portfolio_image_three_caption", "Third Portfolio Image Caption", array('default' => 'Image 3'))
 			->upload($themeslug."_front_portfolio_image_four", "Fourth Portfolio Image", array('default' => array('url' => TEMPLATE_URL . '/images/portfolio.jpg')))
 			->text($themeslug."_front_portfolio_image_four_caption", "Fourth Portfolio Image caption", array('default' => 'Image 4'))
-			->checkbox($themeslug."_front_hide_slider_arrows", "Slider Arrows", array('default' => true))
 			->checkbox($themeslug."_front_portfolio_title_toggle", "Portfolio Title")
 			->text($themeslug."_front_portfolio_title", "Title", array('default' => 'Portfolio'))
 		->subsection_end()
@@ -148,14 +147,14 @@ $options
 			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies")
 		->subsection_end()
 		->subsection("Box Options")
-			->checkbox($themeslug."_box_title_toggle", "Title")
-			->text($themeslug."_box_title", "Title")
+			->checkbox($themeslug."_blog_box_title_toggle", "Title")
+			->text($themeslug."_blog_box_title", "Title")
 		->subsection_end()
 		->subsection("Recent Posts Options")
-			->checkbox($themeslug."_recent_posts_title_toggle", "Title")
-			->text($themeslug."_recent_posts_title", "Title")
-			->select($themeslug.'_recent_posts_category', 'Post Category', array( 'options' => $blogoptions ))
-			->checkbox($themeslug."_recent_posts_images_toggle", "Images")
+			->checkbox($themeslug."_blog_recent_posts_title_toggle", "Title")
+			->text($themeslug."_blog_recent_posts_title", "Title")
+			->select($themeslug.'_blog_recent_posts_category', 'Post Category', array( 'options' => $blogoptions ))
+			->checkbox($themeslug."_blog_recent_posts_images_toggle", "Images")
 		->subsection_end()
 		->subsection("Portfolio Options")
 			->upload($themeslug."_blog_portfolio_image_one", "First Portfolio Image", array('default' => array('url' => TEMPLATE_URL . '/images/portfolio.jpg')))

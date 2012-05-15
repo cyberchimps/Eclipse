@@ -46,15 +46,15 @@ function response_portfolio_element_content() {
 	}
 	elseif (is_page() && !is_front_page()) {
 	
-		$img1 = get_post_meta($post->ID, 'page_portfolio_image_one' , true);
-		$img2 = get_post_meta($post->ID, 'page_portfolio_image_two' , true);
-		$img3 = get_post_meta($post->ID, 'page_portfolio_image_three' , true);
-		$img4 = get_post_meta($post->ID, 'page_portfolio_image_four' , true);
+		$img1 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_one' , true);
+		$img2 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_two' , true);
+		$img3 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_three' , true);
+		$img4 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_four' , true);
 	
-		$caption1 = get_post_meta($post->ID, 'page_portfolio_image_one_caption' , true);
-		$caption2 = get_post_meta($post->ID, 'page_portfolio_image_two_caption' , true);
-		$caption3 = get_post_meta($post->ID, 'page_portfolio_image_three_caption' , true);
-		$caption4 = get_post_meta($post->ID, 'page_portfolio_image_four_caption' , true);
+		$caption1 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_one_caption' , true);
+		$caption2 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_two_caption' , true);
+		$caption3 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_three_caption' , true);
+		$caption4 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_four_caption' , true);
 	}
 	else {
 		$title_enable = $options->get($themeslug.'_blog_portfolio_title_toggle');

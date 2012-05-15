@@ -7,19 +7,25 @@ function response_recent_posts_element_content() {
 	global $options, $themeslug, $wp_query, $custom_excerpt, $post;
 	$custom_excerpt = 'recent';
 	
-	if (is_page()){
-		$title = get_post_meta($post->ID, 'recent_posts_title' , true);;
-		$toggle = get_post_meta($post->ID, 'recent_posts_title_toggle' , true);;
-		$recent_posts_image = get_post_meta($post->ID, 'recent_posts_images_toggle' , true);;
-		$category = get_post_meta($post->ID, 'recent_posts_category' , true);
-
-	} else {
-		$title = $options->get($themeslug.'_recent_posts_title');
-		$toggle = $options->get($themeslug.'_recent_posts_title_toggle');
-		$recent_posts_image = $options->get($themeslug.'_recent_posts_images_toggle');
-		$category = $options->get($themeslug.'_recent_posts_category'); 
+	if (is_front_page()) {
+		$title = $options->get($themeslug.'_front_recent_posts_title');
+		$toggle = $options->get($themeslug.'_front_recent_posts_title_toggle');
+		$recent_posts_image = $options->get($themeslug.'_front_recent_posts_images_toggle');
+		$category = $options->get($themeslug.'_front_recent_posts_category'); 	
 	}
-	
+	elseif (is_page() && !is_front_page()) {
+		$title = get_post_meta($post->ID, $themeslug.'_recent_posts_title' , true);;
+		$toggle = get_post_meta($post->ID, $themeslug.'_recent_posts_title_toggle' , true);;
+		$recent_posts_image = get_post_meta($post->ID, $themeslug.'_recent_posts_images_toggle' , true);;
+		$category = get_post_meta($post->ID, $themeslug.'_recent_posts_category' , true);
+	}
+	else {
+		$title = $options->get($themeslug.'_blog_recent_posts_title');
+		$toggle = $options->get($themeslug.'_blog_recent_posts_title_toggle');
+		$recent_posts_image = $options->get($themeslug.'_blog_recent_posts_images_toggle');
+		$category = $options->get($themeslug.'_blog_recent_posts_category'); 
+	}
+		
 	if ($category != 'all') {
 		$blogcategory = $category;
 	}
