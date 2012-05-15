@@ -81,61 +81,40 @@ function response_portfolio_element_content() {
 <div id="portfolio" class="container">
 	<div class="row">
 		
-	<?php query_posts( array ('post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category ));
-
-	if (have_posts()) :
-		$out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
-
-		$counter = 1;
-
-		while (have_posts()) : the_post();
-
+	<?php
 	    	/* Post-specific variables */	
 	    	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 	    	$title = get_the_title() ;	    	
-
-	     	/* Markup for portfolio */
-	    	$out .= "
+	?>
+	    			<div id='gallery' class='twelve columns'><?php echo $title_output; ?><ul>
 					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img1 ;?>' title='Image 1'><img src='<?php echo $img1 ;?>g'  alt='Image 1'/>
+	    				<a href='<?php echo $img1 ;?>' title='Image 1'><img src='<?php echo $img1 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption1 ;?></div>
 	    				</a>
 	    			</li>
 	    		
 	  	    		<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img2 ;?>' title='Image 2'><img src='<?php echo $img2 ;?>g'  alt='Image 1'/>
+	    				<a href='<?php echo $img2 ;?>' title='Image 2'><img src='<?php echo $img2 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption2 ;?></div>
 	    				</a>
 	    			</li>
 	    		
 					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img3 ;?>' title='Image 1'><img src='<?php echo $img3 ;?>g'  alt='Image 1'/>
+	    				<a href='<?php echo $img3 ;?>' title='Image 1'><img src='<?php echo $img3 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption3 ;?></div>
 	    				</a>
 	    			</li>
 	    			
 	    			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img4 ;?>' title='Image 1'><img src='<?php echo $img4 ;?>g'  alt='Image 1'/>
+	    				<a href='<?php echo $img4 ;?>' title='Image 1'><img src='<?php echo $img4 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption4 ;?></div>
 	    				</a>
 	    			</li>
+	    			</ul></div>
 
-	    			";
 
-	    	/* End slide markup */	
-
-	      	$counter++;
-	      	endwhile;
-	      	$out .= "</ul></div>";	 
-
-	      	else:
-     
-	endif; 	    
-	$wp_query = $tmp_query;    
-
-/* End slide creation */		
-
-	wp_reset_query(); /* Reset post query */ 
+	    	
+<?php
 
 /* Begin Portfolio javascript */ 
     
