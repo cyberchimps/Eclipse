@@ -46,13 +46,15 @@ function response_portfolio_element_content() {
 	}
 	elseif (is_page() && !is_front_page()) {
 	
-		$slide1 = get_post_meta($post->ID, 'page_slide_one_image' , true);
-		$slide2 = get_post_meta($post->ID, 'page_slide_two_image' , true);
-		$slide3 = get_post_meta($post->ID, 'page_slide_three_image' , true);
+		$img1 = get_post_meta($post->ID, 'page_portfolio_image_one' , true);
+		$img2 = get_post_meta($post->ID, 'page_portfolio_image_two' , true);
+		$img3 = get_post_meta($post->ID, 'page_portfolio_image_three' , true);
+		$img4 = get_post_meta($post->ID, 'page_portfolio_image_four' , true);
 	
-		$link1 = get_post_meta($post->ID, 'page_slide_one_url' , true);
-		$link2 = get_post_meta($post->ID, 'page_slide_two_url' , true);
-		$link3 = get_post_meta($post->ID, 'page_slide_three_url' , true);
+		$caption1 = get_post_meta($post->ID, 'page_portfolio_image_one_caption' , true);
+		$caption2 = get_post_meta($post->ID, 'page_portfolio_image_two_caption' , true);
+		$caption3 = get_post_meta($post->ID, 'page_portfolio_image_three_caption' , true);
+		$caption4 = get_post_meta($post->ID, 'page_portfolio_image_four_caption' , true);
 	}
 	else {
 		$title_enable = $options->get($themeslug.'_blog_portfolio_title_toggle');
@@ -106,7 +108,7 @@ function response_portfolio_element_content() {
 	    			</li>
 	    			
 	    			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img4 ;?>' title='<?php echo $caption54 ;?>'><img src='<?php echo $img4 ;?>'  alt='Image 1'/>
+	    				<a href='<?php echo $img4 ;?>' title='<?php echo $caption4 ;?>'><img src='<?php echo $img4 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption4 ;?></div>
 	    				</a>
 	    			</li>
