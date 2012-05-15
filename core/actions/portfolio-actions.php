@@ -88,25 +88,25 @@ function response_portfolio_element_content() {
 	?>
 	    			<div id='gallery' class='twelve columns'><?php echo $title_output; ?><ul>
 					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img1 ;?>' title='Image 1'><img src='<?php echo $img1 ;?>'  alt='Image 1'/>
+	    				<a href='<?php echo $img1 ;?>' title='<?php echo $caption1 ;?>'><img src='<?php echo $img1 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption1 ;?></div>
 	    				</a>
 	    			</li>
 	    		
 	  	    		<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img2 ;?>' title='Image 2'><img src='<?php echo $img2 ;?>'  alt='Image 1'/>
+	    				<a href='<?php echo $img2 ;?>' title='<?php echo $caption2 ;?>'><img src='<?php echo $img2 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption2 ;?></div>
 	    				</a>
 	    			</li>
 	    		
 					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img3 ;?>' title='Image 1'><img src='<?php echo $img3 ;?>'  alt='Image 1'/>
+	    				<a href='<?php echo $img3 ;?>' title='<?php echo $caption3 ;?>'><img src='<?php echo $img3 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption3 ;?></div>
 	    				</a>
 	    			</li>
 	    			
 	    			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='<?php echo $img4 ;?>' title='Image 1'><img src='<?php echo $img4 ;?>'  alt='Image 1'/>
+	    				<a href='<?php echo $img4 ;?>' title='<?php echo $caption54 ;?>'><img src='<?php echo $img4 ;?>'  alt='Image 1'/>
 	    					<div class='portfolio_caption'><?php echo $caption4 ;?></div>
 	    				</a>
 	    			</li>
