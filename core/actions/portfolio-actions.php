@@ -24,28 +24,54 @@ function response_portfolio_element_content() {
 	global $options, $post, $themeslug, $root, $wp_query;
 	$tmp_query = $wp_query; 
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
+	
+	if (is_front_page()) {
+		$title_enable = $options->get($themeslug.'_front_portfolio_title_toggle');
+		$title = $options->get($themeslug.'_front_portfolio_title');
 
-	if (is_page()){
-		$category = get_post_meta($post->ID, 'portfolio_category' , true);
-		$num = get_post_meta($post->ID, 'portfolio_row_number' , true);
-		$title_enable = get_post_meta($post->ID, 'portfolio_title_toggle' , true);
-		$title = get_post_meta($post->ID, 'portfolio_title' , true);;
-	} else {
-		$category = $options->get($themeslug.'_portfolio_category');
-		$num = $options->get($themeslug.'_portfolio_number');
-		$title_enable = $options->get($themeslug.'_portfolio_title_toggle');
-		$title = $options->get($themeslug.'_portfolio_title');
+		$img1source = $options->get($themeslug.'_front_portfolio_image_one');
+		$img2source = $options->get($themeslug.'_front_portfolio_image_two');
+		$img3source = $options->get($themeslug.'_front_portfolio_image_three');
+		$img4source = $options->get($themeslug.'_front_portfolio_image_four');
+		
+		$img1 = $img1source['url'];
+		$img2 = $img2source['url'];
+		$img3 = $img3source['url'];
+		$img4 = $img4source['url'];
+	
+		$caption1 = $options->get($themeslug.'_front_portfolio_image_one_caption');
+		$caption2 = $options->get($themeslug.'_front_portfolio_image_two_caption');
+		$caption3 = $options->get($themeslug.'_front_portfolio_image_three_caption');
+		$caption4 = $options->get($themeslug.'_front_portfolio_image_four_caption');
 	}
+	elseif (is_page() && !is_front_page()) {
+	
+		$slide1 = get_post_meta($post->ID, 'page_slide_one_image' , true);
+		$slide2 = get_post_meta($post->ID, 'page_slide_two_image' , true);
+		$slide3 = get_post_meta($post->ID, 'page_slide_three_image' , true);
+	
+		$link1 = get_post_meta($post->ID, 'page_slide_one_url' , true);
+		$link2 = get_post_meta($post->ID, 'page_slide_two_url' , true);
+		$link3 = get_post_meta($post->ID, 'page_slide_three_url' , true);
+	}
+	else {
+		$title_enable = $options->get($themeslug.'_blog_portfolio_title_toggle');
+		$title = $options->get($themeslug.'_blog_portfolio_title');
 
-	if ($num == '1' OR $num == 'key2') {
-		$number = 'four';
-		$numb = '3';
-	} else if ($num == '2' OR $num == 'key3') {
-		$number = 'six';
-		$numb = '2';
-	} else {
-		$number = 'three';
-		$numb = '4';
+		$img1source = $options->get($themeslug.'_blog_portfolio_image_one');
+		$img2source = $options->get($themeslug.'_blog_portfolio_image_two');
+		$img3source = $options->get($themeslug.'_blog_portfolio_image_three');
+		$img4source = $options->get($themeslug.'_blog_portfolio_image_four');
+		
+		$img1 = $img1source['url'];
+		$img2 = $img2source['url'];
+		$img3 = $img3source['url'];
+		$img4 = $img4source['url'];
+	
+		$caption1 = $options->get($themeslug.'_blog_portfolio_image_one_captiom');
+		$caption2 = $options->get($themeslug.'_blog_portfolio_image_two_caption');
+		$caption3 = $options->get($themeslug.'_blog_portfolio_image_three_caption');
+		$caption4 = $options->get($themeslug.'_blog_portfolio_image_four_caption');
 	}
 
 	$title = ($title != '') ? $title : 'Portfolio';	
@@ -64,19 +90,36 @@ function response_portfolio_element_content() {
 
 		while (have_posts()) : the_post();
 
-			$class = ( $counter % $numb == 1 ) ? 'first-row' : '';
-
 	    	/* Post-specific variables */	
 	    	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 	    	$title = get_the_title() ;	    	
 
 	     	/* Markup for portfolio */
 	    	$out .= "
-				<li id='portfolio_wrap' class='$number columns $class'>
-	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/>
-	    				<div class='portfolio_caption'>$title</div>
-	    			</a>	
-	  	    	</li>
+					<li id='portfolio_wrap' class='three columns'>
+	    				<a href='<?php echo $img1 ;?>' title='Image 1'><img src='<?php echo $img1 ;?>g'  alt='Image 1'/>
+	    					<div class='portfolio_caption'><?php echo $caption1 ;?></div>
+	    				</a>
+	    			</li>
+	    		
+	  	    		<li id='portfolio_wrap' class='three columns'>
+	    				<a href='<?php echo $img2 ;?>' title='Image 2'><img src='<?php echo $img2 ;?>g'  alt='Image 1'/>
+	    					<div class='portfolio_caption'><?php echo $caption2 ;?></div>
+	    				</a>
+	    			</li>
+	    		
+					<li id='portfolio_wrap' class='three columns'>
+	    				<a href='<?php echo $img3 ;?>' title='Image 1'><img src='<?php echo $img3 ;?>g'  alt='Image 1'/>
+	    					<div class='portfolio_caption'><?php echo $caption3 ;?></div>
+	    				</a>
+	    			</li>
+	    			
+	    			<li id='portfolio_wrap' class='three columns'>
+	    				<a href='<?php echo $img4 ;?>' title='Image 1'><img src='<?php echo $img4 ;?>g'  alt='Image 1'/>
+	    					<div class='portfolio_caption'><?php echo $caption4 ;?></div>
+	    				</a>
+	    			</li>
+
 	    			";
 
 	    	/* End slide markup */	
@@ -86,34 +129,6 @@ function response_portfolio_element_content() {
 	      	$out .= "</ul></div>";	 
 
 	      	else:
-
-	      	$out .= "	
-	    		<div id='gallery' class='twelve columns'><ul>
-	      			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 1'><img src='$root/images/pro/portfolio.jpg'  alt='Image 1'/>
-	    					<div class='portfolio_caption'>Image 1</div>
-	    				</a>
-	    			</li>
-	    		
-	  	    		<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 2'><img src='$root/images/pro/portfolio.jpg'  alt='Image 2'/>
-	    					<div class='portfolio_caption'>Image 2</div>
-	    				</a>
-	    			</li>
-	    		
-					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
-	    					<div class='portfolio_caption'>Image 3</div>
-	    				</a>
-	    			</li>
-	    			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
-	    					<div class='portfolio_caption'>Image 3</div>
-	    				</a>
-	    			</li>
-	    	 	</ul></div>	
-	    				
-	    			";
      
 	endif; 	    
 	$wp_query = $tmp_query;    
