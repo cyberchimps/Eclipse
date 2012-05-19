@@ -26,26 +26,22 @@ add_action( 'response_twitterbar_section', 'response_twitterbar_section_content'
 function response_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
 
-	if (is_front_page()) {
-		$handle = $options->get($themeslug.'_front_twitter');
-		$show_replies = $options->get($themeslug.'_front_twitter_reply');
-	}
-	elseif (is_page() && !is_front_page()) {
+	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, $themeslug.'_twitter_handle' , true); 
 		$replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
+		
+		if ($replies == "off") {
+			$show_replies = '0'; 
+		}
+		else {
+			$show_replies = '1'; 
+		}	
 	}
 	else {
 		$handle = $options->get($themeslug.'_blog_twitter');
 		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
 	}
-		
-	if ($replies == "off") {
-		$show_replies = '0'; 
-	}
-	else {
-		$show_replies = '1'; 
-	}	
-	
+
 	if ( $handle ) {
 		response_display_latest_tweets( $handle, $show_replies );
 	}
@@ -57,6 +53,7 @@ function response_twitterbar_section_content() {
 function response_display_latest_tweets( $username, $show_replies = 0 ) {
 	$latest_tweet = response_get_latest_tweets( $username, $show_replies );
 ?>
+<div class="container">
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="bird">
@@ -77,6 +74,7 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 		</div><!--end twitterbar-->
 		<hr />
 	</div>	
+</div>
 <?php
 }
 

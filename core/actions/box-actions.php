@@ -28,11 +28,7 @@ add_action( 'response_box_section', 'response_box_section_content' );
 function response_box_section_content() { 
 	global $options, $themeslug, $post, $root; //call globals
 	
-	if (is_front_page()) {
-		$title = $options->get($themeslug.'_front_box_title');
-		$toggle = $options->get($themeslug.'_front_box_title_toggle');
-	}
-	elseif (is_page() && !is_front_page()) {
+	if (is_page()) {
 		$title = get_post_meta($post->ID, $themeslug.'_box_title' , true);;
 		$toggle = get_post_meta($post->ID, $themeslug.'_box_title_toggle' , true);;
 	}

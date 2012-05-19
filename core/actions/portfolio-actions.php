@@ -25,26 +25,7 @@ function response_portfolio_element_content() {
 	$tmp_query = $wp_query; 
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 	
-	if (is_front_page()) {
-		$title_enable = $options->get($themeslug.'_front_portfolio_title_toggle');
-		$title = $options->get($themeslug.'_front_portfolio_title');
-
-		$img1source = $options->get($themeslug.'_front_portfolio_image_one');
-		$img2source = $options->get($themeslug.'_front_portfolio_image_two');
-		$img3source = $options->get($themeslug.'_front_portfolio_image_three');
-		$img4source = $options->get($themeslug.'_front_portfolio_image_four');
-		
-		$img1 = $img1source['url'];
-		$img2 = $img2source['url'];
-		$img3 = $img3source['url'];
-		$img4 = $img4source['url'];
-	
-		$caption1 = $options->get($themeslug.'_front_portfolio_image_one_caption');
-		$caption2 = $options->get($themeslug.'_front_portfolio_image_two_caption');
-		$caption3 = $options->get($themeslug.'_front_portfolio_image_three_caption');
-		$caption4 = $options->get($themeslug.'_front_portfolio_image_four_caption');
-	}
-	elseif (is_page() && !is_front_page()) {
+	if (is_page()) {
 		$title_enable = get_post_meta($post->ID, $themeslug.'_portfolio_title_toggle' , true);
 		$title = get_post_meta($post->ID, $themeslug.'_portfolio_title' , true);
 	
