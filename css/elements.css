@@ -1,6 +1,8 @@
 /*============================*/
 /*===== Recent Posts Styles ======*/
 /*============================*/
+
+#recent_posts {padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
 .recent-posts-image {margin-top:8px; margin-bottom: 8px;}
 #recent-posts-container.three.columns {width: 22.4%; margin-left: 3.4%; margin-right:0%;}
 #recent-posts-container.columns:first-child {margin-left: 0%;}
@@ -9,54 +11,9 @@
 #recent-posts-container a {color: white;}
 #recent-posts-container a:hover {color: #DDD;}
 
-.recent_posts_element_title {color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;}
+.recent_posts_element_title {color:white; margin-top: 45px; margin-bottom:15px; font-weight: bold;}
 .recent_posts_post_title {font-size: 15px;color: #fff;}
 .recent_posts_byline {color:#646464;font-size: 11px;padding-bottom: 10px;}
-
-/*============================*/
-/*===== Product Styles ======*/
-/*============================*/
-#product_text {color: white; padding: 20px 0 20px 0;}
-.product_text_wrap {}
-#product_text.six.columns {width:48%;}
-#product_media.six.columns {width: 48%; margin-left: 0%;}
-.product_text_title {font-size: 24px;}
-.product_text_text {font-size: 14px;color:#fff; line-height: 1.5;}
-
-#product_media {padding: 20px 0 20px 0;}
-
-#image_container.six.columns {margin-left: 2%;}
-
-
-.elementsbg {
-	background: #fff; 
-}
-
-
-/* Page Elements */
-
-div.orbit-wrapper {
-	margin-top: 25px;	
-}
-
-.slider_content {
-	background: #3c3c3c url(../images/sliderbg.png);
-}
-
-#orbitDemo.orbit img {
-	}
-
-.content_title {font-size: 20px; color: #FFF;}
-
-.content_text {font-size: 16px; color: #FFF;}
-
-.slider_nav {
-	width: 99.8%;
-	
-	margin: auto;
-	margin-bottom: 10px;
-}
-
 
 /*============================*/
 /*======= Twitter Bar ========*/
@@ -67,8 +24,8 @@ div.orbit-wrapper {
 	margin: auto;
 	background: url(../images/twitterbarbg.png);	
 	min-height: 42px;
-	margin-top: 15px;
-	margin-bottom: 35px;
+	margin-top: 25px;
+	margin-bottom: 45px;
 }
 
 #bird {
@@ -86,6 +43,7 @@ div.orbit-wrapper {
 	font-family: 'Open Sans', sans-serif;
 	padding: 13.5px 0px 13.5px 15px;
 }
+
 /*============================*/
 /*====== Bread Crumbs ========*/
 /*============================*/
@@ -101,7 +59,7 @@ div.orbit-wrapper {
 .boxes {margin-top:45px;margin-bottom:20px;padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;
 }
 
-.box_element_title{color:white; margin-top: 25px; font-weight: bold; margin-bottom: -35px;}
+.box_element_title{color:white; margin-top: 45px; font-weight: bold; margin-bottom: -35px;}
 
 #box_container {
 	min-height: 240px;
@@ -151,9 +109,6 @@ div.orbit-wrapper {
 
 .boxes ul { padding-left: 15px; }
 
-/*============================*/
-/*====== Tabbed Widgit =====*/
-/*============================*/
 /**
  * jQuery lightBox plugin
  * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
@@ -169,16 +124,17 @@ div.orbit-wrapper {
  */
  
 #gallery {
-	margin-top: 20px;
-	margin-bottom:20px;
-	padding-top: 10px; padding-bottom: 10px;
+	margin-top: 45px;
+
 }
 
-#portfolio_wrap {}
+#gallery {border-bottom: 2px solid #3d3d3d;}
+
+#portfolio_wrap { margin-bottom: 45px;}
 
 #portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
 
-.portfolio_title {color: white;}
+.portfolio_title {color: white; padding-left: 20px;}
 
 .portfolio_caption {text-align: center; bottom: 50%; left: 5px; color: white; width: 100%; position: absolute; z-index: 2; font-size: 18px;}
 
@@ -196,6 +152,7 @@ div.orbit-wrapper {
 
 #gallery ul img {
 border: 2px solid #3D3D3D;
+
 }
 	
 #gallery ul a:hover img {
