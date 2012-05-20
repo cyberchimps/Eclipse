@@ -1,9 +1,9 @@
 <?php
 /**
-* Functions related to the response Theme Options.
+* Functions related to the Eclipse Theme Options.
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,11 +11,11 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response
+* @package Eclipse
 * @since 1.0
 */
 
-function response_content_layout() {
+function eclipse_content_layout() {
 	global $options, $themeslug, $post;
 	
 	if (is_single()) {
@@ -58,11 +58,11 @@ function response_content_layout() {
 	}
 
 }
-add_action( 'wp_head', 'response_content_Layout' );
+add_action( 'wp_head', 'eclipse_content_Layout' );
 
 /* Site Title Color */
 
-function add_text_color() {
+function eclipse_add_text_color() {
 
 	global $themename, $themeslug, $options;
 
@@ -73,26 +73,11 @@ function add_text_color() {
 		echo '</style>';
 	}
 }
-add_action( 'wp_head', 'add_text_color');
-
-/* Site Title Color */
-
-function add_sitetitle_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_sitetitle_color') != "") {
-		$sitetitle = $options->get($themeslug.'_sitetitle_color'); 
-		echo '<style type="text/css">';
-		echo ".sitename a {color: $sitetitle;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_sitetitle_color');
+add_action( 'wp_head', 'eclipse_add_text_color');
 
 /* Link Color */
 
-function add_link_color() {
+function eclipse_add_link_color() {
 
 	global $themename, $themeslug, $options;
 
@@ -104,11 +89,11 @@ function add_link_color() {
 		echo '</style>';
 	}
 }
-add_action( 'wp_head', 'add_link_color');
+add_action( 'wp_head', 'eclipse_add_link_color');
 
 /* Link Hover Color */
 
-function add_link_hover_color() {
+function eclipse_add_link_hover_color() {
 
 	global $themename, $themeslug, $options;
 
@@ -120,71 +105,18 @@ function add_link_hover_color() {
 		echo '</style>';
 	}
 }
-add_action( 'wp_head', 'add_link_hover_color');
-
-/* Tagline Color */
-
-function add_tagline_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_tagline_color') != '') {
-		$tagline = $options->get($themeslug.'_tagline_color'); 
-		echo '<style type="text/css">';
-		echo "#description {color: $tagline;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_tagline_color');
-
-/* Post Title Color */
-
-function add_posttitle_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_posttitle_color') != '') {
-		$posttitle = $options->get($themeslug.'_posttitle_color'); 
-			
-		echo '<style type="text/css">';
-		echo ".posts_title a {color: $posttitle;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_posttitle_color');
-
-/* Footer Color */
-
-function add_footer_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_footer_color') != "" ) {
-	
-		$footercolor = $options->get($themeslug.'_footer_color'); 
-	
-	
-		echo '<style type="text/css">';
-		echo "#footer {background: $footercolor;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_footer_color');
+add_action( 'wp_head', 'eclipse_add_link_hover_color');
 
 /* Menu Font */
  
-function add_menu_font() {
+function eclipse_add_menu_font() {
 		
 	global $themename, $themeslug, $options;	
 		
 	if ($options->get($themeslug.'_menu_font') == "") {
-		$font = 'Lucida Grande';
+		$font = 'Helvetica';
 	}		
-		
-	elseif ($options->get($themeslug.'_menu_font') == 'custom' && $options->get($themeslug.'_custom_menu_font') != "") {
-		$font = $options->get($themeslug.'_custom_menu_font');	
-	}
-	
+			
 	else {
 		$font = $options->get($themeslug.'_menu_font'); 
 	}
@@ -196,26 +128,29 @@ function add_menu_font() {
 		echo "#nav ul li a {font-family: $fontstrip;}";
 		echo '</style>';
 }
-add_action( 'wp_head', 'add_menu_font'); 
+add_action( 'wp_head', 'eclipse_add_menu_font'); 
 
-/* Custom CSS */
-
-function custom_css() {
-
-	global $themename, $themeslug, $options;
-	
-	$custom =$options->get($themeslug.'_css_options');
-	echo '<style type="text/css">' . "\n";
-	echo  $custom  . "\n";
-	echo '</style>' . "\n";
-}
-
-function custom_css_filter($_content) {
-	$_return = preg_replace ( '/@import.+;( |)|((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/i', '', $_content );
-	$_return = htmlspecialchars ( strip_tags($_return), ENT_NOQUOTES, 'UTF-8' );
-	return $_return;
-}
+/* Menu Font */
+ 
+function eclipse_add_secondary_font() {
 		
-add_action ( 'wp_head', 'custom_css' );
+	global $themename, $themeslug, $options;	
+		
+	if ($options->get($themeslug.'_secondary_font') == "") {
+		$font = 'Open Sans';
+	}		
+			
+	else {
+		$font = $options->get($themeslug.'_secondary_font'); 
+	}
+	
+		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );
+	
+		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		echo '<style type="text/css">';
+		echo "#twittertext, #callout_text, .posts_title a, .sitename, .widget-title {font-family: '$fontstrip', sans-serif;}";
+		echo '</style>';
+}
+add_action( 'wp_head', 'eclipse_add_secondary_font'); 
 
 ?>
