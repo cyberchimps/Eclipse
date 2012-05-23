@@ -4,6 +4,8 @@ Eclipse Pro Changelog
 
 1.0.1 (05-23-12)
 -Removed Front Page template and options.
+-Removed Widgetized Box Element.
+-Added user opt-in PressTrends option.
 -Added Feature Slider Element.
 -Fixed Portfolio Element image captions and z-index.
 -Fixed typography option.
