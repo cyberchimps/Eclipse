@@ -37,9 +37,12 @@ $options
 		
 <p><strong>Eclipse Professional Responsive WordPress Theme</strong></p>
 
-<p>Eclipse from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
+<p>Eclipse offers the same advanced functionality as CyberChimps' other WordPress Themes including a Responsive Design that responds automatically to mobile devices such as the iPhone, iPad, and Android. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, Page Content, Twitter bar and Widgetized boxes. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website.
+</p>
 
 <p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
+
+<p>If you want even more amazing new features <a href='http://cyberchimps.com/eclipsepro/' target='_blank'>upgrade to Eclipse Pro</a> which includes a Custom Feature Slides, Product Element, Image Carousel, Widgetized Boxes, Callout section, expanded typography including TypeKit support, and many more powerful new features. Please visit <a href='http://cyberchimps.com/eclipsepro/' target='_blank'>CyberChimps.com</a> to learn more!</p>
 
 <p>We tried to make Eclipse as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/eclipse/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
