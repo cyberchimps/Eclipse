@@ -45,7 +45,8 @@ function initialize_the_meta_boxes() {
 					'page_slider' => 'Feature Slider',
 					'portfolio_element' => 'Portfolio',
 					'recent_posts_element' => 'Recent Posts',
-					'twitterbar_section' => 'Twitter Bar'
+					'twitterbar_section' => 'Twitter Bar',
+					'box_section' => 'Boxes'
 							
 					),
 					'std' => 'page_section,breadcrumbs'
@@ -58,6 +59,9 @@ function initialize_the_meta_boxes() {
 			->text($themeslug.'_page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com'))
 			->single_image($themeslug.'_page_slide_three_image', 'Slide Three Image', '', array('std' =>  TEMPLATE_URL . '/images/responseslider.jpg'))
 			->text($themeslug.'_page_slide_three_url', 'Slide Three Link', '', array('std' => 'http://cyberchimps.com'))
+		->tab("Box Options")
+			->checkbox($themeslug.'_box_title_toggle', 'Title', '')
+			->text($themeslug.'_box_title', '', '')
 		->tab("Recent Posts Options")
 			->checkbox($themeslug.'_recent_posts_title_toggle', 'Title', '')
 			->text($themeslug.'_recent_posts_title', '', '')

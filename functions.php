@@ -268,7 +268,44 @@ function ifp_widgets_init() {
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
    	));
-   	register_sidebar(array(
+    	
+    register_sidebar(array(
+		'name' => 'Box 1',
+		'id' => 'box-1',
+		'description' => 'This is the first widget of the four-box section',
+		'before_widget' => '<div id="box1" class="three columns">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+		'name' => 'Box 2',
+		'id' => 'box-2',
+		'description' => 'This is the second widget of the four-box section',
+		'before_widget' => '<div id="box2" class="three columns">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+		'name' => 'Box 3',
+		'id' => 'box-3',
+		'description' => 'This is the third widget of the four-box section',
+		'before_widget' => '<div id="box3" class="three columns">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+		register_sidebar(array(
+		'name' => 'Box 4',
+		'id' => 'box-4',
+		'description' => 'This is the fourth widget of the four-box section',
+		'before_widget' => '<div id="box4" class="three columns">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
 		'name' => 'Footer',
 		'id' => 'footer-widgets',
 		'description' => 'These are the footer widgets',
@@ -327,6 +364,8 @@ require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/presstrends.php' ); // User opt-in PressTrends Option.
+
+require_once ( get_template_directory() . '/core/widgets/recent-post.php' ); // Widget include
+require_once ( get_template_directory() . '/core/widgets/popular-post.php' ); // Widget include
 
 ?>
