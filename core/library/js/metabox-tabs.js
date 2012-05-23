@@ -46,14 +46,10 @@ jQuery(document).ready(function($) {
 	$("#subsection-Portfolio-Element > h4").click();
 	$("#subsection-Page-Options > h4").click();
 	var page_subsection_map = {
-		page_slider: "subsection-Eclipse-Pro-Slider-Options",
-		callout_section: "subsection-Callout-Options",
-		carousel_section: "subsection-Carousel-Options",
-		product_element: "subsection-Carousel-Options",
+		page_slider: "subsection-Eclipse-Slider-Options",
 		box_section: "subsection-Box-Options",
 		recent_posts_element: "subsection-Recent-Posts-Options",
 		portfolio_element: "subsection-Portfolio-Options",
-		product_element: "subsection-Product-Options",
 		twitterbar_section: "subsection-Twitter-Options"
 	};
 	$("#ec_page_section_order").change(function(){
