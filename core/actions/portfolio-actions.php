@@ -53,7 +53,7 @@ function response_portfolio_element_content() {
 		$img3 = $img3source['url'];
 		$img4 = $img4source['url'];
 	
-		$caption1 = $options->get($themeslug.'_blog_portfolio_image_one_captiom');
+		$caption1 = $options->get($themeslug.'_blog_portfolio_image_one_caption');
 		$caption2 = $options->get($themeslug.'_blog_portfolio_image_two_caption');
 		$caption3 = $options->get($themeslug.'_blog_portfolio_image_three_caption');
 		$caption4 = $options->get($themeslug.'_blog_portfolio_image_four_caption');
