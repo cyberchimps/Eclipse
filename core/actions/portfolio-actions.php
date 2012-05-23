@@ -97,31 +97,22 @@ function response_portfolio_element_content() {
 	    			</li>
 	    			</ul></div>
 
-
-	    	
-<?php
-
-/* Begin Portfolio javascript */ 
-    
-    $out .= <<<OUT
  <script type="text/javascript">
  	jQuery(document).ready(function ($) {
     $(function() {
         $('#gallery a').lightBox({
-    		imageLoading:			'$root/images/portfolio/lightbox-ico-loading.gif',		
-			imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
-			imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
-			imageBtnClose:			'$root/images/portfolio/lightbox-btn-close.gif',		
-			imageBlank:				'$root/images/portfolio/lightbox-blank.gif',			
+    		imageLoading:			'<?php echo $root ;?>/images/portfolio/lightbox-ico-loading.gif',		
+			imageBtnPrev:			'<?php echo $root ;?>/images/portfolio/lightbox-btn-prev.gif',			
+			imageBtnNext:			'<?php echo $root ;?>/images/portfolio/lightbox-btn-next.gif',			
+			imageBtnClose:			'<?php echo $root ;?>/images/portfolio/lightbox-btn-close.gif',		
+			imageBlank:				'<?php echo $root ;?>/images/portfolio/lightbox-blank.gif',			
 	 });
     });
     });
     </script>
-OUT;
 
-/* End Portfolio javascript */ 
 
-echo $out;
+<?php
 
 /* END */ 
 ?>
