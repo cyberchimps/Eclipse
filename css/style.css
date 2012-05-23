@@ -27,6 +27,14 @@ a{outline:none}
 
 #sidebar.three.columns {width: 22%; margin-left: 4.2%}
 
+#image_pagination {border-top: 1px solid #3D3D3D; border-bottom: 1px solid #3D3D3D;margin-bottom: 15px; display: block;}
+
+.image_wrap {padding: 10px 15px 5px 15px; height: 105px;}
+
+.previous_image {float: left;}
+
+.next_image {float: right;}
+
 .pagination {
 clear:both;
 padding:20px 0;

@@ -7,6 +7,7 @@ Eclipse Pro Changelog
 -Added Feature Slider Element.
 -Fixed Portfolio Element image captions and z-index.
 -Fixed typography option.
+-Added media attachment pagination links.
 -General style fixes.
 
 1.0 (05-15-12)
