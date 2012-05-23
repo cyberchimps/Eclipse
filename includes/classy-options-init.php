@@ -101,7 +101,7 @@ $options
 		->subsection_end()
 		->section("Blog")
 		->open_outersection()
-			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("response_post" => "Post Page", "response_blog_slider" => "Feature Slider", "response_twitterbar_section" => "Twitter Bar", "response_portfolio_element" => "Portfolio","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_portfolio_element,response_twitterbar_section,response_box_section,response_post'))
+			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("response_post" => "Post Page", "response_blog_slider" => "Feature Slider", "response_twitterbar_section" => "Twitter Bar", "response_portfolio_element" => "Portfolio","response_recent_posts_element" => "Recent Posts"), "default" => 'response_blog_slider,response_portfolio_element,response_twitterbar_section,response_post'))
 		->close_outersection()
 		->subsection("Blog Options")
 			->images($themeslug."_blog_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))
