@@ -209,7 +209,7 @@ jQuery(function($) {
 	$("input[name='eclipse[ec_blog_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_page_slider: "subsection-featureslider",
+			response_blog_slider: "subsection-featureslider",
 			response_post: "subsection-blogoptions",
 			response_callout_section: "subsection-calloutoptions",
 			response_portfolio_element: "subsection-portfoliooptions",

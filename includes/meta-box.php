@@ -42,6 +42,7 @@ function initialize_the_meta_boxes() {
 			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
 					'page_section' => 'Page',
 					'breadcrumbs' => 'Breadcrumbs',
+					'page_slider' => 'Feature Slider',
 					'portfolio_element' => 'Portfolio',
 					'recent_posts_element' => 'Recent Posts',
 					'twitterbar_section' => 'Twitter Bar',
@@ -51,6 +52,13 @@ function initialize_the_meta_boxes() {
 					'std' => 'page_section,breadcrumbs'
 				))
 			->pagehelp('', 'Need Help?', '')
+		->tab($themenamefull." Slider Options")
+			->single_image('page_slide_one_image', 'Slide One Image', '', array('std' =>  TEMPLATE_URL . '/images/responseslider.jpg'))
+			->text('page_slide_one_url', 'Slide One Link', '', array('std' => 'http://cyberchimps.com'))
+			->single_image('page_slide_two_image', 'Slide Two Image', '', array('std' =>  TEMPLATE_URL . '/images/responseslider.jpg'))
+			->text('page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com'))
+			->single_image('page_slide_three_image', 'Slide Three Image', '', array('std' =>  TEMPLATE_URL . '/images/responseslider.jpg'))
+			->text('page_slide_three_url', 'Slide Three Link', '', array('std' => 'http://cyberchimps.com'))
 		->tab("Box Options")
 			->checkbox($themeslug.'_box_title_toggle', 'Title', '')
 			->text($themeslug.'_box_title', '', '')

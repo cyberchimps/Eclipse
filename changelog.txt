@@ -2,7 +2,7 @@ Eclipse Pro Changelog
 
 ****************************
 
-1.0.1 (05-20-12)
+1.0.1 (05-23-12)
 -Removed Front Page template and options.
 -Fixed typography option.
 -General style fixes.

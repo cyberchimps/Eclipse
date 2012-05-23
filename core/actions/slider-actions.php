@@ -1,9 +1,9 @@
 <?php
 /**
-* Slider actions used by response.
+* Slider actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2012
+* Copyright: © 2011
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,135 +11,74 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response
+* @package Response
 * @since 1.0
 */
 
 /**
-* response slider actions
+* Response slider actions
 */
 
-add_action ('response_blog_slider_lite', 'response_blog_slider_lite_content' );
+add_action ('response_blog_slider', 'response_slider_lite_content' );
+add_action ('response_page_slider', 'response_slider_lite_content' );
 
 /**
-* Lite slider functions
+* Lite slider function
 */
-function response_blog_slider_lite_content() {
+function response_slider_lite_content() {
 
-/* Call globals. */	
-
-	global $themename, $themeslug, $options, $wp_query, $post, $slider_default;
-
-/* End globals. */
-
-/* Define variables. */	
-
-        $tmp_query = $wp_query; 
-		$category = $options->get($themeslug.'_slider_category');
-		$root = get_template_directory_uri();
+	global $themename, $themeslug, $options, $wp_query, $post, $slider_default, $root;
 		
-/* Define blog category */
-
-	if ($category == 'all' OR $category == 'All' OR $category == '') {
-		$blogcategory = '';
+	if (is_page()) {
+		$slide1 = get_post_meta($post->ID, 'page_slide_one_image' , true);
+		$slide2 = get_post_meta($post->ID, 'page_slide_two_image' , true);
+		$slide3 = get_post_meta($post->ID, 'page_slide_three_image' , true);
+	
+		$link1 = get_post_meta($post->ID, 'page_slide_one_url' , true);
+		$link2 = get_post_meta($post->ID, 'page_slide_two_url' , true);
+		$link3 = get_post_meta($post->ID, 'page_slide_three_url' , true);
 	}
 	
 	else {
-		$blogcategory = $category;
-	}
-	
-/* End blog category */
+		$slide1source = $options->get($themeslug.'_blog_slide_one_image');
+		$slide2source = $options->get($themeslug.'_blog_slide_two_image');
+		$slide3source = $options->get($themeslug.'_blog_slide_three_image');
 		
-    query_posts('category_name='.$blogcategory.'&showposts=50');
-    	
-	    if (have_posts()) :
-	    	$out = "<div id='orbitDemo'>"; 
-	    	$i = 0;
-	    	
-	    	if ($options->get($themeslug.'_slider_posts_number') == '')
-	    	$no = '5';
-	    	else $no = $options->get($themeslug.'_slider_posts_number');
+		$slide1 = $slide1source['url'];
+		$slide2 = $slide2source['url'];
+		$slide3 = $slide3source['url'];
+	
+		$link1 = $options->get($themeslug.'_blog_slide_one_url');
+		$link2 = $options->get($themeslug.'_blog_slide_two_url');
+		$link3 = $options->get($themeslug.'_blog_slide_three_url');
 
-	    	while (have_posts() && $i<$no) : 
-	    	
-	    		the_post(); 
-	    		
-	    		$postimage 	= get_post_meta($post->ID, 'slider_image' , true);
-	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
-	    		$permalink 	= get_permalink();
-	    		$thetitle	= get_the_title(); 
-	    		
-	    	/* Controls slide image and thumbnails */
+	}
+?>
+	<div class="row">
+		<div id="orbitDemo">
+			<a href="<?php echo $link1; ?>">
+	   			<img src="<?php echo $slide1 ;?>" alt="Slider" />
+	    	</a>
+	    	<a href="<?php echo $link2; ?>">
+	   			<img src="<?php echo $slide2 ;?>" alt="Slider" />
+	    	</a>
+	    	<a href="<?php echo $link3; ?>">
+	   			<img src="<?php echo $slide3 ;?>" alt="Slider" />
+	    	</a>
+		</div>
+	</div>
 
-	    	if ($postimage != '' ){
-	    		$image = $postimage;
-	    	}
-	    	
-	    	else {
-	    		$image = $slider_default;
-	    	}
-
-	    		
-	    	/* Markup for slides */
-
-	    	$out .= "<a href='$link' $caption>
-	    				<img src='$image' width='$imgwidth' alt='Slider' />
-	    						<span class='orbit-caption' id='htmlCaption$i'>$title <br /> $text</span>
-	    				</a>
-	    			";
-
-	    	/* End slide markup */	
-	    	 
-	      	$i++;
-	      	endwhile;
-	      	$out .= "</div>";
-	    endif; 
-	    
-	    $wp_query = $tmp_query;
-
-	    	   
-	    if ($options->get($themeslug.'_slider_delay') == '')
-	    	$delay = '3500';
-	    else $delay = $options->get($themeslug.'_slider_delay');
-	  
-	    if ($options->get($themeslug.'hide_slider_navigation') != '0' OR $options->get($themeslug.'hide_slider_navigation') == '' ) {
-	    	$navigation = 'true';
-	    }
-	    else {
-	    
-	     $navigation = 'false'; 
-	    	echo '<style type="text/css">';
-			echo ".nivo-controlNav {display: none;}";
-			echo ".slider_nav {display: none;}";
-			echo '#slider-wrapper {margin-bottom: 20px;}';
-			echo '</style>';
-	    
-	    }
-	    
-	    wp_reset_query();
-/* Begin NivoSlider javascript */ 
-    
-    $out .= <<<OUT
 <script type="text/javascript">
-   $(window).load(function() {
+	jQuery(document).ready(function ($) {
+    $(window).load(function() {
     $('#orbitDemo').orbit({
-         animation: '$animation',
-         advanceSpeed: $sliderdelay,
-         captionAnimation: 'slideOpen',		// fade, slideOpen, none
-         captionAnimationSpeed: 800,  
-         bullets: $dots,
+         animation: 'horizontal-push',
+         bullets: true,
+     });
      });
      });
 </script>
-OUT;
 
-/* End NivoSlider javascript */ 
-
-echo $out;
-/* END */ 
-
-?>
-<div class="slider_nav"></div>
 <?php
 
 }
