@@ -30,13 +30,13 @@ function response_slider_lite_content() {
 	global $themename, $themeslug, $options, $wp_query, $post, $slider_default, $root;
 		
 	if (is_page()) {
-		$slide1 = get_post_meta($post->ID, 'page_slide_one_image' , true);
-		$slide2 = get_post_meta($post->ID, 'page_slide_two_image' , true);
-		$slide3 = get_post_meta($post->ID, 'page_slide_three_image' , true);
+		$slide1 = get_post_meta($post->ID, $themeslug.'_page_slide_one_image' , true);
+		$slide2 = get_post_meta($post->ID, $themeslug.'_page_slide_two_image' , true);
+		$slide3 = get_post_meta($post->ID, $themeslug.'_page_slide_three_image' , true);
 	
-		$link1 = get_post_meta($post->ID, 'page_slide_one_url' , true);
-		$link2 = get_post_meta($post->ID, 'page_slide_two_url' , true);
-		$link3 = get_post_meta($post->ID, 'page_slide_three_url' , true);
+		$link1 = get_post_meta($post->ID, $themeslug.'_page_slide_one_url' , true);
+		$link2 = get_post_meta($post->ID, $themeslug.'_page_slide_two_url' , true);
+		$link3 = get_post_meta($post->ID, $themeslug.'_page_slide_three_url' , true);
 	}
 	
 	else {
