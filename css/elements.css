@@ -182,7 +182,7 @@ border: 2px solid #3D3D3D;
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 100;
+	z-index: 2100;
 	text-align: center;
 	line-height: 0;
 }
