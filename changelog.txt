@@ -2,6 +2,9 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.2 (05-24-12)
+-Added container around page content for responsive margins.
+
 1.0.1 (05-23-12)
 -Removed Front Page template and options.
 -Removed Widgetized Box Element.
