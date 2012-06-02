@@ -1,6 +1,6 @@
 <?php
 
-class Chimps_Metabox {
+class Response_Metabox {
 	function __construct($id, $title, $options) {
 		$this->id = $id;
 		$this->title = $title;

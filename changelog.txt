@@ -7,6 +7,7 @@ Eclipse Changelog
 -Replaced Lightbox with Slimbox.
 -Fixed post entry content not clearing properly.
 -Fixed debugging issue related to empty search results. 
+-Renamed "Chimps_Metabox" "Response_Metabox" to avoid confusion.
 
 1.0.1 (05-23-12)
 -Removed Front Page template and options.
