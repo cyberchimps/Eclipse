@@ -949,6 +949,11 @@ figure {
 	display: none;
 }
 
+@media handheld, only screen and (max-width: 1024px) {
+div.slider-nav span.right {right: 5px !important;}
+div.slider-nav span.left {margin-left: 15px !important;}
+}
+
 
 @media handheld, only screen and (max-width: 767px) {
 
