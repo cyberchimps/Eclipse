@@ -51,7 +51,7 @@ function response_scripts() {
 	wp_register_script( 'tooltips' ,$path.'/js/foundation/jquery.tooltips.js');
 	wp_register_script( 'modernizr' ,$path.'/js/foundation/modernizr.foundation.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
-	wp_register_script( 'lightbox' ,$path.'/js/jquery.lightbox-0.5.js');
+	wp_register_script( 'slimbox' ,$path.'/js/jquery.slimbox.js');
 	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
 	
@@ -62,7 +62,7 @@ function response_scripts() {
 	wp_enqueue_script ('tooltips');
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
-	wp_enqueue_script ('lightbox');
+	wp_enqueue_script ('slimbox');
 	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
 

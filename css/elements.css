@@ -115,19 +115,10 @@ div.orbit-wrapper {
 
 .boxes ul { padding-left: 15px; }
 
-/**
- * jQuery lightBox plugin
- * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
- * and adapted to me for use like a plugin from jQuery.
- * @name jquery-lightbox-0.5.css
- * @author Leandro Vieira Pinho - http://leandrovieira.com
- * @version 0.5
- * @date April 11, 2008
- * @category jQuery plugin
- * @copyright © 2008 Leandro Vieira Pinho (leandrovieira.com)
- * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
- * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
- */
+
+/*============================*/
+/*===== Portfolio =====*/
+/*============================*/
  
 #gallery {
 	margin-top: 45px;
@@ -169,91 +160,86 @@ border: 2px solid #3D3D3D;
 
 #gallery ul a:hover { color: #fff; }
 	
-#jquery-overlay {
-	position: absolute;
-	top: 0;
+/* SLIMBOX */
+
+#lbOverlay {
+	position: fixed;
+	z-index: 9999;
 	left: 0;
-	z-index: 90;
-	width: 100%;
-	height: 500px;
-}
-#jquery-lightbox {
-	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	z-index: 2100;
-	text-align: center;
-	line-height: 0;
+	height: 100%;
+	background-color: #000;
+	cursor: pointer;
 }
-#jquery-lightbox a img { border: none; }
-#lightbox-container-image-box {
-	position: relative;
+
+#lbCenter, #lbBottomContainer {
+	position: absolute;
+	z-index: 9999;
+	overflow: hidden;
 	background-color: #fff;
-	width: 250px;
-	height: 250px;
-	margin: 0 auto;
 }
-#lightbox-container-image { padding: 10px; }
-#lightbox-loading {
-	position: absolute;
-	top: 40%;
-	left: 0%;
-	height: 25%;
-	width: 100%;
-	text-align: center;
-	line-height: 0;
+
+.lbLoading {
+	background: #fff url(../images/portfolio/loading.gif) no-repeat center;
 }
-#lightbox-nav {
+
+#lbImage {
 	position: absolute;
-	top: 0;
 	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 10;
+	top: 0;
+	border: 10px solid #fff;
+	background-repeat: no-repeat;
 }
-#lightbox-container-image-box > #lightbox-nav { left: 0; }
-#lightbox-nav a { outline: none;}
-#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
-	width: 49%;
-	height: 100%;
-	zoom: 1;
+
+#lbPrevLink, #lbNextLink {
 	display: block;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	outline: none;
 }
-#lightbox-nav-btnPrev { 
-	left: 0; 
-	float: left;
+
+#lbPrevLink {
+	left: 0;
 }
-#lightbox-nav-btnNext { 
-	right: 0; 
-	float: right;
+
+#lbPrevLink:hover {
+	background: transparent url(../images/portfolio/prevlabel.gif) no-repeat 0 15%;
 }
-#lightbox-container-image-data-box {
-	font: 10px Verdana, Helvetica, sans-serif;
-	background-color: #fff;
-	margin: 0 auto;
+
+#lbNextLink {
+	right: 0;
+}
+
+#lbNextLink:hover {
+	background: transparent url(../images/portfolio/nextlabel.gif) no-repeat 100% 15%;
+}
+
+#lbBottom {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
 	line-height: 1.4em;
-	overflow: auto;
-	width: 100%;
-	padding: 0 10px 0;
+	text-align: left;
+	border: 10px solid #fff;
+	border-top-style: none;
 }
-#lightbox-container-image-data {
-	padding: 0 10px; 
-	color: #666; 
-}
-#lightbox-container-image-data #lightbox-image-details { 
-	width: 70%; 
-	float: left; 
-	text-align: left; 
-}	
-#lightbox-image-details-caption { font-weight: bold; }
-#lightbox-image-details-currentNumber {
-	display: block; 
-	clear: left; 
-	padding-bottom: 1.0em;	
-}			
-#lightbox-secNav-btnClose {
-	width: 66px; 
+
+#lbCloseLink {
+	display: block;
 	float: right;
-	padding-bottom: 0.7em;	
+	width: 66px;
+	height: 22px;
+	background: transparent url(../images/portfolio/closelabel.gif) no-repeat center;
+	margin: 5px 0;
+	outline: none;
+}
+
+#lbCaption, #lbNumber {
+	margin-right: 71px;
+}
+
+#lbCaption {
+	font-weight: bold;
 }
