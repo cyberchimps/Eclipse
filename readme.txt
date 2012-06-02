@@ -6,7 +6,7 @@ Licensed under GNU General Public License v2.0 - http://www.gnu.org/licenses/gpl
 
 Blog icons provided by http://glyphicons.com/ under the Creative Commons license.
 
-Foundation and Orbit are licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
+Foundation, Orbit and Slimbox are licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
