@@ -5,7 +5,7 @@ Eclipse Changelog
 1.0.2 (06-02-12)
 -Added container around page content for responsive margins.
 -Replaced Lightbox with Slimbox.
--Fixed post entry content not clearing properly.
+-Fixed floats not clearing properly.
 -Fixed debugging issue related to empty search results. 
 -Renamed "Chimps_Metabox" "Response_Metabox" to avoid confusion.
 
