@@ -84,6 +84,7 @@ function response_loop_content($content) {
 							the_content(__('<img class="continue_img" src="' .get_bloginfo('template_directory'). '/images/continue.png"> Continue Reading', 'response'));
 						}
 					 ?>
+					 <div class='clear'>&nbsp;</div>
 				<!--Begin @response link pages hook-->
 					<?php response_link_pages(); ?>
 				<!--End @response link pages hook-->

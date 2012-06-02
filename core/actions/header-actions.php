@@ -118,7 +118,7 @@ function response_meta_tags() { ?>
 function response_title_tag() {
 	global $options, $themeslug, $query, $post; 
 	$blogtitle = ($options->get($themeslug.'_home_title'));
-	if (!is_404()) {
+	if (!is_404() && !is_search()) {
 		$title = get_post_meta($post->ID, 'seo_title' , true);
 	}
 	else {

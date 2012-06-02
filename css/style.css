@@ -159,6 +159,8 @@ color:#fff;
 
 .entry p {clear: none;line-height: 1.5;}
 
+.clear {clear: both;}
+
 .entry p a{border-bottom: 1px solid #575757;}
 
 
