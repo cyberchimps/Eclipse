@@ -8,6 +8,7 @@ Eclipse Changelog
 -Fixed floats not clearing properly.
 -Fixed debugging issue related to empty search results. 
 -Renamed "Chimps_Metabox" "Response_Metabox" to avoid confusion.
+-Removed unused color stylesheets and corresponding code. 
 
 1.0.1 (05-23-12)
 -Removed Front Page template and options.

@@ -187,12 +187,7 @@ function response_link_rel() {
 	else {
 		$font = $options->get($themeslug.'_font'); 
 	} 
-	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
-	}
-	else {
-		$color = $options->get($themeslug.'_color_scheme');
-	}?>
+	?>
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
@@ -204,7 +199,6 @@ function response_link_rel() {
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 
 
 <?php if (is_child_theme()) :  //add support for child themes?>
