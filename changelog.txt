@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+1.0.3 (06-03-12)
+-Removed width from search form causing responsive issues.
+
 1.0.2 (06-02-12)
 -Added container around page content for responsive margins.
 -Replaced Lightbox with Slimbox.

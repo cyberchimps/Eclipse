@@ -54,6 +54,7 @@ function response_slider_lite_content() {
 
 	}
 ?>
+<div class="container">	
 	<div class="row">
 		<div id="orbitDemo">
 			<a href="<?php echo $link1; ?>">
@@ -67,6 +68,7 @@ function response_slider_lite_content() {
 	    	</a>
 		</div>
 	</div>
+</div>
 
 <script type="text/javascript">
 	jQuery(document).ready(function ($) {
