@@ -5,8 +5,11 @@ Eclipse Changelog
 Version 1.0.4 (06-06-12)
 -Updated default images. 
 -Added Czech language files. 
+-Changed several theme function prefixes to 'eclipse' for consistency. 
+-Moved a core pagination function to core-functions.php.
+-CSS tweak for fallback menu. 
 
-Version 1.0.3 (06-03-12)
+Version 1.0.3 (06-02-12)
 -Removed width from search form causing responsive issues.
 -Tweaked slider navigation arrows for better viewing on iPads.
 

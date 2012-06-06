@@ -119,7 +119,7 @@ $options
 			->upload($themeslug."_blog_slide_one_image", "Slide One Image", array('default' => array('url' => TEMPLATE_URL . '/images/sliderdefault.jpg')))
 			->text($themeslug."_blog_slide_one_url", "Slide One Link", array('default' => 'http://cyberchimps.com'))
 			->upload($themeslug."_blog_slide_two_image", "Slide Two", array('default' => array('url' => TEMPLATE_URL . '/images/slide2.jpg')))
-			->text($themeslug."_blog_slide_two_url", "Slide Two Link", array('default' => 'http://cyberchimps.com'))
+			->text($themeslug."_blog_slide_two_url", "Slide Two Link", array('default' => 'http://cyberchimps.com/eclipsepro'))
 			->upload($themeslug."_blog_slide_three_image", "Slide Three", array('default' => array('url' => TEMPLATE_URL . '/images/slide3.jpg')))
 			->text($themeslug."_blog_slide_three_url", "Slide Three Link", array('default' => 'http://cyberchimps.com'))
 		->subsection_end()

@@ -55,7 +55,7 @@ function initialize_the_meta_boxes() {
 			->single_image($themeslug.'_page_slide_one_image', 'Slide One Image', '', array('std' =>  TEMPLATE_URL . '/images/sliderdefault.jpg'))
 			->text($themeslug.'_page_slide_one_url', 'Slide One Link', '', array('std' => 'http://cyberchimps.com'))
 			->single_image($themeslug.'_page_slide_two_image', 'Slide Two Image', '', array('std' =>  TEMPLATE_URL . '/images/slide2.jpg'))
-			->text($themeslug.'_page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com'))
+			->text($themeslug.'_page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com/eclipsepro'))
 			->single_image($themeslug.'_page_slide_three_image', 'Slide Three Image', '', array('std' =>  TEMPLATE_URL . '/images/slide3.jpg'))
 			->text($themeslug.'_page_slide_three_url', 'Slide Three Link', '', array('std' => 'http://cyberchimps.com'))
 		->tab("Recent Posts Options")

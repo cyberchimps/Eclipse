@@ -261,8 +261,8 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > li > .children {
-      display: none;
-	background: rgba(35,35,35,0.85) none;
+     display: none;
+	background: rgba(35,35,35,0.75) none;
    	margin-top: 5px;
     padding: 8px 10px 5px;
     position: absolute;
@@ -274,7 +274,8 @@ a:hover {color: #aaa;}
     border-radius: 0 3px 3px 3px;
 	-moz-border-radius: 0 3px 3px 3px;
     -webkit-border-radius: 0 3px 3px 3px;
-    -khtml-border-radius: 0 3px 3px 3px;}
+    -khtml-border-radius: 0 3px 3px 3px;
+}
 
 #nav #nav_menu > li > .children .nav_arrow {
     background: url(../images/nav_arrow.png);

@@ -94,7 +94,7 @@ function response_post_content() {
 			<?php endif; ?>
 			
 			<!--Begin @response pagination hook-->
-			<?php ec_custom_pagination(); ?>
+			<?php response_custom_pagination(); ?>
 			<!--End @response pagination loop hook-->
 		
 		</div><!--end row-->

@@ -283,6 +283,8 @@ function response_description_icons_content() {
 * @since 1.0
 */
 function response_logo_menu_content() {
+	global $themename;
+
 ?>
 
 <div id="header">
@@ -301,7 +303,7 @@ function response_logo_menu_content() {
 			<div id="nav">
 			<?php wp_nav_menu( array(
 			'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
-			'fallback_cb' => 'menu_fallback',
+			'fallback_cb' => $themename.'_menu_fallback',
 		    'theme_location' => 'header-menu' // Setting up the location for the main-menu, Main Navigation.
 			    )
 			);

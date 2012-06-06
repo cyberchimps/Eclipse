@@ -16,13 +16,13 @@
 */
 
 
-function url_filtered($fields){
+function eclipse_url_filtered($fields){
 	if(isset($fields['url']))
    		unset($fields['url']);
    	
   	return $fields;
 }
-add_filter('comment_form_default_fields', 'url_filtered');
+add_filter('comment_form_default_fields', 'eclipse_url_filtered');
 
 
 /**
@@ -38,9 +38,9 @@ add_filter('comment_form_default_fields', 'url_filtered');
 /**
 * Basic theme setup.
 */ 
-function ec_theme_setup() {
+function eclipse_theme_setup() {
 	global $content_width;
-	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
+	if ( ! isset( $content_width ) ) $content_width = 720; //Set content width
 	
 	add_theme_support(
 		'post-formats',
@@ -52,7 +52,7 @@ function ec_theme_setup() {
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
 }
-add_action( 'after_setup_theme', 'ec_theme_setup' );
+add_action( 'after_setup_theme', 'eclipse_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
@@ -64,17 +64,17 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 /**
 * Add link to theme options in Admin bar.
 */ 
-function admin_link() {
+function eclipse_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'eclipse', 'title' => 'Eclipse Pro Options', 'href' => admin_url('themes.php?page=eclipse')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'Eclipse', 'title' => 'Eclipse Options', 'href' => admin_url('themes.php?page=eclipse')  ) ); 
 }
-add_action( 'admin_bar_menu', 'admin_link', 113 );
+add_action( 'admin_bar_menu', 'eclipse_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function custom_gallery_post_format( $content ) {
+function eclipse_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
@@ -126,12 +126,12 @@ function custom_gallery_post_format( $content ) {
 		$content = ob_get_clean();	
 		return $content; 
 }
-add_filter('response_post_formats_gallery_content', 'custom_gallery_post_format' ); 
+add_filter('response_post_formats_gallery_content', 'eclipse_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function new_excerpt_more($more) {
+function eclipse_new_excerpt_more($more) {
 
 	global $themename, $themeslug, $options, $custom_excerpt, $post, $root;
     
@@ -148,12 +148,12 @@ function new_excerpt_more($more) {
 
 	return '&hellip;<div class="more-link"><br /><br /> <span class="continue-arrow"><img src="'.$root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'eclipse_new_excerpt_more');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function new_excerpt_length($length) {
+function eclipse_new_excerpt_length($length) {
 
 	global $themename, $themeslug, $custom_excerpt, $options;
 	
@@ -170,12 +170,12 @@ function new_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'eclipse_new_excerpt_length');
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function render_ie_pie() { ?>
+function eclipse_render_ie_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3, .es-carousel-wrapper
@@ -187,7 +187,7 @@ function render_ie_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'render_ie_pie', 8);
+add_action('wp_head', 'eclipse_render_ie_pie', 8);
 
 
 /**
@@ -230,7 +230,7 @@ add_action( 'init', 'eclipse_register_menus' );
 /**
 * Menu fallback if custom menu not used.
 */ 
-function menu_fallback() {
+function eclipse_menu_fallback() {
 	global $post; ?>
 	
 	<ul id="nav_menu">
@@ -240,7 +240,7 @@ function menu_fallback() {
 /**
 * Register widgets.
 */ 
-function ifp_widgets_init() {
+function eclipse_widgets_init() {
     register_sidebar(array(
     	'name' => 'Full Sidebar',
     	'id'   => 'sidebar-widgets',
@@ -279,44 +279,8 @@ function ifp_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'ifp_widgets_init');
+add_action ('widgets_init', 'eclipse_widgets_init');
 
-function ec_custom_pagination($pages = '', $range = 4)
-{
-     $showitems = ($range * 2)+1;  
- 
-     global $paged;
-     if(empty($paged)) $paged = 1;
- 
-     if($pages == '')
-     {
-         global $wp_query;
-         $pages = $wp_query->max_num_pages;
-         if(!$pages)
-         {
-             $pages = 1;
-         }
-     }   
- 
-     if(1 != $pages)
-     {
-         echo '<div class="pagination"><span>'.__( 'Page', 'core' ).' '.$paged.' of '.$pages.'</span>';
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a href="'.get_pagenum_link(1).'">'.__( '&laquo; First', 'response' ).'</a>';
-         if($paged > 1 && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged - 1).'">'.__( '&lsaquo; Previous', 'response' ).'</a>';
- 
-         for ($i=1; $i <= $pages; $i++)
-         {
-             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-             {
-                 echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
-             }
-         }
- 
-         if ($paged < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged + 1).'"">'.__( 'Next &rsaquo;', 'response').'</a>';
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($pages).'">'.__( 'Last &raquo;', 'response' ).'</a>';
-         echo "</div>\n";
-     }
-}
 /**
 * Initialize response Core Framework and Pro Extension.
 */ 
