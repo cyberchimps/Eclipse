@@ -2,11 +2,15 @@ Eclipse Changelog
 
 ****************************
 
-1.0.3 (06-03-12)
+Version 1.0.4 (06-06-12)
+-Updated default images. 
+-Added Czech language files. 
+
+Version 1.0.3 (06-03-12)
 -Removed width from search form causing responsive issues.
 -Tweaked slider navigation arrows for better viewing on iPads.
 
-1.0.2 (06-02-12)
+Version 1.0.2 (06-02-12)
 -Added container around page content for responsive margins.
 -Replaced Lightbox with Slimbox.
 -Fixed floats not clearing properly.
@@ -14,7 +18,7 @@ Eclipse Changelog
 -Renamed "Chimps_Metabox" "Response_Metabox" to avoid confusion.
 -Removed unused color stylesheets and corresponding code. 
 
-1.0.1 (05-23-12)
+Version 1.0.1 (05-23-12)
 -Removed Front Page template and options.
 -Removed Widgetized Box Element.
 -Added user opt-in PressTrends option.
@@ -24,5 +28,5 @@ Eclipse Changelog
 -Added media attachment pagination links.
 -General style fixes.
 
-1.0 (05-15-12)
+Version 1.0 (05-15-12)
 -Initial release.
