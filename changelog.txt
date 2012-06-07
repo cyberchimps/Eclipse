@@ -2,12 +2,13 @@ Eclipse Changelog
 
 ****************************
 
-Version 1.0.4 (06-06-12)
+Version 1.0.4 (06-07-12)
 -Updated default images. 
 -Added Czech language files. 
 -Changed several theme function prefixes to 'eclipse' for consistency. 
 -Moved a core pagination function to core-functions.php.
 -CSS tweak for fallback menu. 
+-Set @replies on by default for Twitterbar. 
 
 Version 1.0.3 (06-02-12)
 -Removed width from search form causing responsive issues.

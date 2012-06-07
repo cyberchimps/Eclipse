@@ -125,7 +125,7 @@ $options
 		->subsection_end()
 		->subsection("Twtterbar Options")
 			->text($themeslug."_blog_twitter", "Enter your Twitter handle", array('default' => 'cyberchimps'))
-			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies")
+			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies", array('default' => true))
 		->subsection_end()
 		->subsection("Box Options")
 			->checkbox($themeslug."_blog_box_title_toggle", "Title", array('default' => true))
