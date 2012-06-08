@@ -28,5 +28,7 @@ get_header(); ?>
 
 <?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
 
+<div class="push"></div>
+</div> <!-- End of wrapper -->
 
 <?php get_footer(); ?>

@@ -5,6 +5,7 @@ Eclipse Changelog
 Version 1.0.5 (06-11-12)
 -Fixed timezone bug with Twitterbar.
 -Removed height and width from comment textbox. 
+-Footer now fixed at bottom of browser.
 
 Version 1.0.4 (06-07-12)
 -Updated default images. 

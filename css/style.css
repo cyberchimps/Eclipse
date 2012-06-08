@@ -933,20 +933,27 @@ fieldset,
 figure {
 }
 
+/* Override image 100% issue in IE */
+img {width: auto !important; }
 
-/* Tabs */
+/*	For sticky footer	*/
 
-.ifeature-tabbed-header li {
-	float: left;
-	padding: 5px;
+* {
+	margin: 0;
 }
-
-.ifeature-tabbed-tab {
-	clear: both;
+html, body {
+	height: 100%;
+	margin:0px !important;
 }
-
-.ui-tabs-hide {
-	display: none;
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0px auto -220px auto; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push{
+	height: 220px;
+	clear:both;
 }
 
 @media handheld, only screen and (max-width: 1024px) {
@@ -1009,21 +1016,4 @@ div.slider-nav span.left {margin-left: 15px !important;}
 	.content_text {font-size: 12px;}
 	
 	#nav {right: 140px; width: 100px;}
-}
-
-/* style for recent_post and popular_post widget  */
-
-.widget-post {
-	clear: both;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.widget-img {
-	border: 0px !important;
-}
-
-.widget-main-div {
-	margin-top: 40px;
-	margin-bottom : 20px;
 }

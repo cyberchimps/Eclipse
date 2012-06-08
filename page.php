@@ -30,13 +30,18 @@
 	}
 	
 /* End define global variables. */
-
-	foreach(explode(",", $page_section_order) as $key) {
-		$fn = 'response_' . $key;
-		if(function_exists($fn)) {
-			call_user_func_array($fn, array());
-		}
-	}
-		
-get_footer(); 
 ?>
+
+	<?php 
+		foreach(explode(",", $page_section_order) as $key) {
+			$fn = 'response_' . $key;
+			if(function_exists($fn)) {
+			call_user_func_array($fn, array());
+			}
+		}
+	?>
+	
+<div class="push"></div>
+</div> <!-- End of wrapper -->
+
+<?php get_footer(); ?>

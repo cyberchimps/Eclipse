@@ -21,36 +21,39 @@ global $options, $themeslug;
 </div>
 <?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
 
+<div class="footer_wrap">
 	<div id="footer">
      	<div class="container">
      		<div class="row">
     	
-	<!-- Begin @response footer hook content-->
-		<?php response_footer(); ?>
-	<!-- End @response footer hook content-->
-	
-	<?php endif;?>
-	
+	     		<!-- Begin @response footer hook content-->
+	     			<?php response_footer(); ?>
+	     		<!-- End @response footer hook content-->
 
-		</div><!--end footer_wrap-->
-	</div><!--end footer-->
-</div> 
+			</div> <!--end row-->
+		</div> <!--end container-->
+	</div> <!--end footer-->
 
-<?php if ($options->get($themeslug.'_hide_link') == "1"):?>
+<?php endif;?>
+
 	<div id="afterfooter">
 		<div id="afterfooterwrap">
-		<div class="container">
-		<div class="row">	
-		<!-- Begin @response afterfooter hook content-->
-			<?php response_secondary_footer(); ?>
-		<!-- End @response afterfooter hook content-->
-		</div>  <!--end afterfooterwrap-->	
-	</div> <!--end afterfooter-->	
-		</div> 	
-		</div>
-	<?php endif;?>
+			<div class="container">
+				<div class="row">	
+			
+				<!-- Begin @response afterfooter hook content-->
+					<?php response_secondary_footer(); ?>
+				<!-- End @response afterfooter hook content-->
+		
+				</div> <!--end row-->  
+			</div> <!--end container-->
+		</div> 	<!--end afterfooterwrap-->	
+	</div>  <!--end afterfooter-->	
 	
-	<?php wp_footer(); ?>	
+</div> <!--end footer_wrap-->
+
+<?php wp_footer(); ?>	
+
 </body>
 
 </html>

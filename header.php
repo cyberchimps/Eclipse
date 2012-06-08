@@ -37,7 +37,8 @@
 <!-- Begin @response before_header hook  content-->
 	<?php response_before_header(); ?> 
 <!-- End @response before_header hook content -->
-			
+
+<div class="wrapper"> 			
 <header>		
 	<?php
 		foreach(explode(",", $options->get('header_section_order')) as $fn) {
