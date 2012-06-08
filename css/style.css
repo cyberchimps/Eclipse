@@ -951,16 +951,18 @@ html, body {
 	height: 100%;
 	margin: 0px auto -220px auto; /* the bottom margin is the negative value of the footer's height */
 }
-.footer, .push{
+.push{
 	height: 220px;
 	clear:both;
 }
+
+
+/*	Responsive Styles	*/
 
 @media handheld, only screen and (max-width: 1024px) {
 div.slider-nav span.right {right: 5px !important;}
 div.slider-nav span.left {margin-left: 15px !important;}
 }
-
 
 @media handheld, only screen and (max-width: 767px) {
 

@@ -21,7 +21,6 @@ global $options, $themeslug;
 </div>
 <?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
 
-<div class="footer_wrap">
 	<div id="footer">
      	<div class="container">
      		<div class="row">
@@ -50,7 +49,7 @@ global $options, $themeslug;
 		</div> 	<!--end afterfooterwrap-->	
 	</div>  <!--end afterfooter-->	
 	
-</div> <!--end footer_wrap-->
+
 
 <?php wp_footer(); ?>	
 
