@@ -2,10 +2,11 @@ Eclipse Changelog
 
 ****************************
 
-Version 1.0.6 (06-12-12)
+Version 1.0.6 (06-13-12)
 -Fix for random "no tweets to display" message with Twitterbar. 
 -Fix for breadcrumbs related to single posts/media attachments. 
 -Style tweak for Portfolio Element.
+-Fixed Firefox sidebar bug. 
 
 Version 1.0.5 (06-10-12)
 -Fixed timezone bug with Twitterbar.
