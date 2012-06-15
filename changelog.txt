@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.7 (06-15-12)
+-Replaced wp_theme_data() (deprecated) with wp_get_theme() in opt-in PressTrends function, backwards compatible with 3.3 and below.
+
 Version 1.0.6 (06-13-12)
 -Fix for random "no tweets to display" message with Twitterbar. 
 -Fix for breadcrumbs related to single posts/media attachments. 
