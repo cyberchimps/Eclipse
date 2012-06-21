@@ -25,7 +25,6 @@ a{outline:none}
 
 .required {display: none;}
 
-#sidebar.three.columns {width: 22%; margin-left: 4.2%}
 @-moz-document url-prefix() {#sidebar.three.columns {width: 22%; margin-left: 4.1%}}
 
 #image_pagination {border-top: 1px solid #3D3D3D; border-bottom: 1px solid #3D3D3D;margin-bottom: 15px; display: block;}
