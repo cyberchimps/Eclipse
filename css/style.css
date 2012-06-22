@@ -728,6 +728,7 @@ img.size-full {
 }
 
 .wp-caption p.wp-caption-text {
+  	color: #666;
     font-size:11px;
     line-height:17px;
     margin:0;
