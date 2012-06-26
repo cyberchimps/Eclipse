@@ -40,14 +40,14 @@ add_action( 'response_404_content', 'response_404_content_handler' );
 * @since 1.0
 */
 function response_font() {
-	global $themeslug, $options; //Call global variables
+	global $ec_themeslug, $options; //Call global variables
 	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
 	
-	if ($options->get($themeslug.'_font') == "" ) {
+	if ($options->get($ec_themeslug.'_font') == "" ) {
 		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	else {
-		$font = $options->get($themeslug.'_font'); 
+		$font = $options->get($ec_themeslug.'_font'); 
 	} ?>
 	
 	<body style="font-family:'<?php echo ereg_replace("[^A-Za-z0-9]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
@@ -76,7 +76,7 @@ function response_html_attributes() { ?>
 */
 function response_meta_tags() { ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <?php
-	global $themeslug, $options, $post; //Call global variables
+	global $ec_themeslug, $options, $post; //Call global variables
 	if(!$post) return; // in case of 404 page or something
 	$title = get_post_meta($post->ID, 'seo_title' , true);
 	$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
@@ -89,14 +89,14 @@ function response_meta_tags() { ?>
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
 
-	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
-<meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php
+	if ($options->get($ec_themeslug.'_home_title') != '' AND is_front_page()) { ?>
+<meta name='title' content='<?php echo ($options->get($ec_themeslug.'_home_title')) ;?>'/> <?php
 	}
-	if ($options->get($themeslug.'_home_description') != '' AND is_front_page()) { ?>
-<meta name='description' content='<?php echo ($options->get($themeslug.'_home_description')) ;?>' /> <?php
+	if ($options->get($ec_themeslug.'_home_description') != '' AND is_front_page()) { ?>
+<meta name='description' content='<?php echo ($options->get($ec_themeslug.'_home_description')) ;?>' /> <?php
 	}
-	if ($options->get($themeslug.'_home_keywords') != '' AND is_front_page()) { ?>
-<meta name='keywords' content=' <?php echo ($options->get($themeslug.'_home_keywords')) ; ?>' /> <?php
+	if ($options->get($ec_themeslug.'_home_keywords') != '' AND is_front_page()) { ?>
+<meta name='keywords' content=' <?php echo ($options->get($ec_themeslug.'_home_keywords')) ; ?>' /> <?php
 	}
 	
 	if ($title != '' AND !is_front_page()) {
@@ -116,8 +116,8 @@ function response_meta_tags() { ?>
 * @since 1.0
 */
 function response_title_tag() {
-	global $options, $themeslug, $query, $post; 
-	$blogtitle = ($options->get($themeslug.'_home_title'));
+	global $options, $ec_themeslug, $query, $post; 
+	$blogtitle = ($options->get($ec_themeslug.'_home_title'));
 	if (!is_404() && !is_search()) {
 		$title = get_post_meta($post->ID, 'seo_title' , true);
 	}
@@ -175,17 +175,17 @@ function response_title_tag() {
 * @since 1.0
 */
 function response_link_rel() {
-	global $themeslug, $options; //Call global variables
-	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
+	global $ec_themeslug, $options; //Call global variables
+	$favicon = $options->get($ec_themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
-	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
+	if ($options->get($ec_themeslug.'_font') == "" AND $options->get($ec_themeslug.'_custom_font') == "") {
 		$font = apply_filters( 'synapse_default_font', 'Arial' );
 	}		
-	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
-		$font = $options->get($themeslug.'_custom_font');	
+	elseif ($options->get($ec_themeslug.'_custom_font') != "" && $options->get($ec_themeslug.'_font') == 'custom') {
+		$font = $options->get($ec_themeslug.'_custom_font');	
 	}	
 	else {
-		$font = $options->get($themeslug.'_font'); 
+		$font = $options->get($ec_themeslug.'_font'); 
 	} 
 	?>
 	
@@ -217,10 +217,10 @@ function response_link_rel() {
 * @since 1.0
 */
 function response_header_sitename_content() {
-	global $themeslug, $options; //Call global variables
-	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
+	global $ec_themeslug, $options; //Call global variables
+	$logo = $options->get($ec_themeslug.'_logo'); //Calls the logo URL from the theme options
 
-if ($options->get($themeslug.'_custom_logo') == '1') { ?>
+if ($options->get($ec_themeslug.'_custom_logo') == '1') { ?>
 	<div id="logo">
 		<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
 	</div> <?php
@@ -234,7 +234,7 @@ if ($options->get($themeslug.'_custom_logo') == '1') { ?>
 
 
 function response_header_site_description_content() {
-	global $themeslug, $options; ?>
+	global $ec_themeslug, $options; ?>
 	
 	<div id="description">
 		<h1 class="description"><?php bloginfo('description'); ?>&nbsp;</h1>
@@ -283,7 +283,7 @@ function response_description_icons_content() {
 * @since 1.0
 */
 function response_logo_menu_content() {
-	global $themename;
+	global $ec_themename;
 
 ?>
 
@@ -303,7 +303,7 @@ function response_logo_menu_content() {
 			<div id="nav">
 			<?php wp_nav_menu( array(
 			'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
-			'fallback_cb' => $themename.'_menu_fallback',
+			'fallback_cb' => $ec_themename.'_menu_fallback',
 		    'theme_location' => 'header-menu' // Setting up the location for the main-menu, Main Navigation.
 			    )
 			);
@@ -323,28 +323,28 @@ function response_logo_menu_content() {
 * @since 1.0
 */
 function response_header_social_icons_content() { 
-	global $options, $themeslug; //call globals
+	global $options, $ec_themeslug; //call globals
 	
-	$facebook		= $options->get($themeslug.'_facebook');
-	$hidefacebook   = $options->get($themeslug.'_hide_facebook_icon');
-	$twitter		= $options->get($themeslug.'_twitter');;
-	$hidetwitter    = $options->get($themeslug.'_hide_twitter_icon');;
-	$gplus		    = $options->get($themeslug.'_gplus');
-	$hidegplus      = $options->get($themeslug.'_hide_gplus_icon');
-	$flickr		    = $options->get($themeslug.'_flickr');
-	$hideflickr     = $options->get($themeslug.'_hide_flickr');
-	$pinterest		= $options->get($themeslug.'_pinterest');
-	$hidepinterest	= $options->get($themeslug.'_hide_pinterest');
-	$linkedin		= $options->get($themeslug.'_linkedin');
-	$hidelinkedin   = $options->get($themeslug.'_hide_linkedin');
-	$youtube		= $options->get($themeslug.'_youtube');
-	$hideyoutube    = $options->get($themeslug.'_hide_youtube');
-	$googlemaps		= $options->get($themeslug.'_googlemaps');
-	$hidegooglemaps = $options->get($themeslug.'_hide_googlemaps');
-	$email			= $options->get($themeslug.'_email');
-	$hideemail      = $options->get($themeslug.'_hide_email');
-	$rss			= $options->get($themeslug.'_rsslink');
-	$hiderss   		= $options->get($themeslug.'_hide_rss_icon');
+	$facebook		= $options->get($ec_themeslug.'_facebook');
+	$hidefacebook   = $options->get($ec_themeslug.'_hide_facebook_icon');
+	$twitter		= $options->get($ec_themeslug.'_twitter');;
+	$hidetwitter    = $options->get($ec_themeslug.'_hide_twitter_icon');;
+	$gplus		    = $options->get($ec_themeslug.'_gplus');
+	$hidegplus      = $options->get($ec_themeslug.'_hide_gplus_icon');
+	$flickr		    = $options->get($ec_themeslug.'_flickr');
+	$hideflickr     = $options->get($ec_themeslug.'_hide_flickr');
+	$pinterest		= $options->get($ec_themeslug.'_pinterest');
+	$hidepinterest	= $options->get($ec_themeslug.'_hide_pinterest');
+	$linkedin		= $options->get($ec_themeslug.'_linkedin');
+	$hidelinkedin   = $options->get($ec_themeslug.'_hide_linkedin');
+	$youtube		= $options->get($ec_themeslug.'_youtube');
+	$hideyoutube    = $options->get($ec_themeslug.'_hide_youtube');
+	$googlemaps		= $options->get($ec_themeslug.'_googlemaps');
+	$hidegooglemaps = $options->get($ec_themeslug.'_hide_googlemaps');
+	$email			= $options->get($ec_themeslug.'_email');
+	$hideemail      = $options->get($ec_themeslug.'_hide_email');
+	$rss			= $options->get($ec_themeslug.'_rsslink');
+	$hiderss   		= $options->get($ec_themeslug.'_hide_rss_icon');
 	$folder = 'default';
 	
 	 ?>

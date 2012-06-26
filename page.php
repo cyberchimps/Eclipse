@@ -22,9 +22,9 @@
 /* End header. */	
 
 /* Define global variables. */
-	global $options, $post, $themeslug, $sidebar;
+	global $options, $post, $ec_themeslug, $sidebar;
 	
-	$page_section_order = get_post_meta($post->ID, $themeslug.'_page_section_order' , true);
+	$page_section_order = get_post_meta($post->ID, $ec_themeslug.'_page_section_order' , true);
 	if(!$page_section_order) {
 		$page_section_order = 'page_section';
 	}

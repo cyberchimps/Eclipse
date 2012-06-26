@@ -16,25 +16,25 @@
 */
 
 function eclipse_content_layout() {
-	global $options, $themeslug, $post;
+	global $options, $ec_themeslug, $post;
 	
 	if (is_single()) {
-	$sidebar = $options->get($themeslug.'_single_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_single_sidebar');
 	}
 	elseif (is_archive()) {
-	$sidebar = $options->get($themeslug.'_archive_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_archive_sidebar');
 	}
 	elseif (is_404()) {
-	$sidebar = $options->get($themeslug.'_404_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_404_sidebar');
 	}
 	elseif (is_search()) {
-	$sidebar = $options->get($themeslug.'_search_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_search_sidebar');
 	}
 	elseif (is_page()) {
 	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
 	}
 	else {
-	$sidebar = $options->get($themeslug.'_blog_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_blog_sidebar');
 	}
 	
 	if ($sidebar == 'two-right' OR $sidebar == '3' ) {
@@ -64,10 +64,10 @@ add_action( 'wp_head', 'eclipse_content_Layout' );
 
 function eclipse_add_text_color() {
 
-	global $themename, $themeslug, $options;
+	global $ec_themename, $ec_themeslug, $options;
 
-	if ($options->get($themeslug.'_text_color') != "") {
-		$textcolor = $options->get($themeslug.'_text_color'); 
+	if ($options->get($ec_themeslug.'_text_color') != "") {
+		$textcolor = $options->get($ec_themeslug.'_text_color'); 
 		echo '<style type="text/css">';
 		echo "body {color: $textcolor;}";
 		echo '</style>';
@@ -79,10 +79,10 @@ add_action( 'wp_head', 'eclipse_add_text_color');
 
 function eclipse_add_link_color() {
 
-	global $themename, $themeslug, $options;
+	global $ec_themename, $ec_themeslug, $options;
 
-	if ($options->get($themeslug.'_link_color') != '') {
-		$link = $options->get($themeslug.'_link_color'); 
+	if ($options->get($ec_themeslug.'_link_color') != '') {
+		$link = $options->get($ec_themeslug.'_link_color'); 
 		echo '<style type="text/css">';
 		echo "a {color: $link;}";
 		echo ".meta a {color: $link;}";
@@ -95,10 +95,10 @@ add_action( 'wp_head', 'eclipse_add_link_color');
 
 function eclipse_add_link_hover_color() {
 
-	global $themename, $themeslug, $options;
+	global $ec_themename, $ec_themeslug, $options;
 
-	if ($options->get($themeslug.'_link_hover_color') != '') {
-		$link = $options->get($themeslug.'_link_hover_color'); 
+	if ($options->get($ec_themeslug.'_link_hover_color') != '') {
+		$link = $options->get($ec_themeslug.'_link_hover_color'); 
 		echo '<style type="text/css">';
 		echo "a:hover {color: $link;}";
 		echo ".meta a:hover {color: $link;}";
@@ -111,14 +111,14 @@ add_action( 'wp_head', 'eclipse_add_link_hover_color');
  
 function eclipse_add_menu_font() {
 		
-	global $themename, $themeslug, $options;	
+	global $ec_themename, $ec_themeslug, $options;	
 		
-	if ($options->get($themeslug.'_menu_font') == "") {
+	if ($options->get($ec_themeslug.'_menu_font') == "") {
 		$font = 'Helvetica';
 	}		
 			
 	else {
-		$font = $options->get($themeslug.'_menu_font'); 
+		$font = $options->get($ec_themeslug.'_menu_font'); 
 	}
 	
 		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );
@@ -134,14 +134,14 @@ add_action( 'wp_head', 'eclipse_add_menu_font');
  
 function eclipse_add_secondary_font() {
 		
-	global $themename, $themeslug, $options;	
+	global $ec_themename, $ec_themeslug, $options;	
 		
-	if ($options->get($themeslug.'_secondary_font') == "") {
+	if ($options->get($ec_themeslug.'_secondary_font') == "") {
 		$font = 'Open Sans';
 	}		
 			
 	else {
-		$font = $options->get($themeslug.'_secondary_font'); 
+		$font = $options->get($ec_themeslug.'_secondary_font'); 
 	}
 	
 		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );

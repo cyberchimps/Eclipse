@@ -36,7 +36,7 @@ add_action('after_setup_theme', 'response_text_domain');
 * Load jQuery and register additional scripts.
 */ 
 function response_scripts() {
-	global $options, $themeslug;
+	global $options, $ec_themeslug;
 	if ( !is_admin() ) {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-ui-tabs');
@@ -66,12 +66,12 @@ function response_scripts() {
 	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
 
-	if ($options->get($themeslug.'_lazy_load') == '1' ) {
+	if ($options->get($ec_themeslug.'_lazy_load') == '1' ) {
 		wp_register_script( 'lazyload' ,$path.'/js/jquery.lazyload.js');
 		wp_enqueue_script ('lazyload');
 	}
 	
-	if ($options->get($themeslug.'_responsive_video') == '1' ) {
+	if ($options->get($ec_themeslug.'_responsive_video') == '1' ) {
 	
 		wp_register_script( 'video' ,$path.'/js/video.js');
 		wp_enqueue_script ('video');	
@@ -149,14 +149,14 @@ add_filter('next_post_link','response_shorten_linktext',10,2);
 * @since 1.0
 */
 function response_comment($comment, $args, $depth) {
-	global $root;
+	global $ec_root;
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
          <?php echo get_avatar( $comment, 66 ); ?>
       </div>
-      <img class="triangle" style="margin-bottom: -30px; margin-left: 7px;" src="<?php echo "$root/images/comment-triangle.png";?>">
+      <img class="triangle" style="margin-bottom: -30px; margin-left: 7px;" src="<?php echo "$ec_root/images/comment-triangle.png";?>">
      <div style="background-color: #1a1a1a; margin-left: 100px; padding: 15px 15px 10px 10px; margin-top: -18px; border-radius: 4px; ;">
      <div class="comment-meta commentmetadata">     <span class="comment_author" style="float:left"><?php printf(__('<cite class="fn">%s</cite> <span class="says"></span>'), get_comment_author_link()) ?></span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s', 'core' ), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)', 'core' ),'  ','') ?> | <span class="reply"> <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></span>
      </div>
@@ -180,9 +180,9 @@ function response_comment($comment, $args, $depth) {
 * @since 1.0
 */
 function response_breadcrumbs() {
-  global $root;
+  global $ec_root;
   
-  $delimiter = "<img src='$root/images/breadcrumb-arrow.png'>";
+  $delimiter = "<img src='$ec_root/images/breadcrumb-arrow.png'>";
   $home = 'Home'; // text for the 'Home' link
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb

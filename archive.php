@@ -15,7 +15,7 @@
 * @since 1.0
 */
 
-	global $options, $themeslug, $post, $content_grid; // call globals
+	global $options, $ec_themeslug, $post, $content_grid; // call globals
 	
 /* Header call. */
 
@@ -77,7 +77,7 @@
 	
 		</div><!--end content-->
 	</div><!--end row-->
-		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
+		<?php if ($options->get($ec_themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
 </div><!--end container-->
 
 <div class="push"></div>

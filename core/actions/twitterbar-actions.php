@@ -24,11 +24,11 @@ add_action( 'response_twitterbar_section', 'response_twitterbar_section_content'
 * Retrieves the Twitterbar options
 */
 function response_twitterbar_section_content() {
-	global $options, $themeslug, $post; //call globals
+	global $options, $ec_themeslug, $post; //call globals
 
 	if ( is_page() ) {
-		$handle = get_post_meta($post->ID, $themeslug.'_twitter_handle' , true); 
-		$replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
+		$handle = get_post_meta($post->ID, $ec_themeslug.'_twitter_handle' , true); 
+		$replies = get_post_meta($post->ID, $ec_themeslug.'_twitter_reply' , true); 
 		
 		if ($replies == "off") {
 			$show_replies = '0'; 
@@ -38,8 +38,8 @@ function response_twitterbar_section_content() {
 		}	
 	}
 	else {
-		$handle = $options->get($themeslug.'_blog_twitter');
-		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
+		$handle = $options->get($ec_themeslug.'_blog_twitter');
+		$show_replies = $options->get($ec_themeslug.'_blog_twitter_reply');
 	}
 
 	if ( $handle ) {

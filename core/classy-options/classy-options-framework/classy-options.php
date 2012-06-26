@@ -1,5 +1,5 @@
 <?php
-global $options, $themeslug, $themenamefull;
+global $options, $ec_themeslug, $ec_themenamefull;
 
 class ClassyOptions {
 	function __construct($id, $name = false) {
@@ -13,9 +13,9 @@ class ClassyOptions {
 	}
 
 	function admin_menu() {
-		global $themenamefull;
+		global $ec_themenamefull;
 		
-		$page = add_theme_page( $themenamefull.' Options', $themenamefull.' Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
+		$page = add_theme_page( $ec_themenamefull.' Options', $ec_themenamefull.' Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
 
 		add_action( "admin_print_styles-$page", array($this, 'load_styles') );
 		add_action( "admin_print_scripts-$page",  array($this, 'load_scripts') );
@@ -81,7 +81,7 @@ class ClassyOptions {
 	}
 
 	function render() {
-		global $themenamefull;
+		global $ec_themenamefull;
 		settings_errors(); ?>
 <div class="wrap">
 
@@ -91,7 +91,7 @@ class ClassyOptions {
 
 			<div id="header">
 				<div class="logo">
-				<h2><?php echo $themenamefull; ?> Options</h2>
+				<h2><?php echo $ec_themenamefull; ?> Options</h2>
 				</div>
 				<div class="upgradepro"><a href="http://cyberchimps.com/eclipsepro/" target="_blank">Upgrade to Eclipse Pro</a>
 				</div>
@@ -548,7 +548,7 @@ class ClassyOptions {
 			break;
 
 			case "section_order":
-				$root = get_template_directory_uri();  
+				$ec_root = get_template_directory_uri();  
 				$values = explode(",", $val);
 				$output .=  "<div class='section_order' id=" . esc_attr($value['id']) . ">";
 				$output .=  "<div class='left_list'>";
@@ -557,13 +557,13 @@ class ClassyOptions {
 				foreach($value['options'] as $k => $v) {
 					if(in_array($k, $values)) continue;
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$ec_root/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$v}</span>";
 					$output .=  "</div>";
 				}
 				$output .=  "</div>";
 				$output .=  "</div>";
-				$output .=  "<div class='arrow'><img src='$root/images/arrowdrag.png' /></div>";
+				$output .=  "<div class='arrow'><img src='$ec_root/images/arrowdrag.png' /></div>";
 				$output .=  "<div class='right_list'>";
 				$output .=  "<div class='active'>Active Elements</div>";
 				$output .=  "<div class='drag'>Drag & Drop Elements</div>";
@@ -572,7 +572,7 @@ class ClassyOptions {
 					if(!$k) continue;
 					$val = $value['options'][$k];
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$ec_root/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$val}</span>";
 					$output .=  "</div>";
 				}

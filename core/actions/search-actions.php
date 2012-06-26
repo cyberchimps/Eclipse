@@ -26,7 +26,7 @@ add_action( 'response_search', 'response_search_content' );
 * @since 1.0
 */
 function response_search_content() { 
-	global $options, $themeslug;
+	global $options, $ec_themeslug;
 	$results = apply_filters( 'response_search_results_message', 'Search Results For: %s' ); 
 	$noresults = apply_filters( 'response_no_search_results_message', 'No posts found.' ); ?>
 	
@@ -49,7 +49,7 @@ function response_search_content() {
 				<div class="entry">
 
 					<?php 
-						if ($options->get($themeslug.'_search_show_excerpts') == '1') {
+						if ($options->get($ec_themeslug.'_search_show_excerpts') == '1') {
 							the_excerpt();
 						}
 						else {

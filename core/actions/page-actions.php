@@ -27,7 +27,7 @@ add_action('response_page_section', 'response_page_section_content' );
 * @since 1.0
 */
 function response_page_section_content() { 
-	global $options, $themeslug, $post, $sidebar, $content_grid;
+	global $options, $ec_themeslug, $post, $sidebar, $content_grid;
 	response_sidebar_init();
 	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
 

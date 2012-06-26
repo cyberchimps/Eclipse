@@ -15,14 +15,14 @@
 * @since 1.0
 */
 
-	global $options, $themeslug, $post; // call globals
-	$reorder = $options->get($themeslug.'_blog_section_order');
+	global $options, $ec_themeslug, $post; // call globals
+	$reorder = $options->get($ec_themeslug.'_blog_section_order');
 ?>
 
 <?php get_header(); ?>
 
 		<?php
-			foreach(explode(",", $options->get($themeslug.'_blog_section_order')) as $fn) {
+			foreach(explode(",", $options->get($ec_themeslug.'_blog_section_order')) as $fn) {
 				if(function_exists($fn)) {
 					call_user_func_array($fn, array());
 				}

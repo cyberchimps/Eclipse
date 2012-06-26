@@ -17,7 +17,7 @@
 
 /* Call globals. */	
 
-	global $themename, $themeslug, $options;
+	global $ec_themename, $ec_themeslug, $options;
 	
 /* End globals. */
 	

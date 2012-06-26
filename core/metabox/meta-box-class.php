@@ -334,17 +334,17 @@ class RW_Meta_Box {
 	
 	
 	function show_field_pagehelp($field, $meta) {
-		global $themenamefull, $pagedocs; 
+		global $ec_themenamefull, $ec_pagedocs; 
 		
 		$this->show_field_begin($field, $meta);
-		echo "Visit our $themenamefull Page Options help page here: <a href='$pagedocs' target='_blank'>Page Options Documentation</a></td>";
+		echo "Visit our $ec_themenamefull Page Options help page here: <a href='$ec_pagedocs' target='_blank'>Page Options Documentation</a></td>";
 	}
 		
 	function show_field_sliderhelp($field, $meta) {
-		global $themenamefull, $sliderdocs;
+		global $ec_themenamefull, $ec_sliderdocs;
 		
 		$this->show_field_begin($field, $meta);
-		echo "Visit our $themenamefull Slider help page here: <a href='$sliderdocs' target='_blank'>Slider Documentation</a></td>";
+		echo "Visit our $ec_themenamefull Slider help page here: <a href='$ec_sliderdocs' target='_blank'>Slider Documentation</a></td>";
 	}
 	
 	function show_field_reorder($field, $meta) {
@@ -463,7 +463,7 @@ class RW_Meta_Box {
 	}
 
 	function show_field_section_order($field, $meta) {
-		$root = get_template_directory_uri();  
+		$ec_root = get_template_directory_uri();  
 		$this->show_field_begin($field, $meta);
 		$meta = explode(",", $meta);
 		echo "<div class='section_order'>";
@@ -473,13 +473,13 @@ class RW_Meta_Box {
 			foreach($field['options'] as $key => $value) {
 				if(in_array($key, $meta)) continue;
 				echo "<div class='list_item'>";
-					echo "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					echo "<img src='$ec_root/images/minus.png' class='action' title='Remove'/>";
 					echo "<span data-key='{$key}'>{$value}</span>";
 				echo "</div>";
 			}
 		echo "</div>";
 		echo "</div>";
-		echo "<div id='arrow'><img src='$root/images/arrowdrag.png' /></div>";
+		echo "<div id='arrow'><img src='$ec_root/images/arrowdrag.png' /></div>";
 		echo "<div class='right_list'>";
 		echo "<div id='active'>Active Elements</div>";
 		echo "<div id='drag'>Drag & Drop Elements</div>";
@@ -488,7 +488,7 @@ class RW_Meta_Box {
 				if(!$key) continue;
 				$value = $field['options'][$key];
 				echo "<div class='list_item'>";
-					echo "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					echo "<img src='$ec_root/images/minus.png' class='action' title='Remove'/>";
 					echo "<span data-key='{$key}'>{$value}</span>";
 				echo "</div>";
 			}

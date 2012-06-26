@@ -18,7 +18,7 @@ add_action('init', 'initialize_the_meta_boxes');
 
 function initialize_the_meta_boxes() {
 
-	global  $themename, $themeslug, $themenamefull, $options; // call globals.
+	global  $ec_themename, $ec_themeslug, $ec_themenamefull, $options; // call globals.
 	
 	// Call taxonomies for select options
 
@@ -34,12 +34,12 @@ function initialize_the_meta_boxes() {
 	
 	$meta_boxes = array();
 		
-	$mb = new Response_Metabox('pages', $themenamefull.' Page Options', array('pages' => array('page')));
+	$mb = new Response_Metabox('pages', $ec_themenamefull.' Page Options', array('pages' => array('page')));
 	$mb
 		->tab("Page Options")
-			->image_select($themeslug.'_page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/images/options/right.png' , TEMPLATE_URL . '/images/options/left.png', TEMPLATE_URL . '/images/options/rightleft.png', TEMPLATE_URL . '/images/options/tworight.png', TEMPLATE_URL . '/images/options/none.png')))
-			->checkbox($themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
-			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
+			->image_select($ec_themeslug.'_page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/images/options/right.png' , TEMPLATE_URL . '/images/options/left.png', TEMPLATE_URL . '/images/options/rightleft.png', TEMPLATE_URL . '/images/options/tworight.png', TEMPLATE_URL . '/images/options/none.png')))
+			->checkbox($ec_themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
+			->section_order($ec_themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
 					'page_section' => 'Page',
 					'breadcrumbs' => 'Breadcrumbs',
 					'page_slider' => 'Feature Slider',
@@ -51,36 +51,36 @@ function initialize_the_meta_boxes() {
 					'std' => 'page_section,breadcrumbs'
 				))
 			->pagehelp('', 'Need Help?', '')
-		->tab($themenamefull." Slider Options")
-			->single_image($themeslug.'_page_slide_one_image', 'Slide One Image', '', array('std' =>  TEMPLATE_URL . '/images/sliderdefault.jpg'))
-			->text($themeslug.'_page_slide_one_url', 'Slide One Link', '', array('std' => 'http://cyberchimps.com'))
-			->single_image($themeslug.'_page_slide_two_image', 'Slide Two Image', '', array('std' =>  TEMPLATE_URL . '/images/slide2.jpg'))
-			->text($themeslug.'_page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com/eclipsepro'))
-			->single_image($themeslug.'_page_slide_three_image', 'Slide Three Image', '', array('std' =>  TEMPLATE_URL . '/images/slide3.jpg'))
-			->text($themeslug.'_page_slide_three_url', 'Slide Three Link', '', array('std' => 'http://cyberchimps.com'))
+		->tab($ec_themenamefull." Slider Options")
+			->single_image($ec_themeslug.'_page_slide_one_image', 'Slide One Image', '', array('std' =>  TEMPLATE_URL . '/images/sliderdefault.jpg'))
+			->text($ec_themeslug.'_page_slide_one_url', 'Slide One Link', '', array('std' => 'http://cyberchimps.com'))
+			->single_image($ec_themeslug.'_page_slide_two_image', 'Slide Two Image', '', array('std' =>  TEMPLATE_URL . '/images/slide2.jpg'))
+			->text($ec_themeslug.'_page_slide_two_url', 'Slide Two Link', '', array('std' => 'http://cyberchimps.com/eclipsepro'))
+			->single_image($ec_themeslug.'_page_slide_three_image', 'Slide Three Image', '', array('std' =>  TEMPLATE_URL . '/images/slide3.jpg'))
+			->text($ec_themeslug.'_page_slide_three_url', 'Slide Three Link', '', array('std' => 'http://cyberchimps.com'))
 		->tab("Recent Posts Options")
-			->checkbox($themeslug.'_recent_posts_title_toggle', 'Title', '')
-			->text($themeslug.'_recent_posts_title', '', '')
-			->select($themeslug.'_recent_posts_category', 'Post Category', '', array('options' => $blogoptions, 'all') )
-			->checkbox($themeslug.'_recent_posts_images_toggle', 'Images', '')
+			->checkbox($ec_themeslug.'_recent_posts_title_toggle', 'Title', '')
+			->text($ec_themeslug.'_recent_posts_title', '', '')
+			->select($ec_themeslug.'_recent_posts_category', 'Post Category', '', array('options' => $blogoptions, 'all') )
+			->checkbox($ec_themeslug.'_recent_posts_images_toggle', 'Images', '')
 		->tab("Portfolio Options")
-			->single_image($themeslug.'_page_portfolio_image_one', 'First Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
-			->text($themeslug.'_page_portfolio_image_one_caption', 'First Portfolio Image Caption', '', array('std' => 'Image 1'))
-			->single_image($themeslug.'_page_portfolio_image_two', 'Second Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
-			->text($themeslug.'_page_portfolio_image_two_caption', 'Second Portfolio Image Caption', '', array('std' => 'Image 2'))
-			->single_image($themeslug.'_page_portfolio_image_three', 'Third Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
-			->text($themeslug.'_page_portfolio_image_three_caption', 'Third Portfolio Image Caption', '', array('std' => 'Image 3'))
-			->single_image($themeslug.'_page_portfolio_image_four', 'Fourth Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
-			->text($themeslug.'_page_portfolio_image_four_caption', 'Fourth Portfolio Image Caption', '', array('std' => 'Image 4'))
-			->checkbox($themeslug.'_portfolio_title_toggle', 'Portfolio Title', '')
-			->text($themeslug.'_portfolio_title', 'Title', '', array('std' => 'Portfolio'))
+			->single_image($ec_themeslug.'_page_portfolio_image_one', 'First Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
+			->text($ec_themeslug.'_page_portfolio_image_one_caption', 'First Portfolio Image Caption', '', array('std' => 'Image 1'))
+			->single_image($ec_themeslug.'_page_portfolio_image_two', 'Second Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
+			->text($ec_themeslug.'_page_portfolio_image_two_caption', 'Second Portfolio Image Caption', '', array('std' => 'Image 2'))
+			->single_image($ec_themeslug.'_page_portfolio_image_three', 'Third Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
+			->text($ec_themeslug.'_page_portfolio_image_three_caption', 'Third Portfolio Image Caption', '', array('std' => 'Image 3'))
+			->single_image($ec_themeslug.'_page_portfolio_image_four', 'Fourth Portfolio Image', '', array('std' =>  TEMPLATE_URL . '/images/portfolio.jpg'))
+			->text($ec_themeslug.'_page_portfolio_image_four_caption', 'Fourth Portfolio Image Caption', '', array('std' => 'Image 4'))
+			->checkbox($ec_themeslug.'_portfolio_title_toggle', 'Portfolio Title', '')
+			->text($ec_themeslug.'_portfolio_title', 'Title', '', array('std' => 'Portfolio'))
 		->tab("Twitter Options")
-			->text($themeslug.'_twitter_handle', 'Twitter Handle', '')
+			->text($ec_themeslug.'_twitter_handle', 'Twitter Handle', '')
 			->checkbox('twitter_reply', 'Show @ Replies', '')
 		->tab("SEO Options")
-			->text($themeslug.'_seo_title', 'SEO Title', '')
-			->textarea($themeslug.'_seo_description', 'SEO Description', '')
-			->textarea($themeslug.'_seo_keywords', 'SEO Keywords', '')
+			->text($ec_themeslug.'_seo_title', 'SEO Title', '')
+			->textarea($ec_themeslug.'_seo_description', 'SEO Description', '')
+			->textarea($ec_themeslug.'_seo_keywords', 'SEO Keywords', '')
 			->pagehelp('', 'Need help?', '')
 		->end();
 

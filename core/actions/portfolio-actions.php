@@ -21,42 +21,42 @@
 add_action( 'response_portfolio_element', 'response_portfolio_element_content' );
 
 function response_portfolio_element_content() {	
-	global $options, $post, $themeslug, $root, $wp_query;
+	global $options, $post, $ec_themeslug, $ec_root, $wp_query;
 	$tmp_query = $wp_query; 
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 	
 	if (is_page()) {
-		$title_enable = get_post_meta($post->ID, $themeslug.'_portfolio_title_toggle' , true);
-		$title = get_post_meta($post->ID, $themeslug.'_portfolio_title' , true);
+		$title_enable = get_post_meta($post->ID, $ec_themeslug.'_portfolio_title_toggle' , true);
+		$title = get_post_meta($post->ID, $ec_themeslug.'_portfolio_title' , true);
 	
-		$img1 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_one' , true);
-		$img2 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_two' , true);
-		$img3 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_three' , true);
-		$img4 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_four' , true);
+		$img1 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_one' , true);
+		$img2 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_two' , true);
+		$img3 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_three' , true);
+		$img4 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_four' , true);
 	
-		$caption1 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_one_caption' , true);
-		$caption2 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_two_caption' , true);
-		$caption3 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_three_caption' , true);
-		$caption4 = get_post_meta($post->ID, $themeslug.'_page_portfolio_image_four_caption' , true);
+		$caption1 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_one_caption' , true);
+		$caption2 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_two_caption' , true);
+		$caption3 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_three_caption' , true);
+		$caption4 = get_post_meta($post->ID, $ec_themeslug.'_page_portfolio_image_four_caption' , true);
 	}
 	else {
-		$title_enable = $options->get($themeslug.'_blog_portfolio_title_toggle');
-		$title = $options->get($themeslug.'_blog_portfolio_title');
+		$title_enable = $options->get($ec_themeslug.'_blog_portfolio_title_toggle');
+		$title = $options->get($ec_themeslug.'_blog_portfolio_title');
 
-		$img1source = $options->get($themeslug.'_blog_portfolio_image_one');
-		$img2source = $options->get($themeslug.'_blog_portfolio_image_two');
-		$img3source = $options->get($themeslug.'_blog_portfolio_image_three');
-		$img4source = $options->get($themeslug.'_blog_portfolio_image_four');
+		$img1source = $options->get($ec_themeslug.'_blog_portfolio_image_one');
+		$img2source = $options->get($ec_themeslug.'_blog_portfolio_image_two');
+		$img3source = $options->get($ec_themeslug.'_blog_portfolio_image_three');
+		$img4source = $options->get($ec_themeslug.'_blog_portfolio_image_four');
 		
 		$img1 = $img1source['url'];
 		$img2 = $img2source['url'];
 		$img3 = $img3source['url'];
 		$img4 = $img4source['url'];
 	
-		$caption1 = $options->get($themeslug.'_blog_portfolio_image_one_caption');
-		$caption2 = $options->get($themeslug.'_blog_portfolio_image_two_caption');
-		$caption3 = $options->get($themeslug.'_blog_portfolio_image_three_caption');
-		$caption4 = $options->get($themeslug.'_blog_portfolio_image_four_caption');
+		$caption1 = $options->get($ec_themeslug.'_blog_portfolio_image_one_caption');
+		$caption2 = $options->get($ec_themeslug.'_blog_portfolio_image_two_caption');
+		$caption3 = $options->get($ec_themeslug.'_blog_portfolio_image_three_caption');
+		$caption4 = $options->get($ec_themeslug.'_blog_portfolio_image_four_caption');
 	}
 
 	$title = ($title != '') ? $title : 'Portfolio';	

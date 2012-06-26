@@ -13,11 +13,11 @@
 
 function enqueue_store_styles() {
  
- 	global $themename, $themeslug, $options;
- 	wp_register_style($themeslug.'storecss', get_template_directory_uri(). '/core/classy-options/themes.css');
+ 	global $ec_themename, $ec_themeslug, $options;
+ 	wp_register_style($ec_themeslug.'storecss', get_template_directory_uri(). '/core/classy-options/themes.css');
 
       
-    wp_enqueue_style($themeslug.'storecss');  
+    wp_enqueue_style($ec_themeslug.'storecss');  
 }
 
 // Add page to the menu
@@ -33,12 +33,12 @@ add_action('admin_menu', 'cyberchimps_store_add_menu');
 
 // Create the page
 function cyberchimps_store_page_init() {
-	$root = get_template_directory_uri(); 
+	$ec_root = get_template_directory_uri(); 
 ?>
 
 <div id="contain">
 	<div id="themesheader">
-		<a href="http://cyberchimps.com" target="_blank"><img src="<?php echo $root ;?>/images/themes/cyberchimps.png" /></a>
+		<a href="http://cyberchimps.com" target="_blank"><img src="<?php echo $ec_root ;?>/images/themes/cyberchimps.png" /></a>
 		<br />
 		<span class="pro">Professional WordPress Themes</span>
 		<br /><br />
@@ -59,7 +59,7 @@ function cyberchimps_store_page_init() {
 	<div id="container">
 	
 	<div class="theme_images">
-		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/ifeaturepro.png" /></a>
+		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $ec_root ;?>/images/themes/ifeaturepro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
@@ -71,7 +71,7 @@ function cyberchimps_store_page_init() {
 	</div>
 		
 	<div class="theme_images">
-		<a href="http://cyberchimps.com/businesspro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/bizpro.png" /></a>
+		<a href="http://cyberchimps.com/businesspro/" target="_blank"><img src="<?php echo $ec_root ;?>/images/themes/bizpro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/businesspro/" target="_blank">Business Pro</a></div>
@@ -84,7 +84,7 @@ function cyberchimps_store_page_init() {
 	</div>
 	
 	<div class="theme_images">
-		<a href="http://cyberchimps.com/responsepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/responsepro.png" /></a>
+		<a href="http://cyberchimps.com/responsepro/" target="_blank"><img src="<?php echo $ec_root ;?>/images/themes/responsepro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/responsepro/" target="_blank">Response Pro</a></div>
@@ -96,7 +96,7 @@ function cyberchimps_store_page_init() {
 	</div><br />
 	
 	<div class="theme_images">
-		<a href="http://cyberchimps.com/neuropro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/neuropro.png" /></a>
+		<a href="http://cyberchimps.com/neuropro/" target="_blank"><img src="<?php echo $ec_root ;?>/images/themes/neuropro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/neuropro/" target="_blank">Neuro Pro</a></div>

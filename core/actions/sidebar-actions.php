@@ -30,25 +30,25 @@ add_action( 'response_after_content_sidebar', 'response_after_content_sidebar_ma
 */
 function response_sidebar_init_content() {
 
-	global $options, $themeslug, $post, $sidebar, $content_grid;
+	global $options, $ec_themeslug, $post, $sidebar, $content_grid;
 	
 	if (is_single()) {
-	$sidebar = $options->get($themeslug.'_single_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_single_sidebar');
 	}
 	elseif (is_archive()) {
-	$sidebar = $options->get($themeslug.'_archive_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_archive_sidebar');
 	}
 	elseif (is_404()) {
-	$sidebar = $options->get($themeslug.'_404_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_404_sidebar');
 	}
 	elseif (is_search()) {
-	$sidebar = $options->get($themeslug.'_search_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_search_sidebar');
 	}
 	elseif (is_page()) {
-	$sidebar = get_post_meta($post->ID, $themeslug.'_page_sidebar' , true);
+	$sidebar = get_post_meta($post->ID, $ec_themeslug.'_page_sidebar' , true);
 	}
 	else {
-	$sidebar = $options->get($themeslug.'_blog_sidebar');
+	$sidebar = $options->get($ec_themeslug.'_blog_sidebar');
 	}
 	
 	if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == "2" OR $sidebar == "3") {
@@ -68,7 +68,7 @@ function response_sidebar_init_content() {
 * @since 1.0
 */
 function response_before_content_sidebar_markup() { 
-	global $options, $themeslug, $post, $sidebar; // call globals ?>
+	global $options, $ec_themeslug, $post, $sidebar; // call globals ?>
 				
 	<?php if ($sidebar == 'right-left' OR $sidebar == "2"): ?>
 	<div id="sidebar-left" class="three columns">
@@ -89,7 +89,7 @@ function response_before_content_sidebar_markup() {
 * @since 1.0
 */
 function response_after_content_sidebar_markup() {
-	global $options, $themeslug, $post, $sidebar; // call globals ?>
+	global $options, $ec_themeslug, $post, $sidebar; // call globals ?>
 	
 	<?php if ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '' ): ?>
 	<div id="sidebar" class="three columns">

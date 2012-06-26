@@ -28,7 +28,7 @@ add_action( 'response_post', 'response_post_content');
 */
 function response_post_content() { 
 
-	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals 
+	global $options, $ec_themeslug, $post, $sidebar, $content_grid; // call globals 
 	
 	if (is_single()) {
 		$class = 'single';
@@ -75,7 +75,7 @@ function response_post_content() {
 			</div>
 			<?php endif; ?>
 			
-			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
+			<?php if (is_single() && $options->get($ec_themeslug.'_post_pagination') == "1") : ?>
 				<!--Begin @response post pagination hook-->
 					<?php response_post_pagination(); ?>
 				<!--End @response post pagination hook-->			

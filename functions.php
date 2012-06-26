@@ -28,12 +28,12 @@ add_filter('comment_form_default_fields', 'eclipse_url_filtered');
 /**
 * Define global theme functions.
 */ 
-	$themename = 'eclipse';
-	$themenamefull = 'Eclipse';
-	$themeslug = 'ec';
-	$root = get_template_directory_uri(); 
-	$pagedocs = 'http://cyberchimps.com/question/using-the-eclipse-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/using-the-eclipse-feature-slider/';
+	$ec_themename = 'eclipse';
+	$ec_themenamefull = 'Eclipse';
+	$ec_themeslug = 'ec';
+	$ec_root = get_template_directory_uri(); 
+	$ec_pagedocs = 'http://cyberchimps.com/question/using-the-eclipse-page-options/';
+	$ec_sliderdocs = 'http://cyberchimps.com/question/using-the-eclipse-feature-slider/';
 
 /**
 * Basic theme setup.
@@ -75,8 +75,8 @@ add_action( 'admin_bar_menu', 'eclipse_admin_link', 113 );
 * Custom markup for gallery posts in main blog index.
 */ 
 function eclipse_custom_gallery_post_format( $content ) {
-	global $options, $themeslug, $post;
-	$root = get_template_directory_uri(); 
+	global $options, $ec_themeslug, $post;
+	$ec_root = get_template_directory_uri(); 
 	
 	 ob_start(); 
 		if ( has_post_thumbnail() && $featured_images == '1'  && !is_single()) {
@@ -133,9 +133,9 @@ add_filter('response_post_formats_gallery_content', 'eclipse_custom_gallery_post
 */ 
 function eclipse_new_excerpt_more($more) {
 
-	global $themename, $themeslug, $options, $custom_excerpt, $post, $root;
+	global $ec_themename, $ec_themeslug, $options, $custom_excerpt, $post, $ec_root;
     
-    	if ($options->get($themeslug.'_excerpt_link_text') == '') {
+    	if ($options->get($ec_themeslug.'_excerpt_link_text') == '') {
     		$linktext = 'Continue Reading';
    		}
    		
@@ -143,10 +143,10 @@ function eclipse_new_excerpt_more($more) {
     		$linktext = 'Continue Reading';
     	}
     	else {
-    		$linktext = $options->get($themeslug.'_excerpt_link_text');
+    		$linktext = $options->get($ec_themeslug.'_excerpt_link_text');
    		}
 
-	return '&hellip;</p><div class="more-link"><span class="continue-arrow"><img src="'.$root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
+	return '&hellip;</p><div class="more-link"><span class="continue-arrow"><img src="'.$ec_root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
 }
 add_filter('excerpt_more', 'eclipse_new_excerpt_more');
 
@@ -155,9 +155,9 @@ add_filter('excerpt_more', 'eclipse_new_excerpt_more');
 */ 
 function eclipse_new_excerpt_length($length) {
 
-	global $themename, $themeslug, $custom_excerpt, $options;
+	global $ec_themename, $ec_themeslug, $custom_excerpt, $options;
 	
-		if ($options->get($themeslug.'_excerpt_length') == '') {
+		if ($options->get($ec_themeslug.'_excerpt_length') == '') {
     		$length = '55';
     	}
     	
@@ -165,7 +165,7 @@ function eclipse_new_excerpt_length($length) {
     		$length = '15';
     	}
     	else {
-    		$length = $options->get($themeslug.'_excerpt_length');
+    		$length = $options->get($ec_themeslug.'_excerpt_length');
     	}
     	
 	return $length;
@@ -194,16 +194,16 @@ add_action('wp_head', 'eclipse_render_ie_pie', 8);
 * Google Analytics.
 */ 
 function eclipse_google_analytics() {
-	global $themename, $themeslug, $options;
+	global $ec_themename, $ec_themeslug, $options;
 	
-	echo stripslashes ($options->get($themeslug.'_ga_code'));
+	echo stripslashes ($options->get($ec_themeslug.'_ga_code'));
 
 }
 add_action('wp_head', 'eclipse_google_analytics');
 
 function eclipse_lazy_load() {
-	global $root;
-    $placeholder = "$root/images/grey.gif";
+	global $ec_root;
+    $placeholder = "$ec_root/images/grey.gif";
     echo <<<EOF
 <script type="text/javascript">
 	jQuery(document).ready(function($){

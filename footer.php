@@ -15,11 +15,11 @@
 * @since 1.0
 */
 
-global $options, $themeslug;
+global $options, $ec_themeslug;
 
 ?>
 </div>
-<?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
+<?php if ($options->get($ec_themeslug.'_disable_footer') != "0"):?>	
 
 	<div id="footer">
      	<div class="container">

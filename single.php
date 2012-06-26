@@ -14,7 +14,7 @@
 * @package Eclipse.
 * @since 3.0
 */
-	global $options, $themeslug, $post; // call globals
+	global $options, $ec_themeslug, $post; // call globals
 
 /* End variable definition. */	
 
@@ -26,7 +26,7 @@ get_header(); ?>
 	<!--End @Core post area-->
 	
 
-<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
+<?php if ($options->get($ec_themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
 
 <div class="push"></div>
 </div> <!-- End of wrapper -->

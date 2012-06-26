@@ -4,20 +4,20 @@ add_action( 'response_recent_posts_element', 'response_recent_posts_element_cont
 
 function response_recent_posts_element_content() {
 
-	global $options, $themeslug, $wp_query, $custom_excerpt, $post;
+	global $options, $ec_themeslug, $wp_query, $custom_excerpt, $post;
 	$custom_excerpt = 'recent';
 	
 	if (is_page()){
-		$title = get_post_meta($post->ID, $themeslug.'_recent_posts_title' , true);;
-		$toggle = get_post_meta($post->ID, $themeslug.'_recent_posts_title_toggle' , true);;
-		$recent_posts_image = get_post_meta($post->ID, $themeslug.'_recent_posts_images_toggle' , true);;
-		$category = get_post_meta($post->ID, $themeslug.'_recent_posts_category' , true);
+		$title = get_post_meta($post->ID, $ec_themeslug.'_recent_posts_title' , true);;
+		$toggle = get_post_meta($post->ID, $ec_themeslug.'_recent_posts_title_toggle' , true);;
+		$recent_posts_image = get_post_meta($post->ID, $ec_themeslug.'_recent_posts_images_toggle' , true);;
+		$category = get_post_meta($post->ID, $ec_themeslug.'_recent_posts_category' , true);
 
 	} else {
-		$title = $options->get($themeslug.'_recent_posts_title');
-		$toggle = $options->get($themeslug.'_recent_posts_title_toggle');
-		$recent_posts_image = $options->get($themeslug.'_recent_posts_images_toggle');
-		$category = $options->get($themeslug.'_recent_posts_category'); 
+		$title = $options->get($ec_themeslug.'_recent_posts_title');
+		$toggle = $options->get($ec_themeslug.'_recent_posts_title_toggle');
+		$recent_posts_image = $options->get($ec_themeslug.'_recent_posts_images_toggle');
+		$category = $options->get($ec_themeslug.'_recent_posts_category'); 
 	}
 	
 	if ($category != 'all') {
