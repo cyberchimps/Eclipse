@@ -14,10 +14,10 @@ function response_recent_posts_element_content() {
 		$category = get_post_meta($post->ID, $ec_themeslug.'_recent_posts_category' , true);
 
 	} else {
-		$title = $options->get($ec_themeslug.'_recent_posts_title');
-		$toggle = $options->get($ec_themeslug.'_recent_posts_title_toggle');
-		$recent_posts_image = $options->get($ec_themeslug.'_recent_posts_images_toggle');
-		$category = $options->get($ec_themeslug.'_recent_posts_category'); 
+		$title = $options->get($ec_themeslug.'_blog_recent_posts_title');
+		$toggle = $options->get($ec_themeslug.'_blog_recent_posts_title_toggle');
+		$recent_posts_image = $options->get($ec_themeslug.'_blog_recent_posts_images_toggle');
+		$category = $options->get($ec_themeslug.'_blog_recent_posts_category'); 
 	}
 	
 	if ($category != 'all') {
