@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.10 (07-03-12)
+-Fixed the issue of featured images not displaying on recent post element on blog page.
+
 Version 1.0.9 (06-28-12)
 -Added ec_namespace to all constants.
 
