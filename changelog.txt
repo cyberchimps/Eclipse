@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.11 (07-06-12)
+-Twitter embed fix.
+-Sticky footer + sticky footer fix.
+
 Version 1.0.10 (07-03-12)
 -Fixed the issue of featured images not displaying on recent post element on blog page.
 
