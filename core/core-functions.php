@@ -54,6 +54,7 @@ function response_scripts() {
 	wp_register_script( 'slimbox' ,$path.'/js/jquery.slimbox.js');
 	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+	wp_register_script( 'oembed' ,$path.'/js/oembed-twitter.js');
 	
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('apps');
@@ -65,6 +66,7 @@ function response_scripts() {
 	wp_enqueue_script ('slimbox');
 	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
+	wp_enqueue_script ('oembed');
 
 	if ($options->get($ec_themeslug.'_lazy_load') == '1' ) {
 		wp_register_script( 'lazyload' ,$path.'/js/jquery.lazyload.js');
