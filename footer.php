@@ -18,6 +18,11 @@
 global $options, $ec_themeslug;
 
 ?>
+
+<!-- For sticky footer -->
+<div class="push"></div>  
+</div>	<!-- End of wrapper -->
+
 </div>
 <?php if ($options->get($ec_themeslug.'_disable_footer') != "0"):?>	
 

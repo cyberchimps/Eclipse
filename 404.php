@@ -58,7 +58,4 @@
 	</div><!--end row-->
 </div><!--end container-->
 
-<div class="push"></div>
-</div> <!-- End of wrapper -->
-
 <?php get_footer(); ?>

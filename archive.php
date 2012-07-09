@@ -80,6 +80,4 @@
 		<?php if ($options->get($ec_themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
 </div><!--end container-->
 
-<div class="push"></div>
-</div> <!-- End of wrapper -->
 <?php get_footer(); ?>
