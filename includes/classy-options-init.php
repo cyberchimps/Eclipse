@@ -61,7 +61,6 @@ $options
 			->color($ec_themeslug."_link_hover_color", "Link Hover Color")
 		->subsection_end()
 			->open_outersection()
-				->checkbox($ec_themeslug."_lazy_load", "Lazy Load Image Effect", array('default' => true))
 				->checkbox($ec_themeslug."_responsive_video", "Responsive Videos")
 			->close_outersection()
 		->section("Header")

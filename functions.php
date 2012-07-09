@@ -201,21 +201,6 @@ function eclipse_google_analytics() {
 }
 add_action('wp_head', 'eclipse_google_analytics');
 
-function eclipse_lazy_load() {
-	global $ec_root;
-    $placeholder = "$ec_root/images/grey.gif";
-    echo <<<EOF
-<script type="text/javascript">
-	jQuery(document).ready(function($){
-  	jQuery("img").not("#orbitDemo img, .es-carousel img, #credit img").lazyload({
-    	effect:"fadeIn",
-    	placeholder: "$placeholder"
-  	});
-});
-</script>
-EOF;
-}
-add_action('wp_head', 'eclipse_lazy_load');
 	
 /**
 * Register custom menus for header, footer.

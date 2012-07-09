@@ -67,11 +67,6 @@ function response_scripts() {
 	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
 	wp_enqueue_script ('oembed');
-
-	if ($options->get($ec_themeslug.'_lazy_load') == '1' ) {
-		wp_register_script( 'lazyload' ,$path.'/js/jquery.lazyload.js');
-		wp_enqueue_script ('lazyload');
-	}
 	
 	if ($options->get($ec_themeslug.'_responsive_video') == '1' ) {
 	
