@@ -91,14 +91,13 @@ function response_secondary_footer_copyright() {
 */
 function response_secondary_footer_credit() { 
 	global $options, $ec_themeslug; //call globals
-	
-	if ($options->get($ec_themeslug.'_hide_link') == "1") {?>
+?>
 		
-		<div id="credit" class="twelve columns">
-			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
-		</div> 
+	<div id="credit" class="twelve columns">
+		<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+	</div> 
 	
-	<?php }
+<?php
 }
 /**
 * End
