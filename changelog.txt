@@ -2,6 +2,11 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.13 (07-11-12)
+-Fixed after footer not displaying.
+-Fixed iPad display issue.
+-Fixed German translation issue.
+
 Version 1.0.12 (07-09-12)
 -Removed lazy load.
 -Footer.php fix.
