@@ -76,22 +76,23 @@ add_action( 'admin_bar_menu', 'eclipse_admin_link', 113 );
 */ 
 function eclipse_custom_gallery_post_format( $content ) {
 	global $options, $ec_themeslug, $post;
-	$ec_root = get_template_directory_uri(); 
+	$ec_root = get_template_directory_uri();
+	$featured_images = $options->get($ec_themeslug.'_show_featured_images'); 
 	
 	 ob_start(); 
-		if ( has_post_thumbnail() && $featured_images == '1'  && !is_single()) {
- 		 	echo '<div class="featured-image">';
- 		 	echo '<a href="' . get_permalink($post->ID) . '" >';
- 		 		the_post_thumbnail();
-  			echo '</a>';
-  			echo '</div>';
-		}
 		?>	
 			<div class="row">
 			<div class="three columns"><?php response_post_byline(); ?></div>
 				<div class="entry nine columns">
 					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-									
+				<?php if ( has_post_thumbnail() && $featured_images == '1'  && !is_single()) {
+					echo '<div class="featured-image">';
+					echo '<a href="' . get_permalink($post->ID) . '" >';
+						the_post_thumbnail();
+						echo '</a>';
+						echo '</div>';
+				}
+				?>					
 				<?php if (!is_single()): ?>
 				<?php $images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 					if ( $images ) :
