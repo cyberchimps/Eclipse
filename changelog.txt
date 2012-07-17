@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.14 (07-17-12)
+-Upgrade bar.
+
 Version 1.0.13 (07-11-12)
 -Fixed after footer not displaying.
 -Fixed iPad display issue.
