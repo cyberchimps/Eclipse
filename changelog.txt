@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.15 (07-24-12)
+-Upgrade bar adjustments.
+-Apple-touch icon.
+
 Version 1.0.14 (07-17-12)
 -Upgrade bar.
 
