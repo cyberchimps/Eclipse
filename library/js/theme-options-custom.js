@@ -12,7 +12,15 @@ jQuery(document).ready(function($) {
     } else {
       toShow.hide();
     }
-  }).change();	
+  }).change();
+	$("#ec_apple_touch_toggle").change(function() {
+    var toShow = $("#section-ec_apple_touch");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+		}).change();	
   $("#section-ec_font").change(function() {
     if($(this).find(":selected").val() == 'custom') {
       $('#section-ec_custom_font').fadeIn();

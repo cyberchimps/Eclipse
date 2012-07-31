@@ -71,6 +71,7 @@ $options
 			->checkbox($ec_themeslug."_custom_logo", "Custom Logo")
 			->upload($ec_themeslug."_logo", "Logo")
 			->upload($ec_themeslug."_favicon", "Custom Favicon")
+			->checkbox($ec_themeslug."_apple_touch_toggle", "Apple Touch Toggle" , array('default' => false))
 			->upload($ec_themeslug."_apple_touch", "Apple Touch Icon", array('default' => array('url' => TEMPLATE_URL . '/images/apple-icon.png')))
 		->subsection_end()
 		->subsection("Menu Options")
