@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.16 (07-31-12)
+-Apple-touch icon off by default.
+
 Version 1.0.15 (07-24-12)
 -Upgrade bar adjustments.
 -Apple-touch icon.
