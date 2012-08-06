@@ -188,8 +188,10 @@ function response_link_rel() {
 		$font = $options->get($ec_themeslug.'_font'); 
 	} 
 	?>
-	
-<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+
+<?php if( $options->get($ec_themeslug.'_favicon_toggle') != false ): ?>	
+	<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+<?php endif; ?>
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />

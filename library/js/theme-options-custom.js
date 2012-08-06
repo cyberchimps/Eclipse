@@ -13,6 +13,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
+	$("#ec_favicon_toggle").change(function() {
+    var toShow = $("#section-ec_favicon");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+		}).change();	
 	$("#ec_apple_touch_toggle").change(function() {
     var toShow = $("#section-ec_apple_touch");
     if($(this).is(':checked')) {
