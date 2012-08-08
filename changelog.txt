@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.17 (08-08-12)
+-Portfolio term change for caption.
+-Favicon (off by default).
+
 Version 1.0.16 (07-31-12)
 -Apple-touch icon off by default.
 
