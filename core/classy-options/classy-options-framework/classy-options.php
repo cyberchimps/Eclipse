@@ -558,7 +558,7 @@ class ClassyOptions {
 			break;
 
 			case "section_order":
-				$ec_root = get_template_directory_uri();  
+				$ec_root = get_template_directory_uri(); 
 				$values = explode(",", $val);
 				$output .=  "<div class='section_order' id=" . esc_attr($value['id']) . ">";
 				$output .=  "<div class='left_list'>";
@@ -580,6 +580,7 @@ class ClassyOptions {
 				$output .=  "<div class='list_items'>";
 				foreach($values as $k) {
 					if(!$k) continue;
+					if(!isset($value['options'][$k])) continue;
 					$val = $value['options'][$k];
 					$output .=  "<div class='list_item'>";
 					$output .=  "<img src='$ec_root/images/minus.png' class='action' title='Remove'/>";
