@@ -177,39 +177,16 @@ function response_title_tag() {
 function response_link_rel() {
 	global $ec_themeslug, $options; //Call global variables
 	$favicon = $options->get($ec_themeslug.'_favicon'); //Calls the favicon URL from the theme options 
-	
-	if ($options->get($ec_themeslug.'_font') == "" AND $options->get($ec_themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'synapse_default_font', 'Arial' );
-	}		
-	elseif ($options->get($ec_themeslug.'_custom_font') != "" && $options->get($ec_themeslug.'_font') == 'custom') {
-		$font = $options->get($ec_themeslug.'_custom_font');	
-	}	
-	else {
-		$font = $options->get($ec_themeslug.'_font'); 
-	} 
 	?>
 
 <?php if( $options->get($ec_themeslug.'_favicon_toggle') == true ): ?>	
 	<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 <?php endif; ?>
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />
-<!--[if IE]>
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/ie.css" type="text/css" />
-<![endif]-->
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
-
 <?php if( $options->get($ec_themeslug.'_apple_touch_toggle') == true && is_array( $options->get($ec_themeslug.'_apple_touch') ) ): ?>
 <!--  For apple touch icon -->
 <?php $apple_icon = $options->get($ec_themeslug.'_apple_touch'); ?>
 <link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>"/>
-<?php endif; ?>
-
-<?php if (is_child_theme()) :  //add support for child themes?>
-	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />
 <?php endif; ?>
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

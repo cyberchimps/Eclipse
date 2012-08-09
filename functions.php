@@ -36,11 +36,27 @@ add_filter('comment_form_default_fields', 'eclipse_url_filtered');
 	$ec_sliderdocs = 'http://cyberchimps.com/question/using-the-eclipse-feature-slider/';
 
 /**
+* Set Content Width.
+*/	
+	if ( ! isset( $content_width ) ) $content_width = 720; //Set content width
+
+/**
 * Basic theme setup.
 */ 
 function eclipse_theme_setup() {
-	global $content_width;
-	if ( ! isset( $content_width ) ) $content_width = 720; //Set content width
+	
+/**
+* Initialize response Core Framework and Pro Extension.
+*/ 
+	require_once ( get_template_directory() . '/core/core-init.php' );
+
+/**
+* Call additional files required by theme.
+*/ 
+	require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
+	require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
+	require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
+	require_once ( get_template_directory() . '/includes/presstrends.php' ); // Meta options markup.
 	
 	add_theme_support(
 		'post-formats',
@@ -208,7 +224,7 @@ add_action('wp_head', 'eclipse_google_analytics');
 */ 
 function eclipse_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ))
+	array( 'header-menu' => __( 'Header Menu', 'response' ))
   );
 }
 add_action( 'init', 'eclipse_register_menus' );
@@ -266,19 +282,4 @@ function eclipse_widgets_init() {
 	));
 }
 add_action ('widgets_init', 'eclipse_widgets_init');
-
-/**
-* Initialize response Core Framework and Pro Extension.
-*/ 
-require_once ( get_template_directory() . '/core/core-init.php' );
-
-/**
-* Call additional files required by theme.
-*/ 
-require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
-require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
-require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/presstrends.php' ); // Meta options markup.
-
-
 ?>
