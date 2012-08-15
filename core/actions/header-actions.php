@@ -85,7 +85,7 @@ function response_meta_tags() { ?>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
 
-<meta name="language" content="en" /> 
+<meta name="language" content="<?php bloginfo( 'language' ); ?>" /> 
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
 
