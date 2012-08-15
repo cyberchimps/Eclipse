@@ -2,6 +2,15 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.19 (08-13-12)
+-Changed default slider links to wordpress.org.
+
+Version 1.0.18 (08-13-12)
+-Removed decimal point from sidebar.
+-Presstrends fox for object call.
+-Fixed classy options error line 583.
+-Theme check code cleanup.
+
 Version 1.0.17 (08-08-12)
 -Portfolio term change for caption.
 -Favicon (off by default).
