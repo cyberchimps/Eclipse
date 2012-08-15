@@ -343,7 +343,7 @@ function response_title_tag_filter( $old_title ) {
 	}
 	
 	if (function_exists('is_tag') && is_tag()) { /*Title for tags */
-		$title_tag = get_bloginfo('name').' - '.single_tag_title("Tag Archive for &quot;", FALSE).'&quot;  ';
+		$title_tag = get_bloginfo('name').' - Tag Archive for &quot;'.single_tag_title("", FALSE).'&quot;  ';
 	}
 	elseif (is_archive()) { /*Title for archives */ 
 		$title_tag = get_bloginfo('name').$old_title.' Archive '; 
