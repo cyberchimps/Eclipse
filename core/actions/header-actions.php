@@ -155,15 +155,16 @@ function response_link_rel() {
 function response_header_sitename_content() {
 	global $ec_themeslug, $options; //Call global variables
 	$logo = $options->get($ec_themeslug.'_logo'); //Calls the logo URL from the theme options
+	$url = $options->get($ec_themeslug.'_logo_url') != '' ? $options->get($ec_themeslug.'_logo_url') : get_home_url();
 
 if ($options->get($ec_themeslug.'_custom_logo') == '1') { ?>
 	<div id="logo">
-		<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
+		<a href="<?php echo $url; ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
 	</div> <?php
 	}
 						
 	else{ ?>
-		<h1 class="sitename"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?> </a></h1>
+		<h1 class="sitename"><a href="<?php echo $url; ?>/"><?php bloginfo('name'); ?></a></h1>
 		<?php
 	}						 
 }
