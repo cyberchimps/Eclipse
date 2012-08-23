@@ -155,7 +155,13 @@ function response_link_rel() {
 function response_header_sitename_content() {
 	global $ec_themeslug, $options; //Call global variables
 	$logo = $options->get($ec_themeslug.'_logo'); //Calls the logo URL from the theme options
-	$url = $options->get($ec_themeslug.'_logo_url') != '' ? $options->get($ec_themeslug.'_logo_url') : get_home_url();
+	if( $url = $options->get($ec_themeslug.'_logo_url_toggle' ) == 1 )
+	{
+		$url = $options->get($ec_themeslug.'_logo_url') != '' ? $options->get($ec_themeslug.'_logo_url') : get_home_url();
+	}
+	else {
+		$url = get_home_url();
+	}
 
 if ($options->get($ec_themeslug.'_custom_logo') == '1' && $logo['url'] != '') { ?>
 	<div id="logo">

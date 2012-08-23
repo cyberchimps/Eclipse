@@ -13,6 +13,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
+	$("#ec_logo_url_toggle").change(function() {
+    var toShow = $("#section-ec_logo_url");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();
 	$("#ec_favicon_toggle").change(function() {
     var toShow = $("#section-ec_favicon");
     if($(this).is(':checked')) {
