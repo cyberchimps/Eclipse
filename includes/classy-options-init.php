@@ -71,7 +71,7 @@ $options
 			->checkbox($ec_themeslug."_custom_logo", "Custom Logo")
 			->upload($ec_themeslug."_logo", "Logo")
 			->checkbox($ec_themeslug."_logo_url_toggle", "Logo Custom URL" , array('default' => false))
-			->text($ec_themeslug."_logo_url", "Logo Custom URL")
+			->text($ec_themeslug."_logo_url", "Custom URL")
 			->checkbox($ec_themeslug."_favicon_toggle", "Favicon" , array('default' => false))
 			->upload($ec_themeslug."_favicon", "Custom Favicon", array('default' => array('url' => TEMPLATE_URL . '/images/favicon.ico')))
 			->checkbox($ec_themeslug."_apple_touch_toggle", "Apple Touch Icon" , array('default' => false))
