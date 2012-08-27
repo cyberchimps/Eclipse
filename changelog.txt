@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.22 (08-27-12)
+-Logo url on / off option added.
+
 Version 1.0.21 (08-21-12)
 -Custom URL for logo.
 
