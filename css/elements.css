@@ -3,6 +3,9 @@ div.orbit-wrapper {
 	margin-top: 45px;
 	padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;	
 }
+#orbitDemo.orbit > a {
+  width: 100%;
+}
 
 /*============================*/
 /*===== Recent Posts Styles ======*/
