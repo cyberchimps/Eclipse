@@ -15,6 +15,22 @@
 * @since 1.0
 */
 
+/**
+* Establishes 'response' as the textdomain, sets $locale and file path
+*
+* @since 1.0
+*/
+function response_text_domain() {
+	load_theme_textdomain( 'response', get_template_directory() . '/core/languages' );
+
+	    $locale = get_locale();
+	    $locale_file = get_template_directory() . "/core/languages/$locale.php";
+	    if ( is_readable( $locale_file ) )
+		    require_once( $locale_file );
+		
+		return;    
+}
+add_action('after_setup_theme', 'response_text_domain');
 
 function eclipse_url_filtered($fields){
 	if(isset($fields['url']))
