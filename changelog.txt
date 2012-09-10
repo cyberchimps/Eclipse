@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.24 (09-10-12)
+-Fixed language files.
+
 Version 1.0.23 (09-04-12)
 -Fixed responsive slider in IE and Firefox.
 
