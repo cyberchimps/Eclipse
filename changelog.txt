@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.25 (09-18-12)
+-Changed how translations are laid out.
+
 Version 1.0.24 (09-10-12)
 -Fixed language files.
 
