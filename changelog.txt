@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.29 (10-15-12)
+-Quick edit fix.
+
 Version 1.0.28 (10-08-12)
 -Archive actions fix.
 
