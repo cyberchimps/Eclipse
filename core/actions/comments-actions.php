@@ -82,7 +82,7 @@ function response_comments_loop() {
 	
 <?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+<?php if ( comments_open() && ! post_password_required() ) : ?>
 
 <div class="comments_container">
 
@@ -96,9 +96,7 @@ function response_comments_loop() {
 		<p><?php _e( 'You must be ', 'response' ); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php _e( 'logged in ', 'response' ); ?></a>, <?php _e('to post a comment.', 'response' ); ?></p>
 	<?php else : ?>
 	
-  <?php if( ! post_password_required() ) {
-					comment_form($comments_args); 
-				}	?>
+  <?php comment_form($comments_args); ?>
 	
 		<?php endif; ?>
 		
