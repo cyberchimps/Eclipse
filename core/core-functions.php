@@ -53,8 +53,19 @@ function eclipse_styles() {
 	else {
 		$font = $options->get($ec_themeslug.'_font'); 
 	} 
+	
 	// register font stylesheet
-	wp_register_style( 'fonts', 'http://fonts.googleapis.com/css?family='.$font, array( 'eclipse_style' ) ); 		
+	if( $font == 'Actor' ||
+		$font == 'Coda' ||
+		$font == 'Maven Pro' ||
+		$font == 'Metrophobic' ||
+		$font == 'News Cycle' ||
+		$font == 'Nobile' ||
+		$font == 'Tenor Sans' ||
+		$font == 'Quicksand' ||
+		$font == 'Ubuntu') {
+		wp_register_style( 'fonts', 'http://fonts.googleapis.com/css?family='.$font, array( 'eclipse_style' ) ); 		
+	}
 	
 	// enqueue stylesheets
 	wp_enqueue_style( 'foundation' );
