@@ -2,11 +2,10 @@ Eclipse Changelog
 
 ****************************
 
-Version 1.0.30 (10-31-12)
--Presstrends updated.
--Google font fix.
+Version 1.0.32 (11-07-12)
+-Password protection for elements.
 
-Version 1.0.30 (10-23-12)
+Version 1.0.31 (10-23-12)
 -Comments hidden when protected page/post.
 
 Version 1.0.29 (10-15-12)
