@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.33 (11-12-12)
+-Footer-actions fix.
+
 Version 1.0.32 (11-07-12)
 -Password protection for elements.
 
