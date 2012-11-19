@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.34 (11-19-12)
+-Feedtitle fix.
+
+
 Version 1.0.33 (11-12-12)
 -Footer-actions fix.
 
