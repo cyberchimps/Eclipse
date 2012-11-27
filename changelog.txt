@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.35 (11-26-12)
+-Pinch to zoom enabled.
+
 Version 1.0.34 (11-19-12)
 -Feedtitle fix.
 
