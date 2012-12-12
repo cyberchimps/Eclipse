@@ -2,7 +2,10 @@ Eclipse Changelog
 
 ****************************
 
-Version 1.0.35 (12-6-12)
+Version 1.0.37 (12-12-12)
+-More 3.5 fixes.
+
+Version 1.0.36 (12-6-12)
 -3.5 fixes.
 
 Version 1.0.35 (11-26-12)
