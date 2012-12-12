@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
     });
     
     $('#checkbox-ec_portfolio_title_toggle').change(function(){
-	    var items = $("tr.ec_portfolio_title,");
+	    var items = $("tr.ec_portfolio_title");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
 		}
 	 }).trigger('change');
 	$('#checkbox-ec_box_title_toggle').change(function(){
-	    var items = $("tr.ec_box_title,");
+	    var items = $("tr.ec_box_title");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
 		}
     }).trigger('change');
     $('#checkbox-ec_recent_posts_title_toggle').change(function(){
-	    var items = $("tr.ec_recent_posts_title,");
+	    var items = $("tr.ec_recent_posts_title");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
