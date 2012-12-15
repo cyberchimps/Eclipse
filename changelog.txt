@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.38 (12-15-12)
+-streamlined calls for template directory.
+
 Version 1.0.37 (12-12-12)
 -More 3.5 fixes.
 
