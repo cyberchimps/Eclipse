@@ -157,9 +157,12 @@ if( $font == 'Actor' ||
 	$font == 'Nobile' ||
 	$font == 'Tenor Sans' ||
 	$font == 'Quicksand' ||
-	$font == 'Ubuntu') :	
+	$font == 'Ubuntu') :
+	
+	// Check if SSL is present, if so then use https othereise use http
+	$protocol = is_ssl() ? 'https' : 'http';
 ?>
-	<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
+	<link href='<?php echo $protocol; ?>://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
 <?php endif;
 }
 
