@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.39 (12-22-12)
+-SSL compatibility.
+
 Version 1.0.38 (12-15-12)
 -streamlined calls for template directory.
 
