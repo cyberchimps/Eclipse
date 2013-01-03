@@ -32,7 +32,7 @@ function response_404_content() {
 		$message_text = $options->get($ec_themeslug.'_custom_404');
 	}
 	else {
-		$message_text = apply_filters( 'response_404_message', 'Error 404' );
+		$message_text = apply_filters( 'response_404_message', __( 'Error 404', 'response' ) );
 	} ?>
 	<div class="error"><?php echo $message_text; ?><br />	</div> 
 	<?php
