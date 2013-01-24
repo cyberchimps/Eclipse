@@ -61,18 +61,19 @@ add_filter('comment_form_default_fields', 'eclipse_url_filtered');
 */ 
 function eclipse_theme_setup() {
 	
+	$directory = get_template_directory();
 /**
 * Initialize response Core Framework and Pro Extension.
 */ 
-	require_once ( get_template_directory() . '/core/core-init.php' );
+	require_once ( $directory . '/core/core-init.php' );
 
 /**
 * Call additional files required by theme.
 */ 
-	require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
-	require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
-	require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-	require_once ( get_template_directory() . '/includes/presstrends.php' ); // Meta options markup.
+	require_once ( $directory . '/includes/classy-options-init.php' ); // Theme options markup.
+	require_once ( $directory . '/includes/options-functions.php' ); // Custom functions based on theme options.
+	require_once ( $directory . '/includes/meta-box.php' ); // Meta options markup.
+	require_once ( $directory . '/includes/presstrends.php' ); // Meta options markup.
 	
 	add_theme_support(
 		'post-formats',
