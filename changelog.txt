@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.43 (1-23-13)
+-Meta class fix.
+-Changed printf to _e.
+
 Version 1.0.42 (1-14-13)
 -Sidebar fix.
 
