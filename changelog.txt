@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.44 (1-25-13)
+-Fix image upload
+
 Version 1.0.43 (1-23-13)
 -Meta class fix.
 -Changed printf to _e.
