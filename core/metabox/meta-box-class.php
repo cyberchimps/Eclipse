@@ -572,9 +572,9 @@ class RW_Meta_Box {
 			echo "<img class='image_preview' src='{$meta}' /><br/>";
 		}
 
-		echo "<input type='file' name='{$field['id']}' />";
-		echo "<br/>or enter URL<br/>";
-		echo "<input type='text' size='50' name='{$field['id']}_url' value='{$meta}'/>";
+		echo "<input type='button' class='upload_image_button' value='".__( 'Upload', 'cyberchimps' )."' />";
+		echo "<br/>".__( 'or enter URL', 'cyberchimps' )."<br/>";
+		echo "<input class='upload_image_field' type='text' size='50' name='{$field['id']}_url' value='{$meta}'/>";
 		$this->show_field_end($field, $meta);
 	}
 
@@ -586,7 +586,9 @@ class RW_Meta_Box {
 	function save($post_id) {
 		global $pagenow;
 		
-		
+		// check if this is a revision as the revision id is different to post id. if it is get the parent post id if not then get the post id
+		$post_revision = wp_is_post_revision( $post_id );
+		$post_id = ( $post_revision ) ? $post_revision : $post_id;
 		
 		// check that the save is coming from the edit post page and not the quick edit
 		if( 'admin-ajax.php' != $pagenow ) {
@@ -850,7 +852,12 @@ function metabox_enqueue() {
 
 	wp_enqueue_script('jf-metabox-tabs');
 	
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
+	wp_enqueue_style('thickbox');
+	
 	wp_enqueue_script('jf-metabox-tabs');
+	wp_enqueue_script('custom', $path . 'custom.js', array('jquery') );
 	wp_enqueue_script('jquerycustom', get_template_directory_uri().'/core/library/js/jquery-custom.js', array('jquery') );
 	
 	wp_enqueue_style('metabox-tabs-css');
