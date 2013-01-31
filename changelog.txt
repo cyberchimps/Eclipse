@@ -2,6 +2,9 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.45 (1-30-13)
+-Added wp media uploader.
+
 Version 1.0.44 (1-25-13)
 -Fix image upload
 
