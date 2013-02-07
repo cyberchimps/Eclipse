@@ -2,6 +2,10 @@ Eclipse Changelog
 
 ****************************
 
+Version 1.0.46 (2-6-13)
+-Added check for file upload.
+-Filter for experts.
+
 Version 1.0.45 (1-30-13)
 -Added wp media uploader.
 
