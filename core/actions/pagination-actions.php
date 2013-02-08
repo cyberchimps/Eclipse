@@ -69,8 +69,24 @@ function response_post_pagination_content() {
 	<?php if ($options->get($ec_themeslug.'_post_pagination') != "0"):?>
 	<div id="post-pagination-container">
 		<div id="post-pagination-wrap">
-			<div class="prev-posts-single"><img src="<?php echo "$ec_root/images/previouspost.png";?>"><?php previous_post_link('%link'); ?></div> 
-			<div class="next-posts-single"><?php next_post_link('%link'); ?><img src="<?php echo "$ec_root/images/nextpost.png";?>"></div>
+		
+			<!-- Display previous post link if any exists. -->
+			<?php if( has_previous_posts() ): ?>
+				<div class="prev-posts-single">
+					<img src="<?php echo "$ec_root/images/previouspost.png";?>" />
+					<?php previous_post_link('%link'); ?>
+				</div> 
+			<?php endif; ?>
+			
+			<!-- Display next post link if any exists. -->
+			<?php if( has_next_posts() ): ?>
+				<div class="next-posts-single">
+					<?php next_post_link('%link'); ?>
+					<img src="<?php echo "$ec_root/images/nextpost.png";?>" />
+				</div>
+			<?php endif; ?>
+			
+			<div class="clear-both"></div>
 		</div>
 	</div>
 	<?php endif; 

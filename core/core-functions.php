@@ -384,7 +384,29 @@ function response_title_tag_filter( $old_title ) {
 	return $title_tag;
 }
 
-add_filter( 'wp_title', 'response_title_tag_filter', 10, 3 )
+add_filter( 'wp_title', 'response_title_tag_filter', 10, 3 );
+
+/**
+* To determine whether previous post exists or not
+**/
+function has_previous_posts() {
+	ob_start();
+	previous_post_link();
+	$result = strlen(ob_get_contents());
+	ob_end_clean();
+	return $result;
+}
+
+/**
+* To determine whether previous post exists or not
+**/
+function has_next_posts() {
+	ob_start();
+	next_post_link();
+	$result = strlen(ob_get_contents());
+	ob_end_clean();
+	return $result;
+}
 
 /**
 * End
