@@ -281,7 +281,7 @@ function eclipse_widgets_init() {
     	'name' => 'Full Sidebar',
     	'id'   => 'sidebar-widgets',
     	'description'   => 'These are widgets for the sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container">',
+    	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
     	'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
@@ -290,7 +290,7 @@ function eclipse_widgets_init() {
     	'name' => 'Left Half Sidebar',
     	'id'   => 'sidebar-left',
     	'description'   => 'These are widgets for the left sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container">',
+    	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
     	'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
@@ -299,7 +299,7 @@ function eclipse_widgets_init() {
     	'name' => 'Right Half Sidebar',
     	'id'   => 'sidebar-right',
     	'description'   => 'These are widgets for the right sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container">',
+    	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
     	'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
@@ -309,7 +309,7 @@ function eclipse_widgets_init() {
 		'name' => 'Footer',
 		'id' => 'footer-widgets',
 		'description' => 'These are the footer widgets',
-		'before_widget' => '<div class="three columns footer-widgets">',
+		'before_widget' => '<div class="three columns footer-widgets %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="footer-widget-title">',
 		'after_title' => '</h3>',
