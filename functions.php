@@ -32,15 +32,6 @@ function response_text_domain() {
 }
 add_action('after_setup_theme', 'response_text_domain');
 
-function eclipse_url_filtered($fields){
-	if(isset($fields['url']))
-   		unset($fields['url']);
-   	
-  	return $fields;
-}
-add_filter('comment_form_default_fields', 'eclipse_url_filtered');
-
-
 /**
 * Define global theme functions.
 */ 
