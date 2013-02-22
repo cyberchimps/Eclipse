@@ -3,6 +3,12 @@ Eclipse Changelog
 ****************************
 
 Version 1.0.48 (2-14-13)
+-Placeholder for widget class.
+-Changed default Twitter account.
+-Removed filtration for website field in comment form.
+-Made date format dynamic.
+
+Version 1.0.48 (2-14-13)
 -Filtered out next/prev post section if no such posts exists.
 
 Version 1.0.47 (2-7-13)
