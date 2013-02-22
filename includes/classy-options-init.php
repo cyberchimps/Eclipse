@@ -81,7 +81,7 @@ $options
 			->select($ec_themeslug."_menu_font", "Choose a Font", array( 'options' => array("Helvetica" => "Helvetica (default)", "Arial" => "Arial", "Courier New" => "Courier New", "Georgia" => "Georgia", "Lucida Grande" => "Lucida Grande", "Open Sans" => "Open Sans", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Maven+Pro" => "Maven Pro", "Ubuntu" => "Ubuntu")))			
 		->subsection_end()
 		->subsection("Social")
-			->text($ec_themeslug."_twitter", "Twitter Icon URL", array('default' => 'http://twitter.com/WordPress'))
+			->text($ec_themeslug."_twitter", "Twitter Icon URL", array('default' => 'http://twitter.com'))
 			->checkbox($ec_themeslug."_hide_twitter_icon", "Hide Twitter Icon", array('default' => true))
 			->text($ec_themeslug."_facebook", "Facebook Icon URL", array('default' => 'http://facebook.com'))
 			->checkbox($ec_themeslug."_hide_facebook_icon", "Hide Facebook Icon" , array('default' => true))
