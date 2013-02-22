@@ -127,7 +127,7 @@ $options
 			->text($ec_themeslug."_blog_slide_three_url", "Slide Three Link", array('default' => 'http://wordpress.org'))
 		->subsection_end()
 		->subsection("Twtterbar Options")
-			->text($ec_themeslug."_blog_twitter", "Enter your Twitter handle", array('default' => 'cyberchimps'))
+			->text($ec_themeslug."_blog_twitter", "Enter your Twitter handle", array('default' => 'WordPress'))
 			->checkbox($ec_themeslug."_blog_twitter_reply", "Show @ Replies", array('default' => true))
 		->subsection_end()
 		->subsection("Box Options")
