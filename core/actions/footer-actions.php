@@ -90,13 +90,10 @@ function response_secondary_footer_copyright() {
 * @since 1.0
 */
 function response_secondary_footer_credit() { 
-	global $options, $ec_themeslug; //call globals
 ?>
-		
 	<div id="credit" class="twelve columns">
 		<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 	</div> 
-	
 <?php
 }
 /**
