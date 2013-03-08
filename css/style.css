@@ -619,6 +619,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #afterfootercopyright {
 	text-align: right;
+	margin-top:10px;
 }
 
 #afterfootermenu {
@@ -643,12 +644,16 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	display: inline; 
 }
 
-#credit {z-index: 99;text-align: center; margin-bottom:8px;}
-#credit img {margin-bottom: -12px;}
-
+#credit {
+	z-index: 99;
+	text-align: left;
+	margin-top:10px;
+}
 /* WordPress Styles  */
 
-.featured-image {margin-bottom: 25px;}
+.featured-image {
+	margin-bottom: 25px;
+}
 
 .alignnone {
 	display: block;
