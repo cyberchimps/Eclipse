@@ -31,9 +31,6 @@ h2 {
 a {
 	color: #fff;
 }
-a:visited {
-	color: #b4b4b4;
-}
 a:hover {
 	color: #ccc;
 }
@@ -378,9 +375,11 @@ article {
 	}
 }
 blockquote { 
-	background-color: #ccc;
+	background-color: #333;
+	background-color: rgba(0,0,0,0.1);
 	margin: 20px 10px;
 	padding: 3px;
+	border-left: 5px solid #1a1a1a;
 }
 blockquote p {
   margin: 10px;
