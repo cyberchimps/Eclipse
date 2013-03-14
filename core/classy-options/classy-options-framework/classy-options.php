@@ -1,5 +1,5 @@
 <?php
-global $options, $ec_themeslug, $ec_themenamefull;
+global $options, $ec_themeslug, $ec_themenamefull, $ec_root;
 
 class ClassyOptions {
 	function __construct($id, $name = false) {
@@ -34,6 +34,7 @@ class ClassyOptions {
 	}
 
 	function load_scripts() {
+		global $ec_root;
 		// Inline scripts from options-interface.php
 		add_action('admin_head', array($this, 'admin_head'));
 		
@@ -44,9 +45,9 @@ class ClassyOptions {
 		wp_enqueue_script('thickbox');
 		wp_enqueue_script('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'js/colorpicker.js', array('jquery'));
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
-		wp_enqueue_script('theme-options-custom', get_template_directory_uri().'/library/js/theme-options-custom.js', array('jquery'));
+		wp_enqueue_script('theme-options-custom', $ec_root .'/library/js/theme-options-custom.js', array('jquery'));
 		wp_enqueue_script('media-uploader', CLASSY_OPTIONS_FRAMEWORK_URL.'js/of-medialibrary-uploader.js', array('jquery'));
-		wp_enqueue_script('custom', get_template_directory_uri() . '/core/library/js/custom.js', array('jquery') );
+		wp_enqueue_script('custom', $ec_root . '/core/library/js/custom.js', array('jquery') );
 	}
 
 	function add_admin_bar() {
@@ -83,11 +84,11 @@ class ClassyOptions {
 	}
 
 	function render() {
-		global $ec_themenamefull;
+		global $ec_themenamefull, $ec_root;
 		settings_errors(); ?>
 <div class="wrap">
 <div class="upgrade-callout">
-<p><img src="<?php echo get_template_directory_uri() ;?>/images/chimp.png" alt="CyberChimps" /><strong>Welcome to <?php echo $ec_themenamefull; ?>! Learn more now about upgrading to <a href="http://cyberchimps.com/eclipsepro/" target="_blank"><?php echo $ec_themenamefull; ?> Pro</a> today.</p>
+<p><img src="<?php echo $ec_root ;?>/images/chimp.png" alt="CyberChimps" /><strong>Welcome to <?php echo $ec_themenamefull; ?>! Learn more now about upgrading to <a href="http://cyberchimps.com/eclipsepro/" target="_blank"><?php echo $ec_themenamefull; ?> Pro</a> today.</p>
 <div class="social-container">
 <div class="social">
 <a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
@@ -137,9 +138,9 @@ class ClassyOptions {
 				<div class="clear"></div>
 			</div>
 			<div class="of_admin_bar">
-			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/images/options/top.png" /></a></div>
+			    <div id="top"><a href='#TOP'><img src="<?php echo $ec_root ;?>/images/options/top.png" /></a></div>
 				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'response' ) ); ?>' );" />
-				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/cyberchimpsmini.png" /></a></div>
+				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo $ec_root ;?>/images/options/cyberchimpsmini.png" /></a></div>
 			</div>
 			<div class="clear"></div>
 		</form>

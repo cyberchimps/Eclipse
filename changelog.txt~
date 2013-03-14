@@ -3,7 +3,7 @@ Eclipse Changelog
 ****************************
 
 Version 1.0.52 (3-15-13)
--Replaced the get_template_directory_uri() with the global variable defined with same value.
+-Replace the get_template_directory_uri() with the global variable defined with same value.
 
 Version 1.0.51 (3-8-13)
 -Removed the unused global variables from the footer_credit function.
