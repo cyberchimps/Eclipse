@@ -419,3 +419,15 @@ function cyberchimps_contact_section( $original ) {
 	return $new;
 }
 add_filter( 'cyberchimps_sections_filter', 'cyberchimps_contact_section' );
+
+//upgrade bar
+function ifeature_upgrade_title(){
+	$title = 'Eclipse Pro 2';
+	return $title;
+}
+function ifeature_upgrade_link(){
+	$link = 'http://cyberchimps.com/eclipsepro/';
+	return $link;
+}
+add_filter( 'cyberchimps_upgrade_pro_title', 'ifeature_upgrade_title' );
+add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
