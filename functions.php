@@ -431,3 +431,13 @@ function ifeature_upgrade_link(){
 }
 add_filter( 'cyberchimps_upgrade_pro_title', 'ifeature_upgrade_title' );
 add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
+
+//setup default drag and drop for blog options
+function cyberchimps_default_blog_drag_and_drop(){
+$default = array( 'slider_lite' => __( 'Slider Lite', 'cyberchimps'), 
+'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps' ),	
+'blog_post_page' => __( 'Post Page', 'cyberchimps' )
+);
+return $default;
+}
+add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_default_blog_drag_and_drop' );
