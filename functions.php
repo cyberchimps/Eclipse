@@ -434,10 +434,28 @@ add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
 
 //setup default drag and drop for blog options
 function cyberchimps_default_blog_drag_and_drop(){
-$default = array( 'slider_lite' => __( 'Slider Lite', 'cyberchimps'), 
-'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps' ),	
-'blog_post_page' => __( 'Post Page', 'cyberchimps' )
-);
+	$default = array( 'slider_lite' => __( 'Slider Lite', 'cyberchimps'), 
+		'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps' ),	
+		'blog_post_page' => __( 'Post Page', 'cyberchimps' )
+	);
 return $default;
 }
 add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_default_blog_drag_and_drop' );
+
+//setup default slider image 1
+function cyberchimps_slider_default_image1(){
+	return '/images/branding/eclipseslide.jpg';
+}
+add_filter( 'cyberchimps_slider_lite_img1', 'cyberchimps_slider_default_image1' );
+
+//setup default slider image 2
+function cyberchimps_slider_default_image2(){
+	return '/images/branding/eclipseslide.jpg';
+}
+add_filter( 'cyberchimps_slider_lite_img2', 'cyberchimps_slider_default_image2' );
+
+//setup default slider image 3
+function cyberchimps_slider_default_image3(){
+	return '/images/branding/eclipseslide.jpg';
+}
+add_filter( 'cyberchimps_slider_lite_img3', 'cyberchimps_slider_default_image3' );
