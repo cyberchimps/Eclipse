@@ -41,17 +41,25 @@
     </footer>
   <?php endif; ?>
   
-  <?php if ( is_single() ) : ?>
+  <?php if( is_single() ) : ?>
   	
     <div class="span9">
 		
   <?php elseif( is_search() ): ?>	
   	
-    <div class="span12">
+    <?php if( 'post' == get_post_type() ): ?>
+    
+    	<div class="span9">
+    
+    <?php else: ?>
+  	
+    	<div class="span12">
+      
+    <?php endif; ?>
   
   <?php elseif( is_archive() ): ?>
   		
-      <div class="span12">
+      <div class="span9">
 
 	<?php elseif( is_page() ): ?>
 		
