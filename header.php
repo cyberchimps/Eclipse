@@ -81,9 +81,23 @@
               <div class="main-navigation navbar">
                 <div class="navbar-inner">
                   <div class="container">
-                    
-                      <?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>								      
-              
+                    <?php /* hide collapsing menu if not responsive */
+											if( cyberchimps_get_option( 'responsive_design', 'checked' ) ): ?>
+											<div class="nav-collapse collapse">
+											<?php endif; ?>
+												<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
+								
+								<?php /* hide collapsing menu if not responsive */
+								if( cyberchimps_get_option( 'responsive_design', 'checked' ) ): ?>
+								</div><!-- collapse -->
+								
+											<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+											<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</a>
+								<?php endif; ?>
                   </div><!-- container -->
                 </div><!-- .navbar-inner .row-fluid -->
               </div><!-- main-navigation navbar -->

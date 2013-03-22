@@ -308,6 +308,50 @@ header #search #searchform {
 	padding-left: 30px;
 }
 
+/* Mobile Menu */
+
+.navbar .btn-navbar {
+	background-color: #1a1a1a;
+	background-image: none;
+	border-color: #1a1a1a #1a1a1a #111;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	filter: none;
+}
+.navbar .btn-navbar .icon-bar {
+	background-color: #aaa;
+}
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active {
+	color: #fff;
+	background-color: #333;
+}
+.main-navigation .nav-collapse.in.collapse .nav li a {
+	color: #b3b3b3;
+	font-weight: normal;
+}
+.main-navigation .nav-collapse.in.collapse .nav li.dropdown a .caret {
+	display: none;
+}
+.main-navigation .nav-collapse.in.collapse .nav li a:hover,
+.main-navigation .nav-collapse.in.collapse .dropdown-menu a:hover {
+	color: #fff;
+	background-color: transparent;
+}
+.main-navigation .nav-collapse.in.collapse .dropdown-menu {
+	display: block;
+}
+.main-navigation .nav-collapse.in.collapse .dropdown-menu::before {
+	display: none;
+}
+.main-navigation .nav-collapse.in.collapse .dropdown-menu::after {
+	display: none;
+}
+.main-navigation .nav-collapse.in.collapse .nav li.current_page_item > a,
+.main-navigation .nav-collapse.in.collapse .nav li.current-menu-item > a {
+	color: #fff;
+}
+
 /********************************************************************************************************************/
 /******************************************** MAIN CONTENT **********************************************************/
 /********************************************************************************************************************/
