@@ -2,5 +2,8 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.2 (3-22-13)
+-Bug fixes and framework update.
+
 Version 2.0.0 (3-14-13)
 -2.0 release on new CyberChimps framework now powered by Twitter Bootstrap.
