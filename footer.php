@@ -78,12 +78,8 @@ if (cyberchimps_get_option('footer_show_toggle') == '1') : ?>
 <div id="footer-full-sub" class="container-full">
 <div id="footer-main-wrapper" class="container-fluid">
 <div id="footer-wrapper" class="container">
-
-<footer class="site-footer row-fluid">
 	
 	<?php do_action('cyberchimps_footer'); ?>
-	
-</footer><!-- .site-footer .row-fluid -->
 
 <?php do_action('cyberchimps_after_footer_container'); ?>
 
