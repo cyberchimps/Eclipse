@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.3 (4-2-13)
+-Framework updates.
+
 Version 2.0.2 (3-22-13)
 -Bug fixes and framework update.
 
