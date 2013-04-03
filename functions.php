@@ -455,3 +455,17 @@ function cyberchimps_slider_default_image3(){
 	return '/images/branding/eclipseslide.jpg';
 }
 add_filter( 'cyberchimps_slider_lite_img3', 'cyberchimps_slider_default_image3' );
+
+/* fix full width container that disappears on horizontal scroll */
+function cyberchimps_full_width_fix() {
+	$responsive_design = cyberchimps_get_option( 'responsive_design' );
+	$min_width = cyberchimps_get_option( 'max_width' );
+	if( ! $responsive_design ) {
+		$style = '<style rel="stylesheet" type="text/css" media="all">';
+		$style .= '.container-full, #footer-widgets-wrapper, #footer-main-wrapper { min-width: '. $min_width . 'px;}';
+		$style .= '</style>';
+		
+		echo $style;
+	}
+}
+add_action( 'wp_head', 'cyberchimps_full_width_fix' );
