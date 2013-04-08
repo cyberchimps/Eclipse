@@ -14,7 +14,7 @@
  */
 
 if (cyberchimps_get_option('footer_show_toggle') == '1') : ?> 
-	<div id="footer-full" class="container-full">
+	<div id="footer-full" class="container-full-width">
 		<div id="footer-widgets-wrapper" class="container-fluid">
 			<div id="footer-wrapper" class="container">
 		
@@ -69,7 +69,7 @@ if (cyberchimps_get_option('footer_show_toggle') == '1') : ?>
 
 <?php do_action('cyberchimps_before_footer_container'); ?>
 
-<div id="footer-full-sub" class="container-full">
+<div id="footer-full-sub" class="container-full-width">
 	<div id="footer-main-wrapper" class="container-fluid">
 		<div id="footer-wrapper" class="container">
 			<?php do_action('cyberchimps_footer'); ?>

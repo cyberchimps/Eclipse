@@ -50,7 +50,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="top_header" class="container-full">
+	<div id="top_header" class="container-full-width">
 		<div class="container">
 			<div id="wrapper" class="container-fluid">
 				<div class="row-fluid">
@@ -67,7 +67,7 @@
 		</div><!-- container -->
 	</div><!-- top header -->
 
-	<div id="main_header" class="container-full">
+	<div id="main_header" class="container-full-width">
 		<div class="container">
 			<div id="wrapper" class="container-fluid">
 				<div class="row-fluid">
