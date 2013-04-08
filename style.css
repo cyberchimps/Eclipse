@@ -856,6 +856,8 @@ table#wp-calendar td {
 /********************************************************************************************************************/
 
 #footer-full {
+	margin-top: 20px;
+	padding-top: 20px;
 	background: #111 url('images/footer.png');
 }
 #footer-widgets {
