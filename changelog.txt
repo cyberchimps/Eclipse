@@ -2,7 +2,7 @@ Eclipse 2 Free Changelog
 
 ****************************
 
-Version 2.0.5 (4-17-13)
+Version 2.0.6 (4-18-13)
 -Removed elements using custom post type.
 
 Version 2.0.4 (4-12-13)
