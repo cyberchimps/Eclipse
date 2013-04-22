@@ -93,7 +93,7 @@
 				if( 'post' == get_post_type() && is_single() ) : ?>
 				
 					<?php	// get the post title toggle option
-					$post_title = cyberchimps_option( 'single_post_title' );
+					$post_title = cyberchimps_get_option( 'single_post_title' );
 					if( $post_title == "1" ) :
 						( get_the_title() )? the_title() : the_permalink();
 					endif;
