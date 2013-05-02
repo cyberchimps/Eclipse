@@ -1,6 +1,7 @@
 Eclipse 2 Free Changelog
 
 ****************************
+
 Version 2.0.7 (4-26-13)
 -Replaced cyberchimps_option() with cyberchimps_get_option().
 -Added css fix to Header logo.
