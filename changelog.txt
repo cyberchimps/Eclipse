@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.11 (5-23-13)
+-Added function cyberchimps_posted_by() to display author link.
+-Modified function cyberchimps_posted_on(), tags containing date fields are made to be printed only when date toggle is on.
+
 Version 2.0.10 (5-17-13)
 -Updated slimbox to latest version.
 -Prevented default click action on mobile level slimbox.
