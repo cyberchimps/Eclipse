@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.12 (5-30-13)
+-Removed modal welcome note on theme install.
+-Boxes - added filter for default number 
+
 Version 2.0.11 (5-23-13)
 -Added function cyberchimps_posted_by() to display author link.
 -Modified function cyberchimps_posted_on(), tags containing date fields are made to be printed only when date toggle is on.
