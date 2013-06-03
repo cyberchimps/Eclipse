@@ -113,7 +113,7 @@ function cyberchimps_posted_on() {
 	}
 	
 	if( $show_date ) {
-		$posted_on = sprintf( '<div class="entry-date meta-item"><a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a></div>',
+		$posted_on = sprintf( '<div class="entry-date updated meta-item"><a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a></div>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
