@@ -59,13 +59,13 @@ function cyberchimps_comment( $comment, $args, $depth ) {
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
+		<article id="comment-<?php comment_ID(); ?>" class="comment hreview">
 			<aside class="comment-avatar">
 					<?php echo get_avatar( $comment, 66 ); ?>
       </aside>
       <section class="comment-main-container">
       	<div class="comment-main">
-      	<div class="comment-author vcard">
+      	<div class="comment-author reviewer vcard">
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
             <span class="comment-moderation">
@@ -75,7 +75,7 @@ function cyberchimps_comment( $comment, $args, $depth ) {
 				</div><!-- comment author -->
 
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="dtreviewed"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
 						printf( __( '%1$s at %2$s', 'cyberchimps' ), get_comment_date(), get_comment_time() ); ?>
