@@ -150,16 +150,16 @@ input[type=submit]:hover {
 
 /*======================================= DETAILS =============================================*/
 
-header#cc-header h1.site-title {
+header#cc-header h2.site-title {
 	font-size: 34px;
 	font-weight: 600;
 	margin-top: 20px;
 	line-height: 47.5px;
 }
-header#cc-header h1.site-title a {
+header#cc-header h2.site-title a {
 	color: #f8f8f8;
 }
-header#cc-header h1.site-title a:hover {
+header#cc-header h2.site-title a:hover {
 	color: #ccc;
 	text-decoration: none;
 }
