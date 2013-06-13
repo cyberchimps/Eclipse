@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.14 (6-13-13)
+Removed the unused global variable from boxes.php.
+
 Version 2.0.13 (6-6-13)
 -Updated meta in pot file.
 -Added updated class to the time tag in cyberchimps_posted_on() function.
