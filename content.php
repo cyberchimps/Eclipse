@@ -72,8 +72,9 @@
 	<?php endif; ?>
     
     <header class="entry-header">
-          
-		<h1 class="entry-title">
+
+        <?php echo ( 'post' == get_post_type() && !is_single() || is_search() ) ? '<h2 class="entry-title">' : '<h1 class="entry-title">'; ?>
+
 			<?php
 			if ( 'page' == get_post_type() ) :
 			
@@ -102,7 +103,9 @@
 					<?php
 				endif;
 			endif; ?>
-		</h1>	
+
+        <?php echo ( 'post' == get_post_type() && !is_single() || is_search() ) ? '</h2>' : '</h1>'; ?>
+
 	</header><!-- .entry-header -->
   
   <?php if( get_post_type() == 'post' ): ?>
