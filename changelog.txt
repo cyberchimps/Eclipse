@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.15 (6-21-13)
+-Replaced headlines tags from h2 to h1 at required places.
+
 Version 2.0.14 (6-13-13)
 Removed the unused global variable from boxes.php.
 
