@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.18 (7-11-13)
+- Added filters to widget titles.
+- Woocommerce - removed max-width.
+- Changed where the skin css gets added in the head.
+
 Version 2.0.17 (7-4-13)
 -Removed twitter element.
 -Updated default images and icons.
