@@ -1,0 +1,281 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eclipse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-20 10:07:38 UTC\n"
+"PO-Revision-Date: 2013-03-21 07:46:28 UTC\n"
+"Last-Translator: Web Translate It <support@webtranslateit.com>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: WebTranslateIt.com\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../404.php
+msgid "Oops! That page cannot be found."
+msgstr "Oops! Nie mogę znaleźć takiej strony."
+
+#: ../../404.php
+msgid "It looks like nothing was found at this location. Maybe try searching for it?"
+msgstr "Wygląda na to, że niczego tu nie ma."
+
+#: ../../comments.php
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Jeden komentarz na temat &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentarze na temat &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s komentarzy na temat &ldquo;%2$s&rdquo;"
+
+#: ../../comments.php
+#: ../../comments.php
+msgid "Comment navigation"
+msgstr "Nawigacja po komentarzach"
+
+#: ../../comments.php
+#: ../../comments.php
+msgid "Older Comments"
+msgstr "Starsze komentarze"
+
+#: ../../comments.php
+#: ../../comments.php
+msgid "Newer Comments"
+msgstr "Nowsze komentarze"
+
+#: ../../comments.php
+msgid "Comments are closed."
+msgstr "Komentarze są wyłączone."
+
+#: ../../content.php
+#: ../../image.php
+#: ../../image.php
+#: ../../content.php
+msgid "Edit"
+msgstr "Edycja"
+
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
+msgid "Permalink to %s"
+msgstr "Permalink do %s"
+
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
+msgid "Continue reading"
+msgstr "Czytaj dalej"
+
+#: ../../image.php
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
+msgid "Pages:"
+msgstr "Strony:"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+msgid "Pages"
+msgstr "Strony"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+msgid "Archives"
+msgstr "Archiwum"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+msgid "Categories"
+msgstr "Kategorie"
+
+#: ../../sidebar.php
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+#: ../../footer.php
+msgid "WordPress"
+msgstr ""
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+#: ../../footer.php
+msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr "Strona z dumą napędzana przez WordPress."
+
+#: ../../functions.php
+msgid "Previous Page"
+msgstr "Poprzednia strona"
+
+#: ../../functions.php
+msgid "Next Page"
+msgstr "Następna strona"
+
+#: ../../functions.php
+msgid "Pingback:"
+msgstr ""
+
+#: ../../functions.php
+#: ../../functions.php
+msgid "(Edit)"
+msgstr "(Edycja)"
+
+#: ../../functions.php
+msgid "Your comment is awaiting moderation."
+msgstr "Twój komentarz oczekuje na moderację."
+
+#: ../../functions.php
+msgid "%1$s at %2$s"
+msgstr "%1$s, o godzinie %2$s"
+
+#: ../../functions.php
+msgid "View all posts by"
+msgstr "Pokaż wszystkie posty użytkownika"
+
+#: ../../functions.php
+msgid "Leave a comment"
+msgstr "Dodaj komentarz"
+
+#: ../../functions.php
+msgid "1 Comment"
+msgstr "1 komentarz"
+
+#: ../../functions.php
+msgid "Comments"
+msgstr "Komentarze"
+
+#: ../../functions.php
+msgid "Eclipse 2 Responsive WordPress Theme"
+msgstr "Skórka WordPressa Eclipse 2 Responsive"
+
+#: ../../functions.php
+msgid "Cyberchimps Link"
+msgstr " "
+
+#: ../../functions.php
+#: ../../functions.php
+msgid "Logo"
+msgstr ""
+
+#: ../../functions.php
+msgid "Slider Lite"
+msgstr ""
+
+#: ../../functions.php
+msgid "Portfolio Lite"
+msgstr ""
+
+#: ../../functions.php
+msgid "Post Page"
+msgstr "Strona wpisu"
+
+#: ../../image.php
+msgid "Published"
+msgstr "Opublikowano"
+
+#: ../../image.php
+msgid "size"
+msgstr "rozmiar"
+
+#: ../../image.php
+msgid "in"
+msgstr "w"
+
+#: ../../image.php
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: ../../image.php
+msgid "Next"
+msgstr "Następny"
+
+#: ../../image.php
+msgid "Post a comment"
+msgstr "Dodaj komentarz"
+
+#: ../../image.php
+msgid "or leave a trackback"
+msgstr "lub pozostaw trackback"
+
+#: ../../image.php
+#: ../../image.php
+msgid "Trackback URL"
+msgstr ""
+
+#: ../../image.php
+msgid "Comments are closed, but you can leave a trackback:"
+msgstr "Komentarze wyłączone, ale możesz pozostawić trackback:"
+
+#: ../../image.php
+msgid "Trackbacks are closed, but you can"
+msgstr "Trackbacki wyłączone, ale możesz"
+
+#: ../../image.php
+msgid "post a comment"
+msgstr "dodać komentarz"
+
+#: ../../image.php
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Zarówno komentarze, jak i trackbacki, są obecnie wyłączone."
+
+#: ../../no-results.php
+msgid "Nothing Found"
+msgstr "Niczego nie znaleziono"
+
+#: ../../no-results.php
+msgid "Ready to publish your first post?"
+msgstr "Gotowy, by opublikować swój pierwszy wpis?"
+
+#: ../../no-results.php
+msgid "Get started here"
+msgstr "Zacznij tutaj"
+
+#: ../../no-results.php
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Przykro nam, ale wyszukiwanie nic nie zwróciło."
+
+#: ../../no-results.php
+msgid "It seems we cannot find what you are looking for. Perhaps searching can help."
+msgstr "Wygląda na to, że nie znaleźliśmy tego, czego szukałeś."
+
+#: ../../search.php
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: ../../searchform.php
+msgid "Search"
+msgstr "Szukaj"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+msgid "Entries (RSS)"
+msgstr "Wpisy (RSS)"
+
+#: ../../sidebar.php
+#: ../../sidebar-right.php
+#: ../../sidebar-left.php
+msgid "Comments (RSS)"
+msgstr "Komentarze (RSS)"
+
