@@ -168,6 +168,7 @@
 		<div class="entry-summary">
 			<?php cyberchimps_featured_image(); ?>
 			<?php the_content(); ?>
+			<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-summary -->
 	
 	<?php else :// blog post pages ?>
