@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.24 (8-23-13)
+- Social icons reordering.
+- Upsell page update: Updated screenshot and info of Neuro Pro.
+- Added edit link to page for logged in user.
+
 Version 2.0.23 (8-16-13)
 - Fixed heading typography.
 - Footer copyright - allow all html through.
