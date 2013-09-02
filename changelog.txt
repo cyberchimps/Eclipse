@@ -3,12 +3,13 @@ Eclipse 2 Free Changelog
 ****************************
 
 Version 2.0.25 (8-30-13)
-- Added new class for metabox options.
+- Removed new meta-box options due to unresolved bug that affected some users.
 
 Version 2.0.24 (8-23-13)
 - Social icons reordering.
 - Upsell page update: Updated screenshot and info of Neuro Pro.
 - Added edit link to page for logged in user.
+- Added new class for metabox options.
 
 Version 2.0.23 (8-16-13)
 - Fixed heading typography.
