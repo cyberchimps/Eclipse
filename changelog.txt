@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.27 (13-6-13)
+- Updated README file.
+
 Version 2.0.26 (9-6-13)
 - Minified multi media upload.
 - Meta box fix - changed save_post hook to pre_post_update.
