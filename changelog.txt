@@ -2,7 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
-Version 2.0.27 (13-6-13)
+Version 2.0.28 (9-20-13)
+- Slider option from post is removed as it was not part of free themes.
+- Fixed google font issue.
+
+Version 2.0.27 (9-13-13)
 - Updated README file.
 
 Version 2.0.26 (9-6-13)
