@@ -12,62 +12,66 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
- 
+
 get_header(); ?>
 
-<div id="archive_page" class="container-full-width">
-	
-	<div class="container">
-		
-		<div class="container-fluid">
-		
-			<?php do_action( 'cyberchimps_before_container'); ?>
-			
-			<div id="container" <?php cyberchimps_filter_container_class(); ?>>
-				
-				<?php do_action( 'cyberchimps_before_content_container'); ?>
-				
-				<div id="content" <?php cyberchimps_filter_content_class(); ?>>
-						
-					<?php do_action( 'cyberchimps_before_content'); ?>
-					
-					<?php if ( have_posts() ) : ?>	
-			
-						<?php rewind_posts(); ?>
-			
-						<?php /* Start the Loop */ ?>
-						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php
+	<div id="archive_page" class="container-full-width">
+
+		<div class="container">
+
+			<div class="container-fluid">
+
+				<?php do_action( 'cyberchimps_before_container' ); ?>
+
+				<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+
+					<?php do_action( 'cyberchimps_before_content_container' ); ?>
+
+					<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+
+						<?php do_action( 'cyberchimps_before_content' ); ?>
+
+						<?php if( have_posts() ) : ?>
+
+							<?php rewind_posts(); ?>
+
+							<?php /* Start the Loop */ ?>
+							<?php while( have_posts() ) : the_post(); ?>
+
+								<?php
 								/* Include the Post-Format-specific template for the content.
 								 * If you want to overload this in a child theme then include a file
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
 								get_template_part( 'content', get_post_format() );
-							?>
-			
-						<?php endwhile; ?>
-			
-					<?php else : ?>
-			
-						<?php get_template_part( 'no-results', 'archive' ); ?>
-			
-					<?php endif; ?>
-					
-				<?php do_action( 'cyberchimps_after_content'); ?>
-					
-				</div><!-- #content -->
-				
-				<?php do_action( 'cyberchimps_after_content_container'); ?>
-					
-			</div><!-- #container .row-fluid-->
-			
-			<?php do_action( 'cyberchimps_after_container'); ?>
-			
-		</div><!--container fluid -->
-		
-	</div><!-- container -->
+								?>
 
-</div><!-- container full width -->
+							<?php endwhile; ?>
+
+						<?php else : ?>
+
+							<?php get_template_part( 'no-results', 'archive' ); ?>
+
+						<?php endif; ?>
+
+						<?php do_action( 'cyberchimps_after_content' ); ?>
+
+					</div>
+					<!-- #content -->
+
+					<?php do_action( 'cyberchimps_after_content_container' ); ?>
+
+				</div>
+				<!-- #container .row-fluid-->
+
+				<?php do_action( 'cyberchimps_after_container' ); ?>
+
+			</div>
+			<!--container fluid -->
+
+		</div>
+		<!-- container -->
+
+	</div><!-- container full width -->
 
 <?php get_footer(); ?>
