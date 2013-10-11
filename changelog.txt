@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.31 (10-11-13)
+- Changed ID name separator to (_) from (-) for elements/boxes.php
+
 Version 2.0.30 (10-4-13)
 - Minified JS.
 - Reformatted code( Replaced spaces with tabs ).
