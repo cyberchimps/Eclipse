@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.32 (10-18-13)
+- Container width fix.
+- Added class cc-responsive if responisve design is on.
+
 Version 2.0.31 (10-11-13)
 - Changed ID name separator to (_) from (-) for elements/boxes.php
 
