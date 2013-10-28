@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.33 (10-28-13)
+- Slider lite ID separator change from (-) to(_). Changed affected JS and CSS.
+
 Version 2.0.32 (10-18-13)
 - Container width fix.
 - Added class cc-responsive if responisve design is on.

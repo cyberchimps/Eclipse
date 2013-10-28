@@ -4,7 +4,7 @@ Theme URI: http://cyberchimps.com/eclipse/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
 Description: Eclipse 2 now offers touch friendly Responsive design, as well as Responsive Drag and Drop Theme Options that responds automatically to mobile devices such as the iPhone, iPad, and Android. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, and Post or Page Content. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website.
-Version: 2.0.32
+Version: 2.0.33
 Tags: white, black, silver, light, two-columns, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-menu, featured-images, flexible-header, post-formats, theme-options, threaded-comments, sticky-post
 License: GNU General Public License
 License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
@@ -1179,13 +1179,13 @@ table#wp-calendar td {
 
 /*==================================== SLIDER ======================================================*/
 
-#slider-lite {
+#slider_lite {
 	padding-bottom: 45px;
 	margin-bottom: 45px;
 	border-bottom: 2px solid #3d3d3d;
 }
 
-#slider-lite .carousel-control {
+#slider_lite .carousel-control {
 	position: absolute;
 	top: 40%;
 	left: -20px;
@@ -1206,7 +1206,7 @@ table#wp-calendar td {
 	filter: none;
 }
 
-#slider-lite .carousel-control.right {
+#slider_lite .carousel-control.right {
 	right: -20px;
 	left: auto;
 }
