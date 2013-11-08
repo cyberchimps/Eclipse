@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.36 (11-8-13)
+- Translation domain fix.
+- Sanitization added to few metabox option types.
+- Js minification in core.
+
 Version 2.0.35 (11-7-13)
 - Removed unused code
 
