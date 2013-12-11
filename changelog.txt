@@ -2,6 +2,12 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.39 (12-11-13)
+- Added Font-Based Social Icons.
+- Integrated Font Awesome (Bootstrap font).
+- Added retina ready images and style for it.
+- Changed the way of metabox css/js getting enqueued to support child theme.
+
 Version 2.0.38 (12-04-13)
 - Image size fix: Hooked add_image_size to after_setup_theme.
 - Deleted unused images.
