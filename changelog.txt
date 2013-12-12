@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.40 (12-12-13)
+- Fixed social icon links.
+- Fixed metabox toggle option.
+
 Version 2.0.39 (12-11-13)
 - Added Font-Based Social Icons.
 - Integrated Font Awesome (Bootstrap font).
