@@ -1,4 +1,4 @@
-Eclipse responsive Wordpress theme
+Eclipse responsive WordPress theme
 ====================================
 
 - Eclipse, Copyright 2013
