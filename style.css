@@ -1083,33 +1083,33 @@ table#wp-calendar td {
 
 /*==================================== BOXES ======================================================*/
 
-#widget-boxes-container {
+#widget_boxes_container {
 	padding-bottom: 25px;
 	margin-bottom: 45px;
 	border-bottom: 2px solid #3d3d3d;
 }
 
-#widget-boxes-container .box {
+#widget_boxes_container .box {
 	padding: 0 20px;
 	margin-bottom: 20px;
 	background: transparent;
 }
 
-#widget-boxes-container .box a {
+#widget_boxes_container .box a {
 	display: block;
 	width: 100%;
 	text-align: center;
 }
 
-#widget-boxes-container .box-no-url {
+#widget_boxes_container .box-no-url {
 	cursor: default;
 }
 
-#widget-boxes-container .box img {
+#widget_boxes_container .box img {
 	margin-bottom: 20px;
 }
 
-#widget-boxes-container .box h2 {
+#widget_boxes_container .box h2 {
 	font-size: 15px;
 	font-weight: 500;
 	text-align: left;
@@ -1117,7 +1117,7 @@ table#wp-calendar td {
 	clear: both;
 }
 
-#widget-boxes-container .box p {
+#widget_boxes_container .box p {
 	text-align: left;
 	color: #9a9a9a;
 	font-size: 13px;
