@@ -2,6 +2,13 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.41 (12-16-13)
+- Email and google map icon issue fixed.
+- Social icon issue in IE fixed.
+- Added larger screenshot for WP3.8.
+- Update tags for WP3.8.
+- Updated license.
+
 Version 2.0.40 (12-12-13)
 - Fixed social icon links.
 - Fixed metabox toggle option.
