@@ -459,6 +459,13 @@ article {
 	border-radius: 3px;
 }
 
+.postformats .glyphicon {
+	position: relative;
+	font-size: 1.7em;
+	color: #fff;
+	padding: 7px 10px 10px 0;
+}
+
 @media (max-width: 980px) {
 	.postformats {
 		float: left;
