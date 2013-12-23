@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.42 (12-23-13)
+- Fixed drag and drop font icons on page options.
+- Added metabox field type unfiltered_textarea.
+- Changed underscrore to hyphen in class for portfolio lite element.
+
 Version 2.0.41 (12-16-13)
 - Email and google map icon issue fixed.
 - Social icon issue in IE fixed.
