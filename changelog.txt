@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.43 (1-6-14)
+- Modified Helvetica font-family.
+- Removed translation of a variable.
+
 Version 2.0.42 (12-23-13)
 - Fixed drag and drop font icons on page options.
 - Added metabox field type unfiltered_textarea.
