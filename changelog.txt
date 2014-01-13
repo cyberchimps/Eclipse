@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.44 (1-13-14)
+- Version 2.0.43 upload failed so had to upload again
+
 Version 2.0.43 (1-6-14)
 - Modified Helvetica font-family.
 - Removed translation of a variable.
