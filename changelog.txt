@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.45 (1-14-14)
+- Changed blog layout option text.
+- Fixed upload button not working issue with child themes.
+
 Version 2.0.44 (1-13-14)
 - Version 2.0.43 upload failed so had to upload again
 
