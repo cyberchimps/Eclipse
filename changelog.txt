@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.49 (2-11-14)
+- Updated Translation.
+
 Version 2.0.48 (2-5-14)
 - Fixed multiple thumbnails issue on image attachment page.
 - Fixed image load issue for boxes element.
