@@ -18,25 +18,25 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'cyberchimps' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'eclipse' ); ?></h1>
 	</header>
 	<!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if( is_home() ) { ?>
 
-			<p><?php printf( __( 'Ready to publish your first post?', 'cyberchimps' ) . ' <a href="%1$s">' . __( 'Get started here', 'cyberchimps' ) . '</a>.', admin_url( 'post-new.php' ) ); ?></p>
+			<p><?php printf( __( 'Ready to publish your first post?', 'eclipse' ) . ' <a href="%1$s">' . __( 'Get started here', 'eclipse' ) . '</a>.', admin_url( 'post-new.php' ) ); ?></p>
 
 		<?php }
 		elseif( is_search() ) { ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'cyberchimps' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'eclipse' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php }
 		else { ?>
 
-			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'cyberchimps' ); ?></p>
+			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'eclipse' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } ?>

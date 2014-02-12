@@ -13,6 +13,12 @@
  * @link     http://www.cyberchimps.com/
  */
 
+// Load text domain.
+function cyberchimps_text_domain() {
+	load_theme_textdomain( 'eclipse', get_template_directory() . '/inc/languages' );
+}
+add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
+
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
@@ -35,10 +41,10 @@ function cyberchimps_next_previous_posts() {
 		<div class="more-content">
 			<div class="row-fluid">
 				<div class="span6 previous-post">
-					<?php previous_posts_link( __( 'Previous Page', 'cyberchimps' ) ); ?>
+					<?php previous_posts_link( __( 'Previous Page', 'eclipse' ) ); ?>
 				</div>
 				<div class="span6 next-post">
-					<?php next_posts_link( __( 'Next Page', 'cyberchimps' ) ); ?>
+					<?php next_posts_link( __( 'Next Page', 'eclipse' ) ); ?>
 				</div>
 			</div>
 		</div>
@@ -58,7 +64,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 			case 'trackback' :
 				?>
 				<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'cyberchimps' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'cyberchimps' ), ' ' ); ?></p>
+				<p><?php _e( 'Pingback:', 'eclipse' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'eclipse' ), ' ' ); ?></p>
 				<?php
 				break;
 			default :
@@ -74,7 +80,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 									<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 									<?php if( $comment->comment_approved == '0' ) : ?>
 										<span class="comment-moderation">
-              <em> - <?php _e( 'Your comment is awaiting moderation.', 'cyberchimps' ); ?></em>
+              <em> - <?php _e( 'Your comment is awaiting moderation.', 'eclipse' ); ?></em>
             </span>
 									<?php endif; ?>
 								</div>
@@ -85,11 +91,11 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 										<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 											<?php
 											/* translators: 1: date, 2: time */
-											printf( __( '%1$s at %2$s', 'cyberchimps' ), get_comment_date(), get_comment_time() ); ?>
+											printf( __( '%1$s at %2$s', 'eclipse' ), get_comment_date(), get_comment_time() ); ?>
 										</time>
 									</a>
 
-									<?php edit_comment_link( __( '(Edit)', 'cyberchimps' ), ' ' ); ?>
+									<?php edit_comment_link( __( '(Edit)', 'eclipse' ), ' ' ); ?>
 
 									<span class="reply">
             <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
@@ -150,7 +156,7 @@ function cyberchimps_posted_by() {
 	if( $show_author ) {
 		$posted_by = sprintf( '<div class="entry-author meta-item"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></div>',
 		                      esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		                      esc_attr( sprintf( __( 'View all posts by', 'cyberchimps' ) . ' %s', get_the_author() ) ),
+		                      esc_attr( sprintf( __( 'View all posts by', 'eclipse' ) . ' %s', get_the_author() ) ),
 		                      esc_html( get_the_author() )
 		);
 
@@ -224,11 +230,11 @@ function cyberchimps_post_comments() {
 		$show = ( cyberchimps_get_option( 'post_byline_comments', 1 ) ) ? cyberchimps_get_option( 'post_byline_comments', 1 ) : false;
 	}
 
-	$leave_comment = ( is_single() || is_page() ) ? '' : __( 'Leave a comment', 'cyberchimps' );
+	$leave_comment = ( is_single() || is_page() ) ? '' : __( 'Leave a comment', 'eclipse' );
 
 	if( $show ):
 		if( !post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<div class="entry-comments meta-item"><?php comments_popup_link( $leave_comment, __( '1 Comment', 'cyberchimps' ), '% ' . __( 'Comments', 'cyberchimps' ) ); ?></div>
+			<div class="entry-comments meta-item"><?php comments_popup_link( $leave_comment, __( '1 Comment', 'eclipse' ), '% ' . __( 'Comments', 'eclipse' ) ); ?></div>
 		<?php endif;
 	endif;
 }
@@ -286,7 +292,7 @@ function cyberchimps_options_help_header() {
 }
 
 function cyberchimps_options_help_sub_header() {
-	$text = __( 'Eclipse 2 Responsive WordPress Theme', 'cyberchimps' );
+	$text = __( 'Eclipse 2 Responsive WordPress Theme', 'eclipse' );
 
 	return $text;
 }
@@ -403,7 +409,7 @@ add_filter( 'typography_defaults', 'cyberchimps_typography_defaults' );
 
 function cyberchimps_footer_link() {
 	$array = array(
-		'name'    => __( 'Cyberchimps Link', 'cyberchimps' ),
+		'name'    => __( 'Cyberchimps Link', 'eclipse' ),
 		'id'      => 'footer_cyberchimps_link',
 		'std'     => 1,
 		'type'    => 'toggle',
@@ -418,7 +424,7 @@ add_filter( 'footer_cyberchimps_link', 'cyberchimps_footer_link' );
 
 function cyberchimps_header_drag_and_drop_options() {
 	$options = array(
-		'cyberchimps_logo' => __( 'Logo', 'cyberchimps' )
+		'cyberchimps_logo' => __( 'Logo', 'eclipse' )
 	);
 
 	return $options;
@@ -427,7 +433,7 @@ function cyberchimps_header_drag_and_drop_options() {
 add_filter( 'header_drag_and_drop_options', 'cyberchimps_header_drag_and_drop_options', 50 );
 function cyberchimps_header_drag_and_drop_default() {
 	$default = array(
-		'cyberchimps_logo' => __( 'Logo', 'cyberchimps' )
+		'cyberchimps_logo' => __( 'Logo', 'eclipse' )
 	);
 
 	return $default;
@@ -471,9 +477,9 @@ add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
 
 //setup default drag and drop for blog options
 function cyberchimps_default_blog_drag_and_drop() {
-	$default = array( 'slider_lite'    => __( 'Slider Lite', 'cyberchimps' ),
-	                  'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps' ),
-	                  'blog_post_page' => __( 'Post Page', 'cyberchimps' )
+	$default = array( 'slider_lite'    => __( 'Slider Lite', 'eclipse' ),
+	                  'portfolio_lite' => __( 'Portfolio Lite', 'eclipse' ),
+	                  'blog_post_page' => __( 'Post Page', 'eclipse' )
 	);
 
 	return $default;

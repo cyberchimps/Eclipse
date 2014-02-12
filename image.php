@@ -42,7 +42,7 @@ get_header(); ?>
 									<div class="entry-meta">
 										<?php
 										$metadata = wp_get_attachment_metadata();
-										printf( __( 'Published', 'cyberchimps' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . __( 'size', 'cyberchimps' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . __( 'in', 'cyberchimps' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
+										printf( __( 'Published', 'eclipse' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . __( 'size', 'eclipse' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . __( 'in', 'eclipse' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
 												esc_attr( get_the_date( 'c' ) ),
 												esc_html( get_the_date() ),
 												wp_get_attachment_url(),
@@ -52,16 +52,16 @@ get_header(); ?>
 												get_the_title( $post->post_parent )
 										);
 										?>
-										<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+										<?php edit_post_link( __( 'Edit', 'eclipse' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 									</div>
 									<!-- .entry-meta -->
 
 									<nav id="image-navigation" class="row-fluid">
 										<div class="span6">
-											<div class="previous-image"><?php previous_image_link( false, '&larr; ' . __( 'Previous', 'cyberchimps' ) ); ?></div>
+											<div class="previous-image"><?php previous_image_link( false, '&larr; ' . __( 'Previous', 'eclipse' ) ); ?></div>
 										</div>
 										<div class="span6">
-											<div class="next-image alignright"><?php next_image_link( false, __( 'Next', 'cyberchimps' ) . ' &rarr;' ); ?></div>
+											<div class="next-image alignright"><?php next_image_link( false, __( 'Next', 'eclipse' ) . ' &rarr;' ); ?></div>
 										</div>
 									</nav>
 									<!-- #image-navigation -->
@@ -89,7 +89,7 @@ get_header(); ?>
 									<!-- .entry-attachment -->
 
 									<?php the_content(); ?>
-									<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+									<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'eclipse' ), 'after' => '</div>' ) ); ?>
 
 								</div>
 								<!-- .entry-content -->
@@ -151,19 +151,19 @@ get_header(); ?>
 
 								<footer class="entry-meta">
 									<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . __( 'Post a comment', 'cyberchimps' ) . '</a> ' . __( 'or leave a trackback', 'cyberchimps' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'cyberchimps' ) . '</a>.', get_trackback_url() ); ?>
+										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . __( 'Post a comment', 'eclipse' ) . '</a> ' . __( 'or leave a trackback', 'eclipse' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'eclipse' ) . '</a>.', get_trackback_url() ); ?>
 									<?php elseif ( !comments_open() && pings_open() ) : // Only trackbacks open ?>
-										<?php printf( __( 'Comments are closed, but you can leave a trackback:', 'cyberchimps' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'cyberchimps' ) . '</a>.', get_trackback_url() ); ?>
+										<?php printf( __( 'Comments are closed, but you can leave a trackback:', 'eclipse' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'eclipse' ) . '</a>.', get_trackback_url() ); ?>
 									<?php
 									elseif ( comments_open() && !pings_open() ) : // Only comments open
 										?>
-										<?php _e( 'Trackbacks are closed, but you can', 'cyberchimps' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'cyberchimps' ) . '</a>.'; ?>
+										<?php _e( 'Trackbacks are closed, but you can', 'eclipse' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'eclipse' ) . '</a>.'; ?>
 									<?php
 									elseif ( !comments_open() && !pings_open() ) : // Comments and trackbacks closed
 										?>
-										<?php _e( 'Both comments and trackbacks are currently closed.', 'cyberchimps' ); ?>
+										<?php _e( 'Both comments and trackbacks are currently closed.', 'eclipse' ); ?>
 									<?php endif; ?>
-									<?php edit_post_link( __( 'Edit', 'cyberchimps' ), ' <span class="edit-link">', '</span>' ); ?>
+									<?php edit_post_link( __( 'Edit', 'eclipse' ), ' <span class="edit-link">', '</span>' ); ?>
 								</footer>
 								<!-- .entry-meta -->
 							</article><!-- #post-<?php the_ID(); ?> -->
