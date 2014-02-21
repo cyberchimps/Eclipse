@@ -1,3 +1,6 @@
+/* @override 
+	http://cyberchimps.dev/wp-content/themes/eclipse/style.css?ver=1.0 */
+
 /*
 Theme Name: Eclipse
 Theme URI: http://cyberchimps.com/eclipse/
@@ -560,6 +563,7 @@ blockquote cite:before {
 article.post p, article.page p {
 	font-size: 1.1em;
 	line-height: 1.5em;
+	color: #ccc;
 }
 
 /*==================================== IMAGES ==========================================================*/
