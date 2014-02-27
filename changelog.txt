@@ -2,6 +2,14 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.51 (2-27-14)
+- Slider fix to start on page load.
+- Updated elements images along with boxes images.
+- Fixed Read more text option.
+- Responsive toggle fix: tweaked full-width-container width.
+- Background option fix.
+- Removed post format icon from page.
+
 Version 2.0.50 (2-18-14)
 - Slider is made to be start sliding on page load.
 
