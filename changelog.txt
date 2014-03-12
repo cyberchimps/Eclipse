@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.53 (3-12-14)
+- Fixed duplicate plugin install notification in option page.
+- Modified "More Themes" page to show up all CyberChimps free theme with option to install/activate right there.
+
 Version 2.0.52 (3-5-14)
 - Fixed conflict between blog post excerpt option and bbpress user profile page.
 - Set up element options defaults for better wp.org preview.
