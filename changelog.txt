@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.55 (3-27-14)
+- Updated Elements Translation.
+
 Version 2.0.54 (3-21-14)
 - Updated support forum URL.
 - Fixed IE8 compatibility issue.
