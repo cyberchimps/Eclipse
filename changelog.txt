@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.56 (4-3-14)
+- Added new background option.
+- Removed wp_register_style(or script) for local css/js files.
+
 Version 2.0.55 (3-27-14)
 - Updated Elements Translation.
 
