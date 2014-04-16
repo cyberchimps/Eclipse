@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.58 (4-16-14)
+- Changed social font icons to font awesome.
+- Removed unwanted function_exists() conditional wrapper.
+
 Version 2.0.57 (4-9-14)
 -Added upgrade button to the free theme customizer.
 -Fixed Vimeo video responsiveness.
