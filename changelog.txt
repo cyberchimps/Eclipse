@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.59 (4-24-14)
+- Added recommendation for clef plugin.
+- Updated translations.
+- Youtube video fixed.
+
 Version 2.0.58 (4-16-14)
 - Changed social font icons to font awesome.
 - Removed unwanted function_exists() conditional wrapper.
