@@ -2,6 +2,14 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.62 (5-16-14)
+- Correct spelling of CyberChimps/CSS.
+- Change text for Google font field.
+- Added cyberchimps_ prefix to couple of functions.
+- Changed CyberChimps logo on theme options page.
+- Changed "alt" text of logo to the site name instead of "logo".
+- Regenerated ".mo" files as they were 0KB each before, hence breaking the translation.
+
 Version 2.0.61 (5-9-14)
 - Fixed W3C validator error issue with IE compatibility meta tags.
 - Fixed missing image error: removed unused function.
