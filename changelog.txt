@@ -2,6 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.63 (5-23-14)
+- Updated ugrade text.
+- Removed left sidebar from widget section.
+- Removed "Custom Callout" from sub settings.
+
 Version 2.0.62 (5-16-14)
 - Correct spelling of CyberChimps/CSS.
 - Change text for Google font field.
