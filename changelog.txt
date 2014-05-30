@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.64 (5-30-14)
+- Fixed casing of CyberChimpsParallax class.
+
 Version 2.0.63 (5-23-14)
 - Updated ugrade text.
 - Removed left sidebar from widget section.
