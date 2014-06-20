@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.67 (6-20-14)
+- Code reformatting: Changed spaces to tabs.
+
 Version 2.0.66 (6-13-14)
 - Code reformatted: Changed spaces to tabs.
 
