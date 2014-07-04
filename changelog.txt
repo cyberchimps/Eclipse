@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.69 (7-04-14)
+- Added option for Instagram Icon.
+
 Version 2.0.68 (6-27-14)
 - Core Translation Updated.
 
