@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.71 (7-18-14)
+- Fixed broken link to CyberChimps logo.
+
 Version 2.0.70 (7-11-14)
 - Replaced logo with text in footer credit link.
 
