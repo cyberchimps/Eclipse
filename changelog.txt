@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.75 (9-08-14)
+- Added iFeature slider to plugin suggestion list.
+
 Version 2.0.74 (8-22-14)
 - Updated Translations.
 
