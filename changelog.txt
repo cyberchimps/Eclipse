@@ -2,6 +2,9 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.76 (9-24-14)
+- Placeholder fix for IE8/9.
+
 Version 2.0.75 (9-08-14)
 - Added iFeature slider to plugin suggestion list.
 
