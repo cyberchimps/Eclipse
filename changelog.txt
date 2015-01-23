@@ -2,6 +2,10 @@ Eclipse 2 Free Changelog
 
 ****************************
 
+Version 2.0.79 (1-23-15)
+- Fixed conflict between slider free and pro plugin.
+- Added new plugin suggestion.
+
 Version 2.0.78 (11-25-14)
 - Removed theme activation notice.
 - Changed default links for slider.
