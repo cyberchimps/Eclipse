@@ -448,6 +448,14 @@ function cyberchimps_remove_fields( $orig ) {
 	return $new_fields;
 }
 
+// Remove searchbar from customizer
+add_action( 'customize_register', 'eclipse_customize_register', 50 );
+
+function eclipse_customize_register( $wp_customize ) {
+        $wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
+        $wp_customize->remove_control( 'searchbar' );
+}
+    
 add_filter( 'cyberchimps_field_filter', 'cyberchimps_remove_fields' );
 
 // Remove sections
