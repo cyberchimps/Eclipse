@@ -1,0 +1,36 @@
+checking file style.css
+Hunk #1 FAILED at 1.
+Hunk #2 FAILED at 16.
+Hunk #3 FAILED at 105.
+Hunk #4 succeeded at 171 (offset 24 lines).
+Hunk #5 succeeded at 267 with fuzz 2 (offset 28 lines).
+Hunk #6 FAILED at 260.
+Hunk #7 FAILED at 284.
+Hunk #8 FAILED at 328.
+Hunk #9 succeeded at 442 with fuzz 1 (offset 54 lines).
+Hunk #10 FAILED at 420.
+Hunk #11 succeeded at 508 (offset 63 lines).
+Hunk #12 FAILED at 541.
+Hunk #13 FAILED at 635.
+Hunk #14 FAILED at 645.
+Hunk #15 succeeded at 824 with fuzz 2 (offset 112 lines).
+Hunk #16 FAILED at 733.
+Hunk #17 FAILED at 859.
+Hunk #18 FAILED at 869.
+Hunk #19 FAILED at 921.
+Hunk #20 FAILED at 933.
+Hunk #21 FAILED at 982.
+Hunk #22 FAILED at 1017.
+Hunk #23 FAILED at 1042.
+Hunk #24 FAILED at 1049.
+Hunk #25 FAILED at 1064.
+Hunk #26 FAILED at 1076.
+Hunk #27 succeeded at 1194 with fuzz 2 (offset 97 lines).
+Hunk #28 succeeded at 1248 with fuzz 2 (offset 96 lines).
+Hunk #29 FAILED at 1195.
+Hunk #30 succeeded at 1282 with fuzz 2 (offset 53 lines).
+Hunk #31 FAILED at 1269.
+Hunk #32 FAILED at 1280.
+Hunk #33 FAILED at 1325.
+Hunk #34 FAILED at 1333.
+26 out of 34 hunks FAILED
