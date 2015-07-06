@@ -565,35 +565,6 @@ function cyberchimps_ep_additional_fields( $fields_list ) {
 		'heading' => 'cyberchimps_blog_heading'
 	);
 
-	/* Boxes Options */
-	$fields_list[] = array(
-		'name' => __( 'Title', 'cyberchimps_core' ),
-		'id' => 'boxes_title',
-		'std' => '',
-		'type' => 'toggle',
-		'section' => 'cyberchimps_boxes_section',
-		'heading' => 'cyberchimps_blog_heading'
-	);
-
-	$fields_list[] = array(
-		'name' => __( 'Custom Title', 'cyberchimps_core' ),
-		'id' => 'boxes_custom_title',
-		'class' => 'boxes_title_toggle',
-		'std' => '',
-		'type' => 'text',
-		'section' => 'cyberchimps_boxes_section',
-		'heading' => 'cyberchimps_blog_heading'
-	);
-	$fields_list[] = array(
-		'name' => __( 'Category Description', 'cyberchimps_core' ),
-		'id' => 'boxes_cats_desc',
-		'std' => '',
-		'type' => 'toggle',
-		'section' => 'cyberchimps_boxes_section',
-		'heading' => 'cyberchimps_blog_heading'
-	);
-
-
 	return $fields_list;
 }
 
