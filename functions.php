@@ -182,6 +182,7 @@ function cyberchimps_posted_in() {
 		$categories_list = get_the_category_list( ', ' );
 		if( $categories_list ) :
 			$cats = $categories_list;
+			$cats = ' <span class="meta-separator">-<span> ' . $categories_list;
 			?>
 			<div class="entry-cats meta-item">
 				<?php echo apply_filters( 'cyberchimps_post_categories', $cats ); ?>
@@ -208,6 +209,7 @@ function cyberchimps_post_tags() {
 		$tags_list = get_the_tag_list( '', ', ' );
 		if( $tags_list ) :
 			$tags = $tags_list;
+			$tags = ' <span class="meta-separator">-<span> ' . $tags_list;
 			?>
 			<div class="entry-tags meta-item">
 				<?php echo apply_filters( 'cyberchimps_post_tags', $tags ); ?>
@@ -522,3 +524,137 @@ function cyberchimps_full_width_fix() {
 }
 
 add_action( 'wp_head', 'cyberchimps_full_width_fix' );
+
+// Additional Options
+function cyberchimps_additional_sections( $sections_list ) {
+	return $sections_list;
+}
+
+add_filter( 'cyberchimps_section_list', 'cyberchimps_addon_sections', 20, 1 );
+
+/* Adding thumbnail size for featured image */
+add_image_size( 'cyberchimps_thumbnail_new', '264', '150', TRUE );
+
+function cyberchimps_ep_thumbnail_size() {
+	return 'cyberchimps_thumbnail_new';
+}
+
+add_filter( 'cyberchimps_post_thumbnail_size', 'cyberchimps_ep_thumbnail_size' );
+
+
+// Additional Fields
+function cyberchimps_ep_additional_fields( $fields_list ) {
+
+	/* Blog posts options */
+	$fields_list[] = array(
+		'name' => __( 'Blog Description', 'cyberchimps_core' ),
+		'id' => 'blog_description',
+		'type' => 'toggle',
+		'std' => 0,
+		'section' => 'cyberchimps_blog_options_section',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+
+	$fields_list[] = array(
+		'name' => __( 'Blog Description Text', 'cyberchimps_core' ),
+		'id' => 'blog_description_text',
+		'class' => 'blog_description_toggle',
+		'type' => 'text',
+		'std' => '',
+		'section' => 'cyberchimps_blog_options_section',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+
+	return $fields_list;
+}
+
+add_filter( 'cyberchimps_field_list', 'cyberchimps_ep_additional_fields', 20, 1 );
+
+
+/* Adding mark up for posts page */
+
+function cyberchimps_ep_opening_container() {
+	echo '<div id="blog-posts-inner-container" class="container-full-width">';
+}
+
+add_action( 'cyberchimps_before_content', 'cyberchimps_ep_opening_container', 111 );
+
+
+/* Adding closing mark up for posts page */
+
+function cyberchimps_ep_closing_container() {
+	echo '</div>';
+}
+
+add_action( 'cyberchimps_after_content', 'cyberchimps_ep_closing_container', 111 );
+
+
+/* Adding class to display posts in column for Home, Archive  */
+
+function cyberchimps_ep_custom_class( $classes ) {
+	global $post;
+	$layout_type = '';
+	if ( is_home() ) {
+		$layout_type = cyberchimps_get_option( 'sidebar_images', 'right_sidebar' );
+		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
+			$classes[] = 'span3';
+		} else if ( strcmp( 'left_right_sidebar', $layout_type ) == '0' || strcmp( 'content_middle', $layout_type ) == '0' ) {
+			$classes[] = 'span6';
+		} else {
+			$classes[] = 'span4';
+		}
+	} elseif ( is_archive() ) {
+		$layout_type = cyberchimps_get_option( 'archive_sidebar_options', 'right_sidebar' );
+		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
+			$classes[] = 'span3';
+		} else if ( strcmp( 'left_right_sidebar', $layout_type ) == '0' || strcmp( 'content_middle', $layout_type ) == '0' ) {
+			$classes[] = 'span6';
+		} else {
+			$classes[] = 'span4';
+		}
+	}
+	return $classes;
+}
+
+
+/* Seeting posts_per_page option for home page */
+
+function cyberchimps_ep_posts_per_page_home( $query ) {
+
+	if ( $query->is_home() && ! is_admin() && $query->is_main_query() ) {
+		$layout_type = cyberchimps_get_option( 'sidebar_images', 'right_sidebar' );
+
+		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
+			$query->set( 'posts_per_page', 4 );
+		} else if ( strcmp( 'left_right_sidebar', $layout_type ) == '0' || strcmp( 'content_middle', $layout_type ) == '0' ) {
+			$query->set( 'posts_per_page', 2 );
+		} else {
+			$query->set( 'posts_per_page', 3 );
+		}
+	}
+	return $query;
+}
+
+add_action( 'pre_get_posts', 'cyberchimps_ep_posts_per_page_home' );
+
+
+/* Displayed blog description */
+
+function cyberchimps_ep_blog_description() {
+	$html = '';
+	$title_text = cyberchimps_get_option( 'blog_title_text', __( 'Our Blog', 'cyberchimps_core' ) );
+	$blog_description = cyberchimps_get_option( 'blog_description' );
+	$blog_description_text = cyberchimps_get_option( 'blog_description_text' );
+
+	$html = '<div id="cyberchimps_blog_title" class="row-fluid">
+		<header class="page-header">
+			<h1 class="page-title">' . $title_text . '</h1>
+		</header>';
+	if ( ! empty( $blog_description ) && ! empty( $blog_description_text ) ) {
+		$html .= '<div id="cyberchimps_blog_description">' . $blog_description_text . '</div>';
+	}
+	$html .= '</div>';
+	return $html;
+}
+
+add_filter( 'cyberchimps_blog_title_html', 'cyberchimps_ep_blog_description' );

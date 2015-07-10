@@ -14,42 +14,20 @@
  */
 
 ?>
-
+<?php add_filter( 'post_class', 'cyberchimps_ep_custom_class' ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="row-fluid">
-		<?php if( get_post_type() == 'post' ): ?>
-			<footer class="span3 visible-desktop">
-				<div class="entry-meta">
-					<?php cyberchimps_post_format_icon(); ?>
-
-					<?php if( 'post' == get_post_type() ) : ?>
-
-						<?php cyberchimps_posted_on(); ?>
-
-						<?php cyberchimps_posted_by(); ?>
-
-						<?php cyberchimps_posted_in() ?>
-
-						<?php cyberchimps_post_tags(); ?>
-
-					<?php endif; // End if 'post' == get_post_type() ?>
-
-					<?php cyberchimps_post_comments() ?>
-
-					<?php edit_post_link( __( 'Edit', 'eclipse' ), '<span class="edit-link">', '</span>' ); ?>
-				</div>
-			</footer>
-		<?php endif; ?>
+		
 
 		<?php if (is_single()) : ?>
 
-		<div class="span9">
+		<div class="span12">
 
 			<?php elseif (is_search()): ?>
 
 			<?php if ('post' == get_post_type()): ?>
 
-			<div class="span9">
+			<div class="span12">
 
 				<?php else: ?>
 
@@ -59,7 +37,7 @@
 
 					<?php elseif (is_archive()): ?>
 
-					<div class="span9">
+					<div class="span12">
 
 						<?php elseif (is_page()): ?>
 
@@ -67,9 +45,15 @@
 
 							<?php else : // blog post pages ?>
 
-							<div class="span9">
+							<div class="span12">
 
 								<?php endif; ?>
+								
+								<?php
+								if ( is_home() || is_archive() ) {
+									cyberchimps_featured_image();
+								}
+								?>
 
 								<header class="entry-header">
 
@@ -112,7 +96,7 @@
 								<!-- .entry-header -->
 
 								<?php if( get_post_type() == 'post' ): ?>
-									<footer class="hidden-desktop">
+									<footer class="">
 										<div class="entry-meta">
 											<?php cyberchimps_post_format_icon(); ?>
 
@@ -144,6 +128,7 @@
 									</div><!-- .entry-content -->
 
 								<?php elseif( is_search() ): ?>
+									<?php if ( cyberchimps_get_option( 'search_post_excerpts', 0 ) ): ?>
 									<div class="entry-summary">
 										<?php cyberchimps_featured_image(); ?>
 										<?php add_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
@@ -152,20 +137,16 @@
 										<?php remove_filter( 'excerpt_length', 'cyberchimps_search_excerpt_length', 999 ); ?>
 										<?php remove_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
 									</div><!-- .entry-summary -->
+									<?php endif; ?>
 
 								<?php
 								elseif( is_archive() ): ?>
 									<?php if( cyberchimps_get_option( 'archive_post_excerpts', 0 ) ): ?>
 										<div class="entry-summary">
-											<?php cyberchimps_featured_image(); ?>
+											
 											<?php the_excerpt(); ?>
 										</div>
-									<?php else: ?>
-										<div class="entry-content">
-											<?php cyberchimps_featured_image(); ?>
-											<?php the_content( __( 'Continue reading', 'eclipse' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-											<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'eclipse' ), 'after' => '</div>' ) ); ?>
-										</div><!-- .entry-content -->
+									
 									<?php endif; ?>
 
 								<?php
@@ -180,15 +161,10 @@
 								elseif( is_home() ) : // blog post pages ?>
 									<?php if( cyberchimps_get_option( 'post_excerpts', 0 ) ): ?>
 										<div class="entry-summary">
-											<?php cyberchimps_featured_image(); ?>
+											
 											<?php the_excerpt(); ?>
 										</div>
-									<?php else: ?>
-										<div class="entry-content">
-											<?php cyberchimps_featured_image(); ?>
-											<?php the_content( __( 'Continue reading', 'eclipse' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-											<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'eclipse' ), 'after' => '</div>' ) ); ?>
-										</div><!-- .entry-content -->
+									
 									<?php endif; ?>
 
 								<?php else: ?>
@@ -205,3 +181,4 @@
 						<!-- row fluid -->
 						<div class="clear"></div>
 </article><!-- #post-<?php the_ID(); ?> -->
+<?php remove_filter( 'post_class', 'cyberchimps_ep_custom_class' ); ?>
