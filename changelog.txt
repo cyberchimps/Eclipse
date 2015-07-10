@@ -1,6 +1,9 @@
 Eclipse 2 Free Changelog
 
 ****************************
+Version 3.0.1 (1-23-15)
+- Styled Social Icons
+- changed the display of posts to column format.
 
 Version 2.0.79 (1-23-15)
 - Fixed conflict between slider free and pro plugin.
