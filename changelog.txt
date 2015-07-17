@@ -1,6 +1,10 @@
 Eclipse 2 Free Changelog
 
 ****************************
+
+Version 3.0.2 (17-07-15)
+- Change in theme customizer as per wordpress.org guidelines
+
 Version 3.0.1 (1-23-15)
 - Styled Social Icons
 - changed the display of posts to column format.
