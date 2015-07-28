@@ -658,3 +658,10 @@ function cyberchimps_ep_blog_description() {
 }
 
 add_filter( 'cyberchimps_blog_title_html', 'cyberchimps_ep_blog_description' );
+// Remove searchbar from customizer
+add_action( 'customize_register', 'eclipse_customize_register', 50 );
+
+function eclipse_customize_register( $wp_customize ) {
+        $wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
+        $wp_customize->remove_control( 'searchbar' );
+}
