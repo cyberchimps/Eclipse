@@ -263,7 +263,7 @@ function cyberchimps_theme_check() {
 
 //Theme Name
 function cyberchimps_options_theme_name() {
-	$text = 'Eclipse 2';
+	$text = 'Eclipse 3';
 
 	return $text;
 }
@@ -288,13 +288,13 @@ add_filter( 'cyberchimps_support_forum', 'cyberchimps_options_support_forum' );
 
 // Help Section
 function cyberchimps_options_help_header() {
-	$text = 'Eclipse 2';
+	$text = 'Eclipse 3';
 
 	return $text;
 }
 
 function cyberchimps_options_help_sub_header() {
-	$text = __( 'Eclipse 2 Responsive WordPress Theme', 'eclipse' );
+	$text = __( 'Eclipse 3 Responsive WordPress Theme', 'eclipse' );
 
 	return $text;
 }
@@ -462,20 +462,20 @@ function cyberchimps_contact_section( $original ) {
 add_filter( 'cyberchimps_sections_filter', 'cyberchimps_contact_section' );
 
 //upgrade bar
-function ifeature_upgrade_title() {
-	$title = 'Eclipse Pro 2';
+function eclipse_upgrade_title() {
+	$title = 'Eclipse Pro 3';
 
 	return $title;
 }
 
-function ifeature_upgrade_link() {
+function eclipse_upgrade_link() {
 	$link = 'http://cyberchimps.com/store/eclipse-pro/';
 
 	return $link;
 }
 
-add_filter( 'cyberchimps_upgrade_pro_title', 'ifeature_upgrade_title' );
-add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
+add_filter( 'cyberchimps_upgrade_pro_title', 'eclipse_upgrade_title' );
+add_filter( 'cyberchimps_upgrade_link', 'eclipse_upgrade_link' );
 
 //setup default drag and drop for blog options
 function cyberchimps_default_blog_drag_and_drop() {
@@ -616,9 +616,7 @@ function cyberchimps_ep_custom_class( $classes ) {
 	return $classes;
 }
 
-
 /* Seeting posts_per_page option for home page */
-
 function cyberchimps_ep_posts_per_page_home( $query ) {
 
 	if ( $query->is_home() && ! is_admin() && $query->is_main_query() ) {
@@ -658,3 +656,11 @@ function cyberchimps_ep_blog_description() {
 }
 
 add_filter( 'cyberchimps_blog_title_html', 'cyberchimps_ep_blog_description' );
+// Remove searchbar from customizer
+add_action( 'customize_register', 'eclipse_customize_register', 50 );
+
+function eclipse_customize_register( $wp_customize ) {
+        $wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
+        $wp_customize->remove_control( 'searchbar' );
+}
+?>
