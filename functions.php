@@ -663,4 +663,11 @@ function eclipse_customize_register( $wp_customize ) {
         $wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
         $wp_customize->remove_control( 'searchbar' );
 }
+
+// default background color
+function eclipse_default_background_color() {
+	$color = '333333';
+	return $color;
+}
+add_filter( 'default_background_color', 'eclipse_default_background_color' , '11');
 ?>
