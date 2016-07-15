@@ -683,9 +683,8 @@ blockquote cite:before {
 }
 
 article.post p, article.page p {
-	font-size: 14px;
+	font-size: 1.1em;
 	line-height: 1.5em;
-	color: #ccc;
 }
 
 /*==================================== IMAGES ==========================================================*/
@@ -984,7 +983,6 @@ ol.commentlist li.comment .comment-main .comment-author {
 }
 
 ol.commentlist li.comment .comment-main a {
-	color: #aaaaaa;
 	font-weight: bold;
 	text-decoration: underline;
 }
