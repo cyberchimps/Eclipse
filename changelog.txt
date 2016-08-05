@@ -2,10 +2,11 @@ Eclipse 2 Free Changelog
 
 ****************************
 
-Version 3.0.5 (7-22-16)
+Version 3.0.5 (8-5-16)
 - Fixed background color and Typography size and Typography face issue with customizer
 - Fixed issues with Text Color and link color
 - Fixed issue with social icon display
+- Updated as per latest Theme Check guidelines
 
 Version 3.0.4 (4-15-16)
 - Site font issue fixed
