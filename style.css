@@ -1341,7 +1341,6 @@ table#wp-calendar td {
 	width: 48px;
 	height: 48px;
 	margin-top: -20px;
-	background: url('images/slider-nav.png') no-repeat;
 	border: 0;
 	filter: none;
 }
@@ -1417,4 +1416,7 @@ table#wp-calendar td {
 	header#cc-header .span5 #searchform {
 		float: none;
 	}
+}
+.carousel-control{
+	    line-height: 39px;
 }
