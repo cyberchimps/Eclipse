@@ -119,13 +119,13 @@ endif; // ends check for cyberchimps_comment()
 function cyberchimps_posted_on() {
 
 	if( is_single() ) {
-		$show_date = ( cyberchimps_get_option( 'single_post_byline_date', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_date', 1 ) : false;
+		$show_date = ( get_theme_mod( 'single_post_byline_date', 1 ) ) ? get_theme_mod( 'single_post_byline_date', 1 ) : false;
 	}
 	elseif( is_archive() ) {
-		$show_date = ( cyberchimps_get_option( 'archive_post_byline_date', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_date', 1 ) : false;
+		$show_date = ( get_theme_mod( 'archive_post_byline_date', 1 ) ) ? get_theme_mod( 'archive_post_byline_date', 1 ) : false;
 	}
 	else {
-		$show_date = ( cyberchimps_get_option( 'post_byline_date', 1 ) ) ? cyberchimps_get_option( 'post_byline_date', 1 ) : false;
+		$show_date = ( get_theme_mod( 'post_byline_date', 1 ) ) ? get_theme_mod( 'post_byline_date', 1 ) : false;
 	}
 
 	if( $show_date ) {
@@ -144,13 +144,13 @@ function cyberchimps_posted_on() {
 /* Posted by */
 function cyberchimps_posted_by() {
 	if( is_single() ) {
-		$show_author = ( cyberchimps_get_option( 'single_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_author', 1 ) : false;
+		$show_author = ( get_theme_mod( 'single_post_byline_author', 1 ) ) ? get_theme_mod( 'single_post_byline_author', 1 ) : false;
 	}
 	elseif( is_archive() ) {
-		$show_author = ( cyberchimps_get_option( 'archive_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_author', 1 ) : false;
+		$show_author = ( get_theme_mod( 'archive_post_byline_author', 1 ) ) ? get_theme_mod( 'archive_post_byline_author', 1 ) : false;
 	}
 	else {
-		$show_author = ( cyberchimps_get_option( 'post_byline_author', 1 ) ) ? cyberchimps_get_option( 'post_byline_author', 1 ) : false;
+		$show_author = ( get_theme_mod( 'post_byline_author', 1 ) ) ? get_theme_mod( 'post_byline_author', 1 ) : false;
 	}
 
 	if( $show_author ) {
@@ -170,13 +170,13 @@ function cyberchimps_posted_in() {
 	global $post;
 
 	if( is_single() ) {
-		$show = ( cyberchimps_get_option( 'single_post_byline_categories', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_categories', 1 ) : false;
+		$show = ( get_theme_mod( 'single_post_byline_categories', 1 ) ) ? get_theme_mod( 'single_post_byline_categories', 1 ) : false;
 	}
 	elseif( is_archive() ) {
-		$show = ( cyberchimps_get_option( 'archive_post_byline_categories', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_categories', 1 ) : false;
+		$show = ( get_theme_mod( 'archive_post_byline_categories', 1 ) ) ? get_theme_mod( 'archive_post_byline_categories', 1 ) : false;
 	}
 	else {
-		$show = ( cyberchimps_get_option( 'post_byline_categories', 1 ) ) ? cyberchimps_get_option( 'post_byline_categories', 1 ) : false;
+		$show = ( get_theme_mod( 'post_byline_categories', 1 ) ) ? get_theme_mod( 'post_byline_categories', 1 ) : false;
 	}
 	if( $show ):
 		$categories_list = get_the_category_list( ', ' );
@@ -196,13 +196,13 @@ function cyberchimps_post_tags() {
 	global $post;
 
 	if( is_single() ) {
-		$show = ( cyberchimps_get_option( 'single_post_byline_tags', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_tags', 1 ) : false;
+		$show = ( get_theme_mod( 'single_post_byline_tags', 1 ) ) ? get_theme_mod( 'single_post_byline_tags', 1 ) : false;
 	}
 	elseif( is_archive() ) {
-		$show = ( cyberchimps_get_option( 'archive_post_byline_tags', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_tags', 1 ) : false;
+		$show = ( get_theme_mod( 'archive_post_byline_tags', 1 ) ) ? get_theme_mod( 'archive_post_byline_tags', 1 ) : false;
 	}
 	else {
-		$show = ( cyberchimps_get_option( 'post_byline_tags', 1 ) ) ? cyberchimps_get_option( 'post_byline_tags', 1 ) : false;
+		$show = ( get_theme_mod( 'post_byline_tags', 1 ) ) ? get_theme_mod( 'post_byline_tags', 1 ) : false;
 	}
 
 	if( $show ):
@@ -223,13 +223,13 @@ function cyberchimps_post_comments() {
 	global $post;
 
 	if( is_single() ) {
-		$show = ( cyberchimps_get_option( 'single_post_byline_comments', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_comments', 1 ) : false;
+		$show = ( get_theme_mod( 'single_post_byline_comments', 1 ) ) ? get_theme_mod( 'single_post_byline_comments', 1 ) : false;
 	}
 	elseif( is_archive() ) {
-		$show = ( cyberchimps_get_option( 'archive_post_byline_comments', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_comments', 1 ) : false;
+		$show = ( get_theme_mod( 'archive_post_byline_comments', 1 ) ) ? get_theme_mod( 'archive_post_byline_comments', 1 ) : false;
 	}
 	else {
-		$show = ( cyberchimps_get_option( 'post_byline_comments', 1 ) ) ? cyberchimps_get_option( 'post_byline_comments', 1 ) : false;
+		$show = ( get_theme_mod( 'post_byline_comments', 1 ) ) ? get_theme_mod( 'post_byline_comments', 1 ) : false;
 	}
 
 	$leave_comment = ( is_single() || is_page() ) ? '' : __( 'Leave a comment', 'eclipse' );
@@ -512,8 +512,8 @@ add_filter( 'cyberchimps_slider_lite_img3', 'cyberchimps_slider_default_image3' 
 
 /* fix full width container that disappears on horizontal scroll */
 function cyberchimps_full_width_fix() {
-	$responsive_design = cyberchimps_get_option( 'responsive_design' );
-	$min_width         = cyberchimps_get_option( 'max_width' );
+	$responsive_design = get_theme_mod( 'responsive_design' );
+	$min_width         = get_theme_mod( 'max_width' );
 	if( !$responsive_design ) {
 		$style = '<style rel="stylesheet" type="text/css" media="all">';
 		$style .= '#footer-widgets-wrapper, #footer-main-wrapper { min-width: ' . $min_width . 'px;}';
@@ -595,7 +595,7 @@ function cyberchimps_ep_custom_class( $classes ) {
 	global $post;
 	$layout_type = '';
 	if ( is_home() ) {
-		$layout_type = cyberchimps_get_option( 'sidebar_images', 'right_sidebar' );
+		$layout_type = get_theme_mod( 'sidebar_images', 'right_sidebar' );
 		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
 			$classes[] = 'span3';
 		} else if ( strcmp( 'left_right_sidebar', $layout_type ) == '0' || strcmp( 'content_middle', $layout_type ) == '0' ) {
@@ -604,7 +604,7 @@ function cyberchimps_ep_custom_class( $classes ) {
 			$classes[] = 'span4';
 		}
 	} elseif ( is_archive() ) {
-		$layout_type = cyberchimps_get_option( 'archive_sidebar_options', 'right_sidebar' );
+		$layout_type = get_theme_mod( 'archive_sidebar_options', 'right_sidebar' );
 		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
 			$classes[] = 'span3';
 		} else if ( strcmp( 'left_right_sidebar', $layout_type ) == '0' || strcmp( 'content_middle', $layout_type ) == '0' ) {
@@ -620,7 +620,7 @@ function cyberchimps_ep_custom_class( $classes ) {
 function cyberchimps_ep_posts_per_page_home( $query ) {
 
 	if ( $query->is_home() && ! is_admin() && $query->is_main_query() ) {
-		$layout_type = cyberchimps_get_option( 'sidebar_images', 'right_sidebar' );
+		$layout_type = get_theme_mod( 'sidebar_images', 'right_sidebar' );
 
 		if ( strcmp( 'full_width', $layout_type ) == '0' ) {
 			$query->set( 'posts_per_page', 4 );
@@ -640,9 +640,9 @@ add_action( 'pre_get_posts', 'cyberchimps_ep_posts_per_page_home' );
 
 function cyberchimps_ep_blog_description() {
 	$html = '';
-	$title_text = cyberchimps_get_option( 'blog_title_text', __( 'Our Blog', 'cyberchimps_core' ) );
-	$blog_description = cyberchimps_get_option( 'blog_description' );
-	$blog_description_text = cyberchimps_get_option( 'blog_description_text' );
+	$title_text = get_theme_mod( 'blog_title_text', __( 'Our Blog', 'cyberchimps_core' ) );
+	$blog_description = get_theme_mod( 'blog_description' );
+	$blog_description_text = get_theme_mod( 'blog_description_text' );
 
 	$html = '<div id="cyberchimps_blog_title" class="row-fluid">
 		<header class="page-header">
