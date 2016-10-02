@@ -79,7 +79,7 @@
 										if( 'post' == get_post_type() && is_single() ) : ?>
 
 											<?php // get the post title toggle option
-											$post_title = get_theme_mod( 'single_post_title' );
+											$post_title = cyberchimps_get_option( 'single_post_title' );
 											if( $post_title == "1" ) :
 												( get_the_title() ) ? the_title() : the_permalink();
 											endif;
@@ -128,7 +128,7 @@
 									</div><!-- .entry-content -->
 
 								<?php elseif( is_search() ): ?>
-									<?php if ( get_theme_mod( 'search_post_excerpts', 0 ) ): ?>
+									<?php if ( cyberchimps_get_option( 'search_post_excerpts', 0 ) ): ?>
 									<div class="entry-summary">
 										<?php cyberchimps_featured_image(); ?>
 										<?php add_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
@@ -141,7 +141,7 @@
 
 								<?php
 								elseif( is_archive() ): ?>
-									<?php if( get_theme_mod( 'archive_post_excerpts', 0 ) ): ?>
+									<?php if( cyberchimps_get_option( 'archive_post_excerpts', 0 ) ): ?>
 										<div class="entry-summary">
 											
 											<?php the_excerpt(); ?>
@@ -159,7 +159,7 @@
 
 								<?php
 								elseif( is_home() ) : // blog post pages ?>
-									<?php if( get_theme_mod( 'post_excerpts', 0 ) ): ?>
+									<?php if( cyberchimps_get_option( 'post_excerpts', 0 ) ): ?>
 										<div class="entry-summary">
 											
 											<?php the_excerpt(); ?>
