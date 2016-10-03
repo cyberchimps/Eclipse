@@ -13,7 +13,7 @@
  * @link     http://www.cyberchimps.com/
  */
 
-if( get_theme_mod( 'footer_show_toggle' ) == '1' ) : ?>
+if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 	<div id="footer-full" class="container-full-width">
 		<div id="footer-widgets-wrapper" class="container-fluid">
 			<div id="footer-wrapper" class="container">

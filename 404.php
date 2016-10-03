@@ -36,16 +36,16 @@ get_header(); ?>
 						<article id="post-0" class="post error404 not-found">
 							<header class="entry-header">
 								<h1 class="entry-title">
-									<?php if (get_theme_mod( 'error_custom_title' ) != ''): ?>
-										<?php echo get_theme_mod( 'error_custom_title' ); ?>
+									<?php if (cyberchimps_get_option( 'error_custom_title' ) != ''): ?>
+										<?php echo cyberchimps_get_option( 'error_custom_title' ); ?>
 									<?php else: ?>
 									<?php _e( 'Oops! That page cannot be found.', 'eclipse' ); ?></h1>
 								<?php endif; ?>
 							</header>
 
 							<div class="entry-content">
-								<?php if( get_theme_mod( 'error_custom_content' ) != '' ): ?>
-									<p><?php echo get_theme_mod( 'error_custom_content' ); ?></p>
+								<?php if( cyberchimps_get_option( 'error_custom_content' ) != '' ): ?>
+									<p><?php echo cyberchimps_get_option( 'error_custom_content' ); ?></p>
 								<?php else: ?>
 									<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'eclipse' ); ?></p>
 								<?php endif; ?>
