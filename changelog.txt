@@ -1,6 +1,9 @@
-Eclipse 2 Free Changelog
+Eclipse 3 Free Changelog
 
 ****************************
+Version 3.3 (07-25-17)
+- Added visible edit links in the customizer preview.
+
 Version 3.2 (04-18-17)
 - Fixed issue with PHP version 7.1
 
