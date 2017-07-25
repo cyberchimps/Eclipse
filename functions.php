@@ -21,6 +21,7 @@ add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
+require_once( get_template_directory() . '/inc/admin-about.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if( !isset( $content_width ) ) {
@@ -674,7 +675,7 @@ add_filter( 'default_background_color', 'eclipse_default_background_color' , '11
 function cyberchimps_eclipse_upgrade_bar(){
 	$upgrade_link = apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' );
 	$pro_title = apply_filters( 'cyberchimps_upgrade_pro_title', 'CyberChimps Pro' );
-?>	
+?>
 	<br>
 	<div class="upgrade-callout">
 		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/>
@@ -683,7 +684,7 @@ function cyberchimps_eclipse_upgrade_bar(){
 				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
 			); ?>
 		</p>
-	
+
 	<div class="social-container">
 			<div class="social">
 				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
@@ -703,19 +704,19 @@ function cyberchimps_eclipse_upgrade_bar(){
 					scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 			</div>
 		</div>
-	
+
 	</div>
 <h4 class="notice notice-info is-dismissible" style="margin-top:15px;">
 <p>
-<?php 
+<?php
 	$utm_link="https://cyberchimps.com/free-download-50-stock-images-use-please/?utm_source=Eclipse";
  	$utm_text="Get 50 Free High-Resolution Stock Images by CyberChimps";
 	printf('<a href="' . $utm_link . '" target="_blank">' . $utm_text . '</a> ');
-?>	 
+?>
 </p>
 </h4>
 
-<?php	
+<?php
 }
 
 add_action('admin_init','remove_upgrade_bar');
@@ -728,9 +729,127 @@ if( cyberchimps_theme_check() == 'free' ) {
 }
 
 // enabling theme support for title tag
-function eclipse_title_setup() 
+function eclipse_title_setup()
 {
 	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'eclipse_title_setup' );
-?>
+
+function eclipse_customize_edit_links( $wp_customize ) {
+
+
+   $wp_customize->selective_refresh->add_partial( 'blogname', array(
+'selector' => '.site-title a'
+) );
+
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.top-head-description'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[custom_logo]', array(
+		'selector' => '#logo'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[theme_backgrounds]', array(
+		'selector' => '#social'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
+		'selector' => '#navigation #searchform'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
+		'selector' => '#footer_wrapper'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_copyright_text]', array(
+		'selector' => '#copyright'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[primary]', array(
+		'selector' => '#navigation .nav'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[blog_title]', array(
+		'selector' => '.page-title'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
+		'selector' => '#footer-widget-container'
+	) );
+
+}
+add_action( 'customize_register', 'eclipse_customize_edit_links' );
+add_theme_support( 'customize-selective-refresh-widgets' );
+
+add_action( 'admin_notices', 'eclipse_admin_notices' );
+function eclipse_admin_notices()
+{
+	$admin_check_screen = get_admin_page_title();
+
+	if( !class_exists('SlideDeckPlugin') )
+	{
+	$plugin='slidedeck/slidedeck.php';
+	$slug = 'slidedeck';
+	$installed_plugins = get_plugins();
+
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the SlideDeck Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+			 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+			 <?php } ?>
+
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if( !class_exists('WPForms') )
+	{
+	$plugin = 'wpforms-lite/wpforms.php';
+	$slug = 'wpforms-lite';
+	$installed_plugins = get_plugins();
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the WPForms Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+	 		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+			 <?php } ?>
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+	?>
+		<div class="notice notice-success is-dismissible">
+				<b><p>Liked this theme? <a href="https://wordpress.org/support/theme/eclipse/reviews/#new-post" target="_blank">Leave us</a> a ***** rating. Thank you! </p></b>
+		</div>
+		<?php
+	}
+
+}
