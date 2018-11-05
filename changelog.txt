@@ -1,6 +1,10 @@
 Eclipse 3 Free Changelog
 
 ****************************
+Version 3.4 (11-05-18)
+- Added Gutenberg compatibility
+- Added testimonial and contact us elements.
+
 Version 3.3 (07-25-17)
 - Added visible edit links in the customizer preview.
 
@@ -11,7 +15,7 @@ Version 3.1 (10-03-16)
 - Reintroduced Theme Options.
 
 Version 3.0.6 (09-15-16)
-- Fixed slider arrow issue. 
+- Fixed slider arrow issue.
 
 Version 3.0.5 (8-5-16)
 - Fixed background color and Typography size and Typography face issue with customizer
@@ -104,7 +108,7 @@ Version 2.0.61 (5-9-14)
 - Added FooBox as recommended plugin.
 
 Version 2.0.60 (5-2-14)
-- Fixed byline toggle issue. 
+- Fixed byline toggle issue.
 
 Version 2.0.59 (4-24-14)
 - Added recommendation for clef plugin.
@@ -324,7 +328,7 @@ Version 2.0.13 (6-6-13)
 
 Version 2.0.12 (5-30-13)
 -Removed modal welcome note on theme install.
--Boxes - added filter for default number 
+-Boxes - added filter for default number
 
 Version 2.0.11 (5-23-13)
 -Added function cyberchimps_posted_by() to display author link.

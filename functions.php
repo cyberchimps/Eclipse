@@ -22,6 +22,7 @@ add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 require_once( get_template_directory() . '/inc/admin-about.php' );
+require_once( get_template_directory() . '/inc/testimonial_template.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if( !isset( $content_width ) ) {
@@ -728,12 +729,75 @@ if( cyberchimps_theme_check() == 'free' ) {
 	add_action( 'cyberchimps_options_before_container', 'cyberchimps_eclipse_upgrade_bar' );
 }
 
-// enabling theme support for title tag
-function eclipse_title_setup()
-{
+/**p_e
+ * [eclipse_title_setup description].
+ */
+function eclipse_title_setup() {
+	// enabling theme support for title tag.
 	add_theme_support( 'title-tag' );
+
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+
+	// Adds support for editor color palette.
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'White', 'eclipse' ),
+				'slug'  => 'white',
+				'color' => '#fff',
+			),
+			array(
+				'name'  => __( 'Light gray', 'eclipse' ),
+				'slug'  => 'light-gray',
+				'color' => '#f5f5f5',
+			),
+			array(
+				'name'  => __( 'Blue', 'eclipse' ),
+				'slug'  => 'blue',
+				'color' => '#337ab7',
+			),
+			array(
+				'name'  => __( 'Dark gray', 'eclipse' ),
+				'slug'  => 'dark-gray',
+				'color' => '#333',
+			),
+		)
+	);
+
 }
 add_action( 'after_setup_theme', 'eclipse_title_setup' );
+
+/**
+ *  Enqueue block styles  in editor
+ */
+function eclipse_block_styles() {
+	wp_enqueue_style( 'gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+
+}
+add_action( 'enqueue_block_editor_assets', 'eclipse_block_styles' );
+
+/**
+ * [eclipse_enqueue description]
+ *
+ * @return void
+ */
+function eclipse_enqueue() {
+	$directory_uri = get_template_directory_uri();
+	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'eclipse_enqueue' );
+
+/**
+ * [eclipse_set_defaults description]
+ */
+function eclipse_set_defaults() {
+	remove_action('testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ));
+	add_action('testimonial', 'eclipse_testimonial_render_display');
+}
+add_action( 'init', 'eclipse_set_defaults' );
+
 
 function eclipse_customize_edit_links( $wp_customize ) {
 
