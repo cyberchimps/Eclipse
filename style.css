@@ -1,4 +1,4 @@
-/* @override 
+/* @override
 	http://cyberchimps.dev/wp-content/themes/eclipse/style.css?ver=1.0 */
 
 /*
@@ -6,8 +6,8 @@ Theme Name: Eclipse
 Theme URI: http://cyberchimps.com/eclipse/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
-Description: Eclipse 3 now offers touch friendly Responsive design, as well as Responsive Drag and Drop Theme Options that responds automatically to mobile devices such as the iPhone, iPad, and Android. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, and Post or Page Content. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website. Eclispse 3 has visible edit links in the customizer preview. For Support -<a href="https://cyberchimps.com/forum/free/eclipse/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/eclipse/).
-Version: 3.3
+Description: Eclipse 3 now offers touch friendly Gutenberg compatible,Responsive design, as well as Responsive Drag and Drop Theme Options that responds automatically to mobile devices such as the iPhone, iPad, and Android. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, and Post or Page Content. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website. Eclispse 3 has visible edit links in the customizer preview. For Support -<a href="https://cyberchimps.com/forum/free/eclipse/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/eclipse/).
+Version: 3.4
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, flexible-header, post-formats, theme-options, sticky-post, blog, threaded-comments, footer-widgets, custom-logo
 Text Domain: eclipse
 License: GNU General Public License version 3
@@ -181,7 +181,7 @@ input[type=submit]:hover {
 	font-size: 20px;
 	margin: 0 0 0 5px;
 }
-.default-icons a.twitterbird{
+.default-icons a.twitterbeclipsed{
 	color: #6ED4FC;
 }
 .default-icons a.facebook{
@@ -1143,7 +1143,7 @@ table#wp-calendar td {
 #footer-widget-container .widget-container{
 	padding: 20px 0 20px 40px;
 }
-#footer-widget-container .row-fluid .widget-container:first-child{
+#footer-widget-container .row-fluid .widget-container:feclipsest-child{
 	width: 33%;
 	padding-left: 0;
 }
@@ -1419,4 +1419,223 @@ table#wp-calendar td {
 }
 .carousel-control{
 	    line-height: 39px;
+}
+
+/*============= Testimonial ==========*/
+.eclipse_main_title{
+      margin-top: 80px;
+      text-align: center;
+      font-size: 1.8em;
+  }
+  ul.slides {
+      margin-left: 0;
+  }
+  .flexslider .slides > li {
+    display: block;
+    -webkit-backface-visibility: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ 	.slides.eclipse_carousel {
+    max-width: 100%;
+    display: inline-block;
+    padding-top: 20px;
+    width: auto !important;
+}
+ 	#testimonial_section .eclipse_short_desc {
+      margin-top: 80px;
+}
+#testimonial_section {
+background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; }
+#testimonial_section .img-responsive {
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  border: 5px solid #fff; }
+#testimonial_section .flexslider {
+  background: transparent;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+#testimonial_section .eclipse_slider_text_img {
+  color: #fff; }
+  #testimonial_section .eclipse_slider_text_img li {
+    width: auto;
+    text-align: center;
+}
+ #testimonial_section .eclipse_testimonial_author {
+  font-weight: 600;
+  font-size: 1.125em; }
+#testimonial_section .eclipse_testimonial_abt_author {
+  font-weight: 500;
+  margin-bottom: 12%; }
+#testimonial_section .after_testimonial_text {
+  margin: 25px auto;
+  padding: 0;
+  max-width: 84px;
+  border: 0;
+  border-top: solid 2px #cd834a;
+  text-align: center;
+  background: transparent; }
+#testimonial_section #carousel2.flexslider {
+  position: absolute;
+  bottom: -20%; }
+#testimonial_section .flex-active-slide img {
+  border-color: #cd834a; }
+#testimonial_section .flex-active-slide .arrow-top {
+  position: absolute;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e14c3d;
+  border-left: 10px solid transparent;
+  top: 12px;
+  left: 13%; }
+#testimonial_section .flex-viewport {
+  text-align: center; }
+testimonial_section .flexslider .slides {
+  padding-bottom: 30px; }
+ #testimonial_section{
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+}
+.eclipse_main_title{
+    margin-top: 80px;
+    text-align: center;
+}
+.flex-direction-nav,
+.flex-declipseection-nav{
+    display: none;
+}
+	/* =============================== Contact Section  ========================== */
+.contactus_wrapper{
+    padding: 0 0 3% 0;
+    color: #fff;
+	}
+.contactus_wrapper.span12
+{
+     margin: 0 auto;
+}
+
+#contact_us input[type="text"], #contact_us textarea{
+    width: 96%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+	}
+.contact_left_sec{
+    font-size: 16px;
+    line-height: 1.8;
+}
+.fa
+{
+    font-size: 30px;
+}
+.contact_right_sec input[type="submit"]
+{
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #cd834a 0%, #9e663d 100%) repeat scroll 0 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: lobster,cursive;
+    font-size: 17.5px;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 55px;
+    margin: 2% 32%;
+	}
+.contact_title{
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 1.8em;
+}
+	@media all and (max-width: 767px) {
+    .contact_left_sec
+    {
+        text-align: center;
+    }
+    .contactus_wrapper.span12
+    {
+        padding: 20px 30px;
+    }
+    .contact_addr {
+    padding-bottom: 10px;
+    }
+    .eclipse_testimonial_text{
+    padding: 0 20px;
+    }
+}
+/* ========================== Contact details in header  =========================== */
+	.contact_details{
+    font-family: lobster,cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.contact_details:before{
+    font-family: "FontAwesome";
+    content: "\f095";
+}
+#register
+{
+    padding: 12px 0 0 0;
+}
+
+
+.entry-content ol,
+.entry-content ul,
+.entry-summary ol,
+.entry-summary ul{
+	margin-left: 2.9em;
+}
+
+.entry-content ol.wp-block-gallery,
+.entry-content ul.wp-block-gallery,
+.entry-summary ol.wp-block-gallery,
+.entry-summary ul.wp-block-gallery {
+	display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+ audio, canvas, video {
+    display: inline-block;
+    width: 100%;
+}
+ .wp-block-column p {
+    padding: 0 14px;
+}
+ .wp-block-gallery .blocks-gallery-item figcaption {
+        padding: 40px 0;
+}
+
+.has-dark-gray-background-color{
+	background-color: #333;
+}
+.has-dark-gray-color{
+	color: #333;
+}
+
+.has-blue-background-color{
+	background-color: #337ab7;
+}
+.has-blue-color{
+	color: #337ab7;
+}
+
+.has-light-gray-background-color{
+	background-color: #f5f5f5;
+}
+.has-light-gray-color{
+	color: #f5f5f5;
+}
+
+.has-white-background-color{
+	background-color: #fff;
+}
+.has-white-color{
+	color: #fff;
 }
