@@ -6,7 +6,7 @@ Theme Name: Eclipse
 Theme URI: http://cyberchimps.com/eclipse/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
-Description: Eclipse 3 now offers touch friendly Gutenberg compatible,Responsive design, as well as Responsive Drag and Drop Theme Options that responds automatically to mobile devices such as the iPhone, iPad, and Android. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, and Post or Page Content. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website. Eclispse 3 has visible edit links in the customizer preview. For Support -<a href="https://cyberchimps.com/forum/free/eclipse/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/eclipse/).
+Description: Eclipse 3 now offers touch friendly Responsive design, as well as Responsive Drag and Drop Theme Options that responds automatically to mobile devices such as the iPhone, iPad, and Android and is Gutenberg compatible. Eclipse also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, and Post or Page Content. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website. Eclispse 3 has visible edit links in the customizer preview. For Support -<a href="https://cyberchimps.com/forum/free/eclipse/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/eclipse/).
 Version: 3.4
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, flexible-header, post-formats, theme-options, sticky-post, blog, threaded-comments, footer-widgets, custom-logo
 Text Domain: eclipse
@@ -181,7 +181,7 @@ input[type=submit]:hover {
 	font-size: 20px;
 	margin: 0 0 0 5px;
 }
-.default-icons a.twitterbeclipsed{
+.default-icons a.twitterbird{
 	color: #6ED4FC;
 }
 .default-icons a.facebook{
@@ -1143,7 +1143,7 @@ table#wp-calendar td {
 #footer-widget-container .widget-container{
 	padding: 20px 0 20px 40px;
 }
-#footer-widget-container .row-fluid .widget-container:feclipsest-child{
+#footer-widget-container .row-fluid .widget-container:first-child{
 	width: 33%;
 	padding-left: 0;
 }

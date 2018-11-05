@@ -773,7 +773,7 @@ add_action( 'after_setup_theme', 'eclipse_title_setup' );
  *  Enqueue block styles  in editor
  */
 function eclipse_block_styles() {
-	wp_enqueue_style( 'mytheme-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+	wp_enqueue_style( 'gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 
 }
 add_action( 'enqueue_block_editor_assets', 'eclipse_block_styles' );
