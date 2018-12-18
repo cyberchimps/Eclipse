@@ -407,7 +407,7 @@ function cyberchimps_typography_defaults() {
 add_filter( 'cyberchimps_typography_sizes', 'cyberchimps_typography_sizes' );
 add_filter( 'cyberchimps_typography_faces', 'cyberchimps_typography_faces' );
 add_filter( 'cyberchimps_typography_styles', 'cyberchimps_typography_styles' );
-add_filter( 'typography_defaults', 'cyberchimps_typography_defaults' );
+add_filter( 'cyberchimps_typography_defaults', 'cyberchimps_typography_defaults' );
 
 // turn cyberchimps footer link off
 
@@ -769,11 +769,82 @@ function eclipse_title_setup() {
 }
 add_action( 'after_setup_theme', 'eclipse_title_setup' );
 
+
+/**
+ * [customizer_css description].
+ *
+ * @return string.
+ */
+function customizer_css() {
+
+	$typography_options   = cyberchimps_get_option( 'typography_options' );
+	$font_family_headings = cyberchimps_get_option( 'font_family_headings' );
+
+	$font_family                  = $typography_options['face'] ? $typography_options['face'] : 'Open Sans", Helvetica, Arial, "Arial, Helvetica, sans-serif';
+	$font_size                    = $typography_options['size'] ? $typography_options['size'] : '14px';
+	$font_weight                  = $typography_options['style'] ? $typography_options['style'] : 'Normal';
+	$color                        = cyberchimps_get_option( 'text_colorpicker' ) ? cyberchimps_get_option( 'text_colorpicker' ) : '#cccccc';
+	$link_colorpicker             = cyberchimps_get_option( 'link_colorpicker' ) ? cyberchimps_get_option( 'link_colorpicker' ) : '#ffffff';
+	$link_hover_colorpicker       = cyberchimps_get_option( 'link_hover_colorpicker' ) ? cyberchimps_get_option( 'link_hover_colorpicker' ) : '#005580';
+	$eclipse_font_family_headings = $font_family_headings['face'] ? $font_family_headings['face'] : 'Arial, Helvetica, sans-serif';
+
+	$get_background_color  = get_background_color() ? get_background_color() : 'fff';
+	$get_background_image1 = get_template_directory_uri() . '/cyberchimps/lib/images/backgrounds/' . get_theme_mod( 'cyberchimps_background' ) . '.jpg';
+	$get_background_image1 = $get_background_image1 ? $get_background_image1 : '';
+	$get_background_image2 = get_background_image() ? get_background_image() : '';
+	$get_background_image  = $get_background_image2 ? $get_background_image2 : $get_background_image1;
+
+	$custom_css = ".editor-writing-flow,
+	.editor-styles-wrapper{
+		background-color:#{$get_background_color};
+		background-image:url('{$get_background_image}');
+		font-family: {$font_family};
+		font-size: {$font_size};
+		font-weight: {$font_weight};
+		color: {$color};
+		line-height: 1.5;
+	}
+	.wp-block-freeform.block-library-rich-text__tinymce h1,
+	.wp-block-freeform.block-library-rich-text__tinymce h2,
+	.wp-block-freeform.block-library-rich-text__tinymce h3,
+	.wp-block-freeform.block-library-rich-text__tinymce h4,
+	.wp-block-freeform.block-library-rich-text__tinymce h5,
+	.wp-block-freeform.block-library-rich-text__tinymce h6,
+	.wp-block-heading h1.editor-rich-text__tinymce,
+	.wp-block-heading h2.editor-rich-text__tinymce,
+	.wp-block-heading h3.editor-rich-text__tinymce,
+	.wp-block-heading h4.editor-rich-text__tinymce,
+	.wp-block-heading h5.editor-rich-text__tinymce,
+	.wp-block-heading h6.editor-rich-text__tinymce {
+		font-family: {$eclipse_font_family_headings};
+		font-weight: normal;
+		margin-bottom: 15px;
+	}
+
+	.wp-block-freeform.block-library-rich-text__tinymce a,
+	.editor-writing-flow a{
+		color: {$link_colorpicker};
+		text-decoration: none;
+	}
+
+	.wp-block-freeform.block-library-rich-text__tinymce a:hover,
+	.wp-block-freeform.block-library-rich-text__tinymce a:focus,
+	.editor-writing-flow a:hover,
+	.editor-writing-flow a:focus{
+		color:  {$link_hover_colorpicker};
+	}";
+	return $custom_css;
+}
+
 /**
  *  Enqueue block styles  in editor
  */
 function eclipse_block_styles() {
-	wp_enqueue_style( 'gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+	wp_enqueue_style( 'eclipse-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web|Lobster', array(), '1.0' );
+
+	wp_add_inline_style( 'eclipse-google-font', customizer_css() );
+
+	wp_enqueue_style( 'eclipse-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 
 }
 add_action( 'enqueue_block_editor_assets', 'eclipse_block_styles' );
