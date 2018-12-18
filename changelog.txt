@@ -1,6 +1,10 @@
 Eclipse 3 Free Changelog
 
 ****************************
+Version 3.5 (12-18-18)
+- Added customizer support for Gutenberg
+- Fixed cyberchimps page elements issue in wordpress 5.0
+
 Version 3.4 (11-05-18)
 - Added Gutenberg compatibility
 - Added testimonial and contact us elements.
